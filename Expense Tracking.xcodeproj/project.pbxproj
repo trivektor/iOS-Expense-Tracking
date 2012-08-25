@@ -13,6 +13,10 @@
 		B512F35715E8B38600EDD5AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B512F35515E8B38600EDD5AF /* InfoPlist.strings */; };
 		B512F35915E8B38600EDD5AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B512F35815E8B38600EDD5AF /* main.m */; };
 		B512F35D15E8B38600EDD5AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B512F35C15E8B38600EDD5AF /* AppDelegate.m */; };
+		B512F36615E8B39500EDD5AF /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B512F36415E8B39500EDD5AF /* HomeViewController.m */; };
+		B512F36715E8B39500EDD5AF /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B512F36515E8B39500EDD5AF /* HomeViewController.xib */; };
+		B512F36A15E8B43000EDD5AF /* header.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B512F36915E8B43000EDD5AF /* header.jpg */; };
+		B512F36C15E8B63700EDD5AF /* wood-wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B512F36B15E8B63700EDD5AF /* wood-wallpaper.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +24,17 @@
 		B512F34C15E8B38600EDD5AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B512F34E15E8B38600EDD5AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B512F35015E8B38600EDD5AF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		B512F35415E8B38600EDD5AF /* Expense Tracking-Info.plist */ = {isa = PBXFileReference; path = "Expense Tracking-Info.plist"; sourceTree = "<group>"; };
+		B512F35415E8B38600EDD5AF /* Expense Tracking-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Expense Tracking-Info.plist"; sourceTree = "<group>"; };
 		B512F35615E8B38600EDD5AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B512F35815E8B38600EDD5AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B512F35A15E8B38600EDD5AF /* Expense Tracking-Prefix.pch */ = {isa = PBXFileReference; path = "Expense Tracking-Prefix.pch"; sourceTree = "<group>"; };
-		B512F35B15E8B38600EDD5AF /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		B512F35A15E8B38600EDD5AF /* Expense Tracking-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Expense Tracking-Prefix.pch"; sourceTree = "<group>"; };
+		B512F35B15E8B38600EDD5AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B512F35C15E8B38600EDD5AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B512F36315E8B39500EDD5AF /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		B512F36415E8B39500EDD5AF /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		B512F36515E8B39500EDD5AF /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		B512F36915E8B43000EDD5AF /* header.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = header.jpg; path = "../../Expense-Tracker/www/images/header.jpg"; sourceTree = "<group>"; };
+		B512F36B15E8B63700EDD5AF /* wood-wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "wood-wallpaper.jpg"; path = "../../Expense-Tracker/www/images/wood-wallpaper.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +81,13 @@
 		B512F35215E8B38600EDD5AF /* Expense Tracking */ = {
 			isa = PBXGroup;
 			children = (
+				B512F36815E8B40E00EDD5AF /* Images */,
 				B512F35B15E8B38600EDD5AF /* AppDelegate.h */,
 				B512F35C15E8B38600EDD5AF /* AppDelegate.m */,
 				B512F35315E8B38600EDD5AF /* Supporting Files */,
+				B512F36315E8B39500EDD5AF /* HomeViewController.h */,
+				B512F36415E8B39500EDD5AF /* HomeViewController.m */,
+				B512F36515E8B39500EDD5AF /* HomeViewController.xib */,
 			);
 			path = "Expense Tracking";
 			sourceTree = "<group>";
@@ -88,6 +101,15 @@
 				B512F35A15E8B38600EDD5AF /* Expense Tracking-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B512F36815E8B40E00EDD5AF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B512F36B15E8B63700EDD5AF /* wood-wallpaper.jpg */,
+				B512F36915E8B43000EDD5AF /* header.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +163,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B512F35715E8B38600EDD5AF /* InfoPlist.strings in Resources */,
+				B512F36715E8B39500EDD5AF /* HomeViewController.xib in Resources */,
+				B512F36A15E8B43000EDD5AF /* header.jpg in Resources */,
+				B512F36C15E8B63700EDD5AF /* wood-wallpaper.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +178,7 @@
 			files = (
 				B512F35915E8B38600EDD5AF /* main.m in Sources */,
 				B512F35D15E8B38600EDD5AF /* AppDelegate.m in Sources */,
+				B512F36615E8B39500EDD5AF /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
