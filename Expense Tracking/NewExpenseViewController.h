@@ -9,16 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
-@interface NewExpenseViewController : UIViewController
+@interface NewExpenseViewController : UIViewController <UITextFieldDelegate>
 {
-    
-    __weak IBOutlet UITextField *nameField;
-    __weak IBOutlet UITextField *amountField;
-    __weak IBOutlet UITextField *taxField;
-    __weak IBOutlet UITextField *tipField;
-    __weak IBOutlet UITextField *categoryField;
-    __weak IBOutlet UITextView *descriptionField;
-    __weak IBOutlet UIButton *addButton;
+    __weak IBOutlet UITextField *nameTextField;
+    __weak IBOutlet UITextField *amountTextField;
+    __weak IBOutlet UITextField *taxTextField;
+    __weak IBOutlet UITextField *tipTextField;
+    __weak IBOutlet UITextView *descriptionTextField;
+    __weak IBOutlet UIButton *addExpenseButton;
 }
 
 @end

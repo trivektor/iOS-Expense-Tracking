@@ -26,21 +26,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+     
     // Do any additional setup after loading the view from its nib.
+//    amountField.delegate = self;
+    nameTextField.delegate = self;
+//    taxField.delegate = self;
+//    tipField.delegate = self;
+//    categoryField.delegate = self;
+//    
     [self.view setBackgroundColor:[UIColor clearColor]];
     [self.navigationItem setTitle:@"Add Expense"];
-    
-    UIImageView *bg = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 299, 396)];
-    bg.image = [UIImage imageNamed:@"envelope_form.png"];
-    [self.view addSubview:bg];
-    [self.view sendSubviewToBack:bg];
-    
-    [addButton.layer setCornerRadius:8.0f];
-    [addButton.layer setMasksToBounds:YES];
-    [addButton.layer setBorderWidth:1.0f];
-    [addButton.layer setBackgroundColor:[UIColor orangeColor].CGColor];
-    [addButton setBackgroundColor:[UIColor orangeColor]];
-    [addButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    
+//    [addButton.layer setCornerRadius:8.0f];
+//    [addButton.layer setMasksToBounds:YES];
+//    [addButton.layer setBorderWidth:1.0f];
+//    [addButton.layer setBackgroundColor:[UIColor orangeColor].CGColor];
+//    [addButton setBackgroundColor:[UIColor orangeColor]];
+//    [addButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     
 //    [addButton.layer setBackgroundColor:[UIColor orangeColor].CGColor];
 //    [addButton setTintColor:[UIColor orangeColor]];
@@ -59,14 +61,12 @@
 
 - (void)viewDidUnload
 {
-    nameField = nil;
-    amountField = nil;
-    taxField = nil;
-    tipField = nil;
-    categoryField = nil;
-    descriptionField = nil;
-    addButton = nil;
-    addButton = nil;
+    nameTextField = nil;
+    amountTextField = nil;
+    taxTextField = nil;
+    tipTextField = nil;
+    descriptionTextField = nil;
+    addExpenseButton = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -75,6 +75,20 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    if ([text isEqual:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    }
+    return YES;
 }
 
 @end
