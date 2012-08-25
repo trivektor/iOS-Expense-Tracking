@@ -17,6 +17,13 @@
 		B512F36715E8B39500EDD5AF /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B512F36515E8B39500EDD5AF /* HomeViewController.xib */; };
 		B512F36A15E8B43000EDD5AF /* header.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B512F36915E8B43000EDD5AF /* header.jpg */; };
 		B512F36C15E8B63700EDD5AF /* wood-wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B512F36B15E8B63700EDD5AF /* wood-wallpaper.jpg */; };
+		B512F37215E8BD2800EDD5AF /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = B512F36D15E8BD2800EDD5AF /* calendar.png */; };
+		B512F37315E8BD2800EDD5AF /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = B512F36E15E8BD2800EDD5AF /* list.png */; };
+		B512F37415E8BD2800EDD5AF /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = B512F36F15E8BD2800EDD5AF /* plus.png */; };
+		B512F37515E8BD2800EDD5AF /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = B512F37015E8BD2800EDD5AF /* settings.png */; };
+		B512F37615E8BD2800EDD5AF /* spechbubble.png in Resources */ = {isa = PBXBuildFile; fileRef = B512F37115E8BD2800EDD5AF /* spechbubble.png */; };
+		B512F37815E8C38300EDD5AF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B512F37715E8C38300EDD5AF /* Default.png */; };
+		B512F37A15E8C3D100EDD5AF /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B512F37915E8C3D100EDD5AF /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +42,13 @@
 		B512F36515E8B39500EDD5AF /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		B512F36915E8B43000EDD5AF /* header.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = header.jpg; path = "../../Expense-Tracker/www/images/header.jpg"; sourceTree = "<group>"; };
 		B512F36B15E8B63700EDD5AF /* wood-wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "wood-wallpaper.jpg"; path = "../../Expense-Tracker/www/images/wood-wallpaper.jpg"; sourceTree = "<group>"; };
+		B512F36D15E8BD2800EDD5AF /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calendar.png; path = ../../../Desktop/iphone_dev/calendar.png; sourceTree = "<group>"; };
+		B512F36E15E8BD2800EDD5AF /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = list.png; path = ../../../Desktop/iphone_dev/list.png; sourceTree = "<group>"; };
+		B512F36F15E8BD2800EDD5AF /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plus.png; path = ../../../Desktop/iphone_dev/plus.png; sourceTree = "<group>"; };
+		B512F37015E8BD2800EDD5AF /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings.png; path = ../../../Desktop/iphone_dev/settings.png; sourceTree = "<group>"; };
+		B512F37115E8BD2800EDD5AF /* spechbubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spechbubble.png; path = ../../../Desktop/iphone_dev/spechbubble.png; sourceTree = "<group>"; };
+		B512F37715E8C38300EDD5AF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		B512F37915E8C3D100EDD5AF /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,8 @@
 		B512F33D15E8B38600EDD5AF = {
 			isa = PBXGroup;
 			children = (
+				B512F37915E8C3D100EDD5AF /* icon.png */,
+				B512F37715E8C38300EDD5AF /* Default.png */,
 				B512F35215E8B38600EDD5AF /* Expense Tracking */,
 				B512F34B15E8B38600EDD5AF /* Frameworks */,
 				B512F34915E8B38600EDD5AF /* Products */,
@@ -106,6 +122,11 @@
 		B512F36815E8B40E00EDD5AF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B512F36D15E8BD2800EDD5AF /* calendar.png */,
+				B512F36E15E8BD2800EDD5AF /* list.png */,
+				B512F36F15E8BD2800EDD5AF /* plus.png */,
+				B512F37015E8BD2800EDD5AF /* settings.png */,
+				B512F37115E8BD2800EDD5AF /* spechbubble.png */,
 				B512F36B15E8B63700EDD5AF /* wood-wallpaper.jpg */,
 				B512F36915E8B43000EDD5AF /* header.jpg */,
 			);
@@ -166,6 +187,13 @@
 				B512F36715E8B39500EDD5AF /* HomeViewController.xib in Resources */,
 				B512F36A15E8B43000EDD5AF /* header.jpg in Resources */,
 				B512F36C15E8B63700EDD5AF /* wood-wallpaper.jpg in Resources */,
+				B512F37215E8BD2800EDD5AF /* calendar.png in Resources */,
+				B512F37315E8BD2800EDD5AF /* list.png in Resources */,
+				B512F37415E8BD2800EDD5AF /* plus.png in Resources */,
+				B512F37515E8BD2800EDD5AF /* settings.png in Resources */,
+				B512F37615E8BD2800EDD5AF /* spechbubble.png in Resources */,
+				B512F37815E8C38300EDD5AF /* Default.png in Resources */,
+				B512F37A15E8C3D100EDD5AF /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

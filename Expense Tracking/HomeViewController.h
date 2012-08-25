@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : UIViewController
+@interface HomeViewController : UITableViewController
+{
+}
+
+@property (nonatomic, retain) NSMutableArray *options;
+@property (nonatomic, retain) NSMutableArray *optionIcons;
 
 @end
