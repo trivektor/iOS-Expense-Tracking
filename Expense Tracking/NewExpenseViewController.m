@@ -29,6 +29,15 @@
     // Do any additional setup after loading the view from its nib.
     [self.view setBackgroundColor:[UIColor clearColor]];
     [self.navigationItem setTitle:@"Add Expense"];
+    
+    UIImageView *bg = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 299, 396)];
+    bg.image = [UIImage imageNamed:@"envelope_form.png"];
+    [self.view addSubview:bg];
+    [self.view sendSubviewToBack:bg];
+    
+    UIImage *addButtonImage = [UIImage imageNamed:@"yellow_btn.png"];
+    [addButton setBackgroundImage:addButtonImage forState:UIControlStateNormal];
+    [addButton setB
 }
 
 - (void)viewDidUnload
@@ -39,6 +48,7 @@
     tipField = nil;
     categoryField = nil;
     descriptionField = nil;
+    addButton = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

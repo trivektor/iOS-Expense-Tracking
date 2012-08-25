@@ -17,5 +17,6 @@
     __weak IBOutlet UITextField *tipField;
     __weak IBOutlet UITextField *categoryField;
     __weak IBOutlet UITextView *descriptionField;
+    __weak IBOutlet UIButton *addButton;
 }
 @end

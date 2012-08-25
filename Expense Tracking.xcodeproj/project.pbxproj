@@ -28,6 +28,8 @@
 		B512F37F15E8C44500EDD5AF /* MonthExpenseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B512F37D15E8C44500EDD5AF /* MonthExpenseViewController.xib */; };
 		B512F38315E8C4FE00EDD5AF /* NewExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B512F38115E8C4FE00EDD5AF /* NewExpenseViewController.m */; };
 		B512F38415E8C4FE00EDD5AF /* NewExpenseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B512F38215E8C4FE00EDD5AF /* NewExpenseViewController.xib */; };
+		B519A46B15E8D4A4005CD2D3 /* envelope_form.png in Resources */ = {isa = PBXBuildFile; fileRef = B519A46A15E8D4A4005CD2D3 /* envelope_form.png */; };
+		B519A47015E8DC94005CD2D3 /* yellow_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = B519A46F15E8DC94005CD2D3 /* yellow_btn.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,8 @@
 		B512F38015E8C4FE00EDD5AF /* NewExpenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewExpenseViewController.h; sourceTree = "<group>"; };
 		B512F38115E8C4FE00EDD5AF /* NewExpenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewExpenseViewController.m; sourceTree = "<group>"; };
 		B512F38215E8C4FE00EDD5AF /* NewExpenseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewExpenseViewController.xib; sourceTree = "<group>"; };
+		B519A46A15E8D4A4005CD2D3 /* envelope_form.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = envelope_form.png; path = ../../../Desktop/iphone_dev/envelope_form.png; sourceTree = "<group>"; };
+		B519A46F15E8DC94005CD2D3 /* yellow_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yellow_btn.png; path = ../../../Desktop/iphone_dev/yellow_btn.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,8 @@
 		B512F36815E8B40E00EDD5AF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B519A46F15E8DC94005CD2D3 /* yellow_btn.png */,
+				B519A46A15E8D4A4005CD2D3 /* envelope_form.png */,
 				B512F36D15E8BD2800EDD5AF /* calendar.png */,
 				B512F36E15E8BD2800EDD5AF /* list.png */,
 				B512F36F15E8BD2800EDD5AF /* plus.png */,
@@ -212,6 +218,8 @@
 				B512F37A15E8C3D100EDD5AF /* icon.png in Resources */,
 				B512F37F15E8C44500EDD5AF /* MonthExpenseViewController.xib in Resources */,
 				B512F38415E8C4FE00EDD5AF /* NewExpenseViewController.xib in Resources */,
+				B519A46B15E8D4A4005CD2D3 /* envelope_form.png in Resources */,
+				B519A47015E8DC94005CD2D3 /* yellow_btn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +338,7 @@
 				B512F36215E8B38600EDD5AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
