@@ -7,6 +7,8 @@
 //
 
 #import "HomeViewController.h"
+#import "MonthExpenseViewController.h"
+#import "NewExpenseViewController.h"
 
 @interface HomeViewController ()
 @end
@@ -23,7 +25,7 @@
         // Custom initialization
         
         // Add option items to option items array
-        // #TODO: move this into a model
+        // TODO: move this into a model
         self.options = [[NSMutableArray alloc] init];
         [self.options addObject:@"View this month expenses"];
         [self.options addObject:@"Add new expense"];
@@ -79,8 +81,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    [self.navigationItem setBackBarButtonItem:backButton];
+    
     NSInteger selectedRow = [indexPath row];
-    NSLog(@"%i", selectedRow);
+    // TODO: is there a better way to do this?
+    if (selectedRow == 0) {
+        MonthExpenseViewController *a = [[MonthExpenseViewController alloc] init];
+        [self.navigationController pushViewController:a animated:YES];
+        return;
+    }
+    
+    if (selectedRow == 1) {
+        NewExpenseViewController *b = [[NewExpenseViewController alloc] init];
+        [self.navigationController pushViewController:b animated:YES];
+        return;
+    }
 }
 
 
