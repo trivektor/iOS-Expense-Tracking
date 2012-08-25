@@ -1,0 +1,263 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B512F34D15E8B38600EDD5AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B512F34C15E8B38600EDD5AF /* UIKit.framework */; };
+		B512F34F15E8B38600EDD5AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B512F34E15E8B38600EDD5AF /* Foundation.framework */; };
+		B512F35115E8B38600EDD5AF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B512F35015E8B38600EDD5AF /* CoreGraphics.framework */; };
+		B512F35715E8B38600EDD5AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B512F35515E8B38600EDD5AF /* InfoPlist.strings */; };
+		B512F35915E8B38600EDD5AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B512F35815E8B38600EDD5AF /* main.m */; };
+		B512F35D15E8B38600EDD5AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B512F35C15E8B38600EDD5AF /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B512F34815E8B38600EDD5AF /* Expense Tracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Expense Tracking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B512F34C15E8B38600EDD5AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B512F34E15E8B38600EDD5AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B512F35015E8B38600EDD5AF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B512F35415E8B38600EDD5AF /* Expense Tracking-Info.plist */ = {isa = PBXFileReference; path = "Expense Tracking-Info.plist"; sourceTree = "<group>"; };
+		B512F35615E8B38600EDD5AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B512F35815E8B38600EDD5AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B512F35A15E8B38600EDD5AF /* Expense Tracking-Prefix.pch */ = {isa = PBXFileReference; path = "Expense Tracking-Prefix.pch"; sourceTree = "<group>"; };
+		B512F35B15E8B38600EDD5AF /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		B512F35C15E8B38600EDD5AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B512F34515E8B38600EDD5AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B512F34D15E8B38600EDD5AF /* UIKit.framework in Frameworks */,
+				B512F34F15E8B38600EDD5AF /* Foundation.framework in Frameworks */,
+				B512F35115E8B38600EDD5AF /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B512F33D15E8B38600EDD5AF = {
+			isa = PBXGroup;
+			children = (
+				B512F35215E8B38600EDD5AF /* Expense Tracking */,
+				B512F34B15E8B38600EDD5AF /* Frameworks */,
+				B512F34915E8B38600EDD5AF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B512F34915E8B38600EDD5AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B512F34815E8B38600EDD5AF /* Expense Tracking.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B512F34B15E8B38600EDD5AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B512F34C15E8B38600EDD5AF /* UIKit.framework */,
+				B512F34E15E8B38600EDD5AF /* Foundation.framework */,
+				B512F35015E8B38600EDD5AF /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B512F35215E8B38600EDD5AF /* Expense Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				B512F35B15E8B38600EDD5AF /* AppDelegate.h */,
+				B512F35C15E8B38600EDD5AF /* AppDelegate.m */,
+				B512F35315E8B38600EDD5AF /* Supporting Files */,
+			);
+			path = "Expense Tracking";
+			sourceTree = "<group>";
+		};
+		B512F35315E8B38600EDD5AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B512F35415E8B38600EDD5AF /* Expense Tracking-Info.plist */,
+				B512F35515E8B38600EDD5AF /* InfoPlist.strings */,
+				B512F35815E8B38600EDD5AF /* main.m */,
+				B512F35A15E8B38600EDD5AF /* Expense Tracking-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B512F34715E8B38600EDD5AF /* Expense Tracking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B512F36015E8B38600EDD5AF /* Build configuration list for PBXNativeTarget "Expense Tracking" */;
+			buildPhases = (
+				B512F34415E8B38600EDD5AF /* Sources */,
+				B512F34515E8B38600EDD5AF /* Frameworks */,
+				B512F34615E8B38600EDD5AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Expense Tracking";
+			productName = "Expense Tracking";
+			productReference = B512F34815E8B38600EDD5AF /* Expense Tracking.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B512F33F15E8B38600EDD5AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = B512F34215E8B38600EDD5AF /* Build configuration list for PBXProject "Expense Tracking" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B512F33D15E8B38600EDD5AF;
+			productRefGroup = B512F34915E8B38600EDD5AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B512F34715E8B38600EDD5AF /* Expense Tracking */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B512F34615E8B38600EDD5AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B512F35715E8B38600EDD5AF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B512F34415E8B38600EDD5AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B512F35915E8B38600EDD5AF /* main.m in Sources */,
+				B512F35D15E8B38600EDD5AF /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B512F35515E8B38600EDD5AF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B512F35615E8B38600EDD5AF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B512F35E15E8B38600EDD5AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B512F35F15E8B38600EDD5AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B512F36115E8B38600EDD5AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Expense Tracking/Expense Tracking-Prefix.pch";
+				INFOPLIST_FILE = "Expense Tracking/Expense Tracking-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B512F36215E8B38600EDD5AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Expense Tracking/Expense Tracking-Prefix.pch";
+				INFOPLIST_FILE = "Expense Tracking/Expense Tracking-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B512F34215E8B38600EDD5AF /* Build configuration list for PBXProject "Expense Tracking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B512F35E15E8B38600EDD5AF /* Debug */,
+				B512F35F15E8B38600EDD5AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B512F36015E8B38600EDD5AF /* Build configuration list for PBXNativeTarget "Expense Tracking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B512F36115E8B38600EDD5AF /* Debug */,
+				B512F36215E8B38600EDD5AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B512F33F15E8B38600EDD5AF /* Project object */;
+}
