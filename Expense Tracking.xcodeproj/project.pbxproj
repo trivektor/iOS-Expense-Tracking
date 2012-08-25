@@ -30,6 +30,7 @@
 		B512F38415E8C4FE00EDD5AF /* NewExpenseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B512F38215E8C4FE00EDD5AF /* NewExpenseViewController.xib */; };
 		B519A46B15E8D4A4005CD2D3 /* envelope_form.png in Resources */ = {isa = PBXBuildFile; fileRef = B519A46A15E8D4A4005CD2D3 /* envelope_form.png */; };
 		B519A47015E8DC94005CD2D3 /* yellow_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = B519A46F15E8DC94005CD2D3 /* yellow_btn.png */; };
+		B519A47215E93EC4005CD2D3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B519A47115E93EC4005CD2D3 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		B512F38215E8C4FE00EDD5AF /* NewExpenseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewExpenseViewController.xib; sourceTree = "<group>"; };
 		B519A46A15E8D4A4005CD2D3 /* envelope_form.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = envelope_form.png; path = ../../../Desktop/iphone_dev/envelope_form.png; sourceTree = "<group>"; };
 		B519A46F15E8DC94005CD2D3 /* yellow_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yellow_btn.png; path = ../../../Desktop/iphone_dev/yellow_btn.png; sourceTree = "<group>"; };
+		B519A47115E93EC4005CD2D3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B519A47215E93EC4005CD2D3 /* QuartzCore.framework in Frameworks */,
 				B512F34D15E8B38600EDD5AF /* UIKit.framework in Frameworks */,
 				B512F34F15E8B38600EDD5AF /* Foundation.framework in Frameworks */,
 				B512F35115E8B38600EDD5AF /* CoreGraphics.framework in Frameworks */,
@@ -82,6 +85,7 @@
 		B512F33D15E8B38600EDD5AF = {
 			isa = PBXGroup;
 			children = (
+				B519A47115E93EC4005CD2D3 /* QuartzCore.framework */,
 				B512F37915E8C3D100EDD5AF /* icon.png */,
 				B512F37715E8C38300EDD5AF /* Default.png */,
 				B512F35215E8B38600EDD5AF /* Expense Tracking */,

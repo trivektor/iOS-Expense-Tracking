@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface NewExpenseViewController : UIViewController
 {
@@ -19,4 +20,5 @@
     __weak IBOutlet UITextView *descriptionField;
     __weak IBOutlet UIButton *addButton;
 }
+
 @end

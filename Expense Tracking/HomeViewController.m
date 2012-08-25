@@ -82,6 +82,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    [backButton setTintColor:[UIColor blackColor]];
     [self.navigationItem setBackBarButtonItem:backButton];
     
     NSInteger selectedRow = [indexPath row];

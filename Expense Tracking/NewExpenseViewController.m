@@ -35,9 +35,26 @@
     [self.view addSubview:bg];
     [self.view sendSubviewToBack:bg];
     
-    UIImage *addButtonImage = [UIImage imageNamed:@"yellow_btn.png"];
-    [addButton setBackgroundImage:addButtonImage forState:UIControlStateNormal];
-    [addButton setB
+    [addButton.layer setCornerRadius:8.0f];
+    [addButton.layer setMasksToBounds:YES];
+    [addButton.layer setBorderWidth:1.0f];
+    [addButton.layer setBackgroundColor:[UIColor orangeColor].CGColor];
+    [addButton setBackgroundColor:[UIColor orangeColor]];
+    [addButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
+//    [addButton.layer setBackgroundColor:[UIColor orangeColor].CGColor];
+//    [addButton setTintColor:[UIColor orangeColor]];
+//    [addButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+//    gradientLayer.frame = addButton.layer.bounds;
+//    gradientLayer.colors = [NSArray arrayWithObjects:
+//                            [UIColor colorWithHue:0x45/255.0 saturation:0x63/255.0 brightness:0x99/255.0 alpha:1.0].CGColor,
+//                            [UIColor colorWithHue:0x39/255.0 saturation:0x84/255.0 brightness:0x96/255.0 alpha:1.0].CGColor,
+//                            nil];
+//    gradientLayer.cornerRadius = addButton.layer.cornerRadius;
+//    [addButton.layer addSublayer:gradientLayer];
+//    [addButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    //[addButton.layer setBorderColor:[UIColor ].CGColor];
 }
 
 - (void)viewDidUnload
@@ -48,6 +65,7 @@
     tipField = nil;
     categoryField = nil;
     descriptionField = nil;
+    addButton = nil;
     addButton = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
