@@ -19,4 +19,6 @@
     __weak IBOutlet UIButton *addExpenseButton;
 }
 
+- (IBAction)addExpenseButtonTapped:(id)sender;
+
 @end

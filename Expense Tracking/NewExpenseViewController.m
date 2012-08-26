@@ -7,6 +7,7 @@
 //
 
 #import "NewExpenseViewController.h"
+#import "Expense.h"
 
 @interface NewExpenseViewController ()
 
@@ -91,6 +92,37 @@
         return NO;
     }
     return YES;
+}
+
+- (IBAction)addExpenseButtonTapped:(id)sender
+{
+    UIAlertView *dialog;
+    
+    if (nameTextField.text.length == 0 || amountTextField.text.length == 0) {
+        dialog = [[UIAlertView alloc] initWithTitle:@"Alert" 
+                                            message:@"Please enter a name and an amount" 
+                                           delegate:self 
+                                  cancelButtonTitle:@"OK" 
+                                  otherButtonTitles:nil];
+        [dialog show];
+        return;
+    } else {
+        BOOL result = [Expense addExpenseWithName:[nameTextField text] 
+                                           Amount:[amountTextField text].floatValue 
+                                              Tax:[taxTextField text].floatValue 
+                                              Tip:[tipTextField text].floatValue 
+                                      Description:[descriptionTextField text]];
+        
+        dialog = [[UIAlertView alloc] initWithTitle:@"Oops" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
+        if (result == YES) {
+            [dialog setMessage:@"Expense has been added"];
+        } else {
+            [dialog setMessage:@"An error occurred while adding expense"];
+        }
+        
+        [dialog show];
+    }
 }
 
 @end

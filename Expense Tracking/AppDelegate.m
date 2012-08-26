@@ -55,4 +55,14 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (NSString *) getDBPath {
+	//Search for standard documents using NSSearchPathForDirectoriesInDomains
+	//First Param = Searching the documents directory
+	//Second Param = Searching the Users directory and not the System
+	//Expand any tildes and identify home directories.
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory , NSUserDomainMask, YES);
+	NSString *documentsDir = [paths objectAtIndex:0];
+	return [documentsDir stringByAppendingPathComponent:@"Expense-Tracking.sqlite"];
+}
+
 @end

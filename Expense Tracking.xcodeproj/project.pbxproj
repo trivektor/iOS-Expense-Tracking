@@ -33,6 +33,10 @@
 		B519A47215E93EC4005CD2D3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B519A47115E93EC4005CD2D3 /* QuartzCore.framework */; };
 		B519A47615E98E11005CD2D3 /* border_seperator.png in Resources */ = {isa = PBXBuildFile; fileRef = B519A47515E98E11005CD2D3 /* border_seperator.png */; };
 		B58BE2B315E9AE8900CA6EA8 /* add_button.png in Resources */ = {isa = PBXBuildFile; fileRef = B58BE2B215E9AE8900CA6EA8 /* add_button.png */; };
+		B5A5757D15E9B72300EE9A62 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A5757C15E9B72300EE9A62 /* libsqlite3.0.dylib */; };
+		B5A5758015E9B72B00EE9A62 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A5757F15E9B72B00EE9A62 /* libsqlite3.dylib */; };
+		B5A5758315E9BAEC00EE9A62 /* Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A5758215E9BAEC00EE9A62 /* Expense.m */; };
+		B5A5758515E9BC9000EE9A62 /* Expense-Tracking.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B5A5758415E9BC9000EE9A62 /* Expense-Tracking.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +73,11 @@
 		B519A47115E93EC4005CD2D3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B519A47515E98E11005CD2D3 /* border_seperator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = border_seperator.png; path = ../../../Desktop/iphone_dev/border_seperator.png; sourceTree = "<group>"; };
 		B58BE2B215E9AE8900CA6EA8 /* add_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = add_button.png; path = ../../../Desktop/iphone_dev/add_button.png; sourceTree = "<group>"; };
+		B5A5757C15E9B72300EE9A62 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		B5A5757F15E9B72B00EE9A62 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		B5A5758115E9BAEC00EE9A62 /* Expense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expense.h; sourceTree = "<group>"; };
+		B5A5758215E9BAEC00EE9A62 /* Expense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expense.m; sourceTree = "<group>"; };
+		B5A5758415E9BC9000EE9A62 /* Expense-Tracking.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Expense-Tracking.sqlite"; path = "../../Desktop/Expense-Tracking.sqlite"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5A5758015E9B72B00EE9A62 /* libsqlite3.dylib in Frameworks */,
+				B5A5757D15E9B72300EE9A62 /* libsqlite3.0.dylib in Frameworks */,
 				B519A47215E93EC4005CD2D3 /* QuartzCore.framework in Frameworks */,
 				B512F34D15E8B38600EDD5AF /* UIKit.framework in Frameworks */,
 				B512F34F15E8B38600EDD5AF /* Foundation.framework in Frameworks */,
@@ -89,6 +100,9 @@
 		B512F33D15E8B38600EDD5AF = {
 			isa = PBXGroup;
 			children = (
+				B5A5758415E9BC9000EE9A62 /* Expense-Tracking.sqlite */,
+				B5A5757F15E9B72B00EE9A62 /* libsqlite3.dylib */,
+				B5A5757C15E9B72300EE9A62 /* libsqlite3.0.dylib */,
 				B519A47115E93EC4005CD2D3 /* QuartzCore.framework */,
 				B512F37915E8C3D100EDD5AF /* icon.png */,
 				B512F37715E8C38300EDD5AF /* Default.png */,
@@ -132,6 +146,8 @@
 				B512F38015E8C4FE00EDD5AF /* NewExpenseViewController.h */,
 				B512F38115E8C4FE00EDD5AF /* NewExpenseViewController.m */,
 				B512F38215E8C4FE00EDD5AF /* NewExpenseViewController.xib */,
+				B5A5758115E9BAEC00EE9A62 /* Expense.h */,
+				B5A5758215E9BAEC00EE9A62 /* Expense.m */,
 			);
 			path = "Expense Tracking";
 			sourceTree = "<group>";
@@ -232,6 +248,7 @@
 				B519A47015E8DC94005CD2D3 /* yellow_btn.png in Resources */,
 				B519A47615E98E11005CD2D3 /* border_seperator.png in Resources */,
 				B58BE2B315E9AE8900CA6EA8 /* add_button.png in Resources */,
+				B5A5758515E9BC9000EE9A62 /* Expense-Tracking.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +264,7 @@
 				B512F36615E8B39500EDD5AF /* HomeViewController.m in Sources */,
 				B512F37E15E8C44500EDD5AF /* MonthExpenseViewController.m in Sources */,
 				B512F38315E8C4FE00EDD5AF /* NewExpenseViewController.m in Sources */,
+				B5A5758315E9BAEC00EE9A62 /* Expense.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
