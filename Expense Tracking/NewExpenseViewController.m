@@ -28,14 +28,16 @@
     [super viewDidLoad];
      
     // Do any additional setup after loading the view from its nib.
-//    amountField.delegate = self;
     nameTextField.delegate = self;
-//    taxField.delegate = self;
-//    tipField.delegate = self;
-//    categoryField.delegate = self;
-//    
+    amountTextField.delegate = self;
+    taxTextField.delegate = self;
+    tipTextField.delegate = self;
+    descriptionTextField.delegate = self;
+
     [self.view setBackgroundColor:[UIColor clearColor]];
     [self.navigationItem setTitle:@"Add Expense"];
+    
+    [addExpenseButton setTitleColor:[UIColor colorWithRed:141/255.0 green:67/255.0 blue:2/255.0 alpha:1] forState:UIControlStateNormal];
 //    
 //    [addButton.layer setCornerRadius:8.0f];
 //    [addButton.layer setMasksToBounds:YES];

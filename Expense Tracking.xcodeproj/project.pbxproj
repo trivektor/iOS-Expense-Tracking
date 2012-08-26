@@ -32,6 +32,7 @@
 		B519A47015E8DC94005CD2D3 /* yellow_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = B519A46F15E8DC94005CD2D3 /* yellow_btn.png */; };
 		B519A47215E93EC4005CD2D3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B519A47115E93EC4005CD2D3 /* QuartzCore.framework */; };
 		B519A47615E98E11005CD2D3 /* border_seperator.png in Resources */ = {isa = PBXBuildFile; fileRef = B519A47515E98E11005CD2D3 /* border_seperator.png */; };
+		B58BE2B315E9AE8900CA6EA8 /* add_button.png in Resources */ = {isa = PBXBuildFile; fileRef = B58BE2B215E9AE8900CA6EA8 /* add_button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		B519A46F15E8DC94005CD2D3 /* yellow_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yellow_btn.png; path = ../../../Desktop/iphone_dev/yellow_btn.png; sourceTree = "<group>"; };
 		B519A47115E93EC4005CD2D3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B519A47515E98E11005CD2D3 /* border_seperator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = border_seperator.png; path = ../../../Desktop/iphone_dev/border_seperator.png; sourceTree = "<group>"; };
+		B58BE2B215E9AE8900CA6EA8 /* add_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = add_button.png; path = ../../../Desktop/iphone_dev/add_button.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 		B512F36815E8B40E00EDD5AF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B58BE2B215E9AE8900CA6EA8 /* add_button.png */,
 				B519A47515E98E11005CD2D3 /* border_seperator.png */,
 				B519A46F15E8DC94005CD2D3 /* yellow_btn.png */,
 				B519A46A15E8D4A4005CD2D3 /* envelope_form.png */,
@@ -228,6 +231,7 @@
 				B519A46B15E8D4A4005CD2D3 /* envelope_form.png in Resources */,
 				B519A47015E8DC94005CD2D3 /* yellow_btn.png in Resources */,
 				B519A47615E98E11005CD2D3 /* border_seperator.png in Resources */,
+				B58BE2B315E9AE8900CA6EA8 /* add_button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
