@@ -114,7 +114,11 @@
                                         Tip:[tipTextField text].doubleValue
                                 Description:[descriptionTextField text]];
         
-        dialog = [[UIAlertView alloc] initWithTitle:@"Oops" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        dialog = [[UIAlertView alloc] initWithTitle:@"Alert" 
+                                            message:nil 
+                                           delegate:self 
+                                  cancelButtonTitle:@"OK" 
+                                  otherButtonTitles:nil];
         
         if (result == YES) {
             [dialog setMessage:@"Expense has been added"];

@@ -14,7 +14,5 @@
 @property (strong, nonatomic) UIWindow *window;
 
 - (void) createEditableCopyOfDatabaseIfNeeded;
-- (NSString *) getDBPath;
-- (NSString *) getDocumentDirectory;
 
 @end

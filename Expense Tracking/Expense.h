@@ -25,6 +25,4 @@
 
 - (Boolean)addExpenseWithName:(NSString *)name Amount:(float)amount Tax:(float)tax Tip:(float)tip Description:(NSString *)description;
 
-- (NSString *)getDocumentDirectory;
-
 @end

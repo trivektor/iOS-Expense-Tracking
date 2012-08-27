@@ -14,7 +14,10 @@
 
 - (Boolean)addExpenseWithName:(NSString *)ename Amount:(float)eamount Tax:(float)etax Tip:(float)etip Description:(NSString *)edescription;
 {
-    NSString *dbPath = [self.getDocumentDirectory stringByAppendingPathComponent:@"Expense-Tracking.sqlite"];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *dbPath = [documentsDirectory stringByAppendingPathComponent:@"Expense-Tracking.sqlite"];
+
     if (sqlite3_open(dbPath.UTF8String, &database) == SQLITE_OK) {
         NSLog(@"successfully opened database at the provided database path");
         
@@ -27,26 +30,20 @@
                 NSLog(@"Error white creating insert statement");
                 NSAssert1(0, @"Error white creating insert statement. '%s'", sqlite3_errmsg(database));
             }
+            NSLog(@"%s", ename.UTF8String);
+            sqlite3_bind_text(insertStatement, 0, ename.UTF8String, -1, SQLITE_TRANSIENT);
+            sqlite3_bind_double(insertStatement, 2, eamount);
+            sqlite3_bind_double(insertStatement, 3, etax);
+            sqlite3_bind_double(insertStatement, 4, etip);
+            sqlite3_bind_text(insertStatement, 6, edescription.UTF8String, -1, SQLITE_TRANSIENT);
             
-            sqlite3_bind_text(insertStatement, 1, ename.UTF8String, -1, SQLITE_TRANSIENT);
-            //sqlite3_bind_double(insertStatement, 2, eamount);
-            //sqlite3_bind_double(insertStatement, 3, etax);
-            //sqlite3_bind_double(insertStatement, 4, etip);
-            //sqlite3_bind_text(insertStatement, 6, edescription.UTF8String, -1, SQLITE_TRANSIENT);
-            //sqlite3_finalize(insertStatement);
-            
-            if (sqlite3_step(insertStatement) == SQLITE_OK) {
-                sqlite3_finalize(insertStatement);
-                sqlite3_close(database);
-                NSLog(@"new expense inserted fine");
-                return YES;
-            } else {
-                NSLog(@"new expense was not inserted");
-                NSLog(@"sqlite3_step error: '%s'", sqlite3_errmsg(database));
-                return NO;  
+            if (sqlite3_step(insertStatement) == SQLITE_DONE) {
+                NSLog(@"New expense has been inserted successfully");
             }
+            sqlite3_finalize(insertStatement);
+            sqlite3_close(database);
+            return YES;
         }
-        NSLog(@"insert statement is not nil");
     }
     NSLog(@"cannot open database file at the database path provided");
     return NO;
@@ -57,8 +54,11 @@
     NSMutableArray *expensesArray = [[NSMutableArray alloc] init];
     
     @try {
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSString *dbPath = [documentsDirectory stringByAppendingPathComponent:@"Expense-Tracking.sqlite"];
+        
         NSFileManager *fileManager = [NSFileManager defaultManager];
-        NSString *dbPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Expense-Tracking.sqlite"];
         BOOL success = [fileManager fileExistsAtPath:dbPath];
         
         if (!success) 
@@ -72,20 +72,26 @@
         }
         
         const char *sql = "SELECT * FROM expenses";
-        sqlite3_stmt *sqlStatement;
+        sqlite3_stmt *selectStatement;
         
-        if (sqlite3_prepare(database, sql, -1, &sqlStatement, NULL) != SQLITE_OK)
+        if (sqlite3_prepare(database, sql, -1, &selectStatement, NULL) != SQLITE_OK)
         {
             NSLog(@"Problem with prepare statement");
         }
         
-        while (sqlite3_step(sqlStatement) == SQLITE_ROW) 
+        while (sqlite3_step(selectStatement) == SQLITE_ROW) 
         {
             Expense *expense = [[Expense alloc] init];
-            expense.name = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 1)];
-            expense.amount = sqlite3_column_double(sqlStatement, 2);
-            expense.tax = sqlite3_column_double(sqlStatement, 3);
-            expense.tip = sqlite3_column_double(sqlStatement, 4);
+            NSLog(@"%s", sqlite3_column_text(selectStatement, 1));
+            if ((char*)sqlite3_column_text(selectStatement, 1) != NULL)
+            {
+                expense.name = [NSString stringWithUTF8String:(char*)sqlite3_column_text(selectStatement, 1)];
+            } else {
+                expense.name = @"Untitled expense";
+            }
+            expense.amount = sqlite3_column_double(selectStatement, 2);
+            expense.tax = sqlite3_column_double(selectStatement, 3);
+            expense.tip = sqlite3_column_double(selectStatement, 4);
             //expense.description = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 5)];
             [expensesArray addObject:expense];
         }
@@ -94,15 +100,8 @@
         NSLog(@"An exception occured: %@", [exception reason]);
     }
     @finally {
-        NSLog(@"%i", [expensesArray count]);
         return expensesArray;
     }
-}
-
-- (NSString *) getDocumentDirectory{
-    NSFileManager *fileMgr = [NSFileManager defaultManager];
-    NSString *homeDir = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
-    return homeDir;
 }
 
 @end

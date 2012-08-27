@@ -58,54 +58,28 @@
 
 - (void) createEditableCopyOfDatabaseIfNeeded
 {
-    NSError *err=nil;
-    
-    NSFileManager *fileMgr = [NSFileManager defaultManager];
-    NSString *dbpath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Expense-Tracking.sqlite"];
-    
-    NSString *copydbpath = [self.getDocumentDirectory stringByAppendingPathComponent:@"Expense-Tracking.sqlite"];
-    [fileMgr removeItemAtPath:copydbpath error:&err];
-    
-    if(![fileMgr copyItemAtPath:dbpath toPath:copydbpath error:&err])
-    {
-        UIAlertView *tellErr = [[UIAlertView alloc] initWithTitle:@"Alert" 
-                                                          message:@"Unable to copy database." 
-                                                         delegate:self 
-                                                cancelButtonTitle:@"OK" 
-                                                otherButtonTitles:nil];
-        [tellErr show];
-    }
-//    BOOL success;
-//    NSFileManager *fileManager = [NSFileManager defaultManager];
-//    NSError *error;
-//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-//    NSString *expensesDirectory = [paths objectAtIndex:0];
-//    NSString *writableDBPath = [expensesDirectory stringByAppendingPathComponent:@"Expense-Tracking.sqlite"];
-//    success = [fileManager fileExistsAtPath:writableDBPath];
-//    NSLog([[NSBundle mainBundle] resourcePath]);
-//    if (success) return;
-//    NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Expense-Tracking.sqlite"];
-//    success = [fileManager copyItemAtPath:defaultDBPath toPath:writableDBPath error:&error];
-//    if (!success) {
-//        NSLog(@"Failed to create writable database with message '%C'", [error localizedDescription]);
-//    }
-    
-}
-                                
-- (NSString *) getDocumentDirectory{
-    NSFileManager *fileMgr = [NSFileManager defaultManager];
-    NSString *homeDir = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
-    return homeDir;
-}
+    // First, test for existence.
+    BOOL success;
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"Expense-Tracking.sqlite"];
+    success = [fileManager fileExistsAtPath:writableDBPath];
+    if (success) return;
+    // The writable database does not exist, so copy the default to the appropriate location.
+    NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Expense-Tracking.sqlite"];
 
-- (NSString *) getDBPath {
-	//Search for standard documents using NSSearchPathForDirectoriesInDomains
-	//First Param = Searching the documents directory
-	//Second Param = Searching the Users directory and not the System
-	//Expand any tildes and identify home directories.
-	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory , NSUserDomainMask, YES);
-	NSString *documentsDir = [paths objectAtIndex:0];
-	return [documentsDir stringByAppendingPathComponent:@"Expense-Tracking.sqlite"];
+    // Delete remnant file
+    if ([fileManager fileExistsAtPath:writableDBPath]) {
+        [fileManager removeItemAtPath:writableDBPath error:nil];
+    }
+    
+    success = [fileManager copyItemAtPath:defaultDBPath toPath:writableDBPath error:&error];
+    if (!success) {
+        NSAssert1(0, @"Failed to create writable database file with message '%@'.", [error localizedDescription]);
+    }
+
 }
 
 @end
