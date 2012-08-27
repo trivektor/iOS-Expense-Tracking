@@ -17,12 +17,26 @@
 
 @synthesize expenses;
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)init
 {
-    self = [super initWithStyle:style];
+    self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         // Custom initialization
         self.expenses = [[[Expense alloc] init] getAll];
+    }
+    return self;
+}
+
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    return [self init];
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
     }
     return self;
 }
@@ -32,6 +46,7 @@
     [super viewDidLoad];
     
     [self.navigationItem setTitle:@"All Expenses"];
+    [self.view setBackgroundColor:[UIColor clearColor]];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

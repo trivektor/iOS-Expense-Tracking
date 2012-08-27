@@ -30,7 +30,6 @@
                 NSLog(@"Error white creating insert statement");
                 NSAssert1(0, @"Error white creating insert statement. '%s'", sqlite3_errmsg(database));
             }
-            NSLog(@"%s", ename.UTF8String);
             sqlite3_bind_text(insertStatement, 1, ename.UTF8String, -1, SQLITE_TRANSIENT);
             sqlite3_bind_double(insertStatement, 2, eamount);
             sqlite3_bind_double(insertStatement, 3, etax);
@@ -82,7 +81,6 @@
         while (sqlite3_step(selectStatement) == SQLITE_ROW) 
         {
             Expense *expense = [[Expense alloc] init];
-            NSLog(@"%s", sqlite3_column_text(selectStatement, 1));
             if ((char*)sqlite3_column_text(selectStatement, 1) != NULL)
             {
                 expense.name = [NSString stringWithUTF8String:(char*)sqlite3_column_text(selectStatement, 1)];

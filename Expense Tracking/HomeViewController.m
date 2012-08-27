@@ -19,12 +19,11 @@
 @synthesize options;
 @synthesize optionIcons;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         // Custom initialization
-        
         // Add option items to option items array
         // TODO: move this into a model
         self.options = [[NSMutableArray alloc] init];
@@ -40,6 +39,21 @@
         [self.optionIcons addObject:@"settings.png"];
         [self.optionIcons addObject:@"list.png"];
         [self.optionIcons addObject:@"spechbubble.png"];
+
+    }
+    return self;
+}
+
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    return [self init];
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization        
     }
     return self;
 }
@@ -49,6 +63,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.navigationItem setTitle:@"Expense Tracking"];
+    [self.view setBackgroundColor:[UIColor clearColor]];
 }
 
 - (void)viewDidUnload
