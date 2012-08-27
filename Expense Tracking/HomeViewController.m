@@ -64,6 +64,13 @@
     // Do any additional setup after loading the view from its nib.
     [self.navigationItem setTitle:@"Expense Tracking"];
     [self.view setBackgroundColor:[UIColor clearColor]];
+    //[self.tableView setBackgroundColor:[[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"envelope_form.png"]]];
+    UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"envelope_form.png"]];
+    [backgroundImage setFrame:self.tableView.frame];
+    [self.tableView setBackgroundView:backgroundImage];
+    [self.tableView setScrollEnabled:NO];
+    //self.tableView.contentInset = UIEdgeInsetsMake(5, 20, 20, 20);
+
 }
 
 - (void)viewDidUnload
@@ -91,6 +98,8 @@
     cell.textLabel.font = [UIFont fontWithName:@"Arial" size:16.0];
     [cell.imageView setImage:[UIImage imageNamed:[self.optionIcons objectAtIndex:[indexPath row]]]];
     cell.selectedBackgroundView.backgroundColor = [UIColor orangeColor];
+    cell.backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 280, 44)];
+    cell.backgroundColor = [UIColor clearColor];
     return cell;
 
 }
