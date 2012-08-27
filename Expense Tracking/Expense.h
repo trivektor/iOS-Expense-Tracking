@@ -11,9 +11,20 @@
 
 @interface Expense : NSObject
 {
+    sqlite3 *database;
+    sqlite3_stmt *insertStatement;
 }
 
-- (void)addNewExpenseToDatabase;
-+ (Boolean)addExpenseWithName:(NSString *)name Amount:(float)amount Tax:(float)tax Tip:(float)tip Description:(NSString *)description;
+@property (nonatomic, retain) NSString *name;
+@property (nonatomic) double amount;
+@property (nonatomic) double tax;
+@property (nonatomic) double tip;
+@property (nonatomic, retain) NSString *description;
+
+- (NSMutableArray *) getAll;
+
+- (Boolean)addExpenseWithName:(NSString *)name Amount:(float)amount Tax:(float)tax Tip:(float)tip Description:(NSString *)description;
+
+- (NSString *)getDocumentDirectory;
 
 @end

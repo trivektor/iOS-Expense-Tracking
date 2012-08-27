@@ -107,11 +107,12 @@
         [dialog show];
         return;
     } else {
-        BOOL result = [Expense addExpenseWithName:[nameTextField text] 
-                                           Amount:[amountTextField text].floatValue 
-                                              Tax:[taxTextField text].floatValue 
-                                              Tip:[tipTextField text].floatValue 
-                                      Description:[descriptionTextField text]];
+        Expense *e = [[Expense alloc] init];
+        BOOL result = [e addExpenseWithName:[nameTextField text] 
+                                     Amount:[amountTextField text].doubleValue 
+                                        Tax:[taxTextField text].doubleValue
+                                        Tip:[tipTextField text].doubleValue
+                                Description:[descriptionTextField text]];
         
         dialog = [[UIAlertView alloc] initWithTitle:@"Oops" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         

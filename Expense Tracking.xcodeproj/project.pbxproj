@@ -36,7 +36,9 @@
 		B5A5757D15E9B72300EE9A62 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A5757C15E9B72300EE9A62 /* libsqlite3.0.dylib */; };
 		B5A5758015E9B72B00EE9A62 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A5757F15E9B72B00EE9A62 /* libsqlite3.dylib */; };
 		B5A5758315E9BAEC00EE9A62 /* Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A5758215E9BAEC00EE9A62 /* Expense.m */; };
-		B5A5758515E9BC9000EE9A62 /* Expense-Tracking.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B5A5758415E9BC9000EE9A62 /* Expense-Tracking.sqlite */; };
+		B5DF7FFE15E9E5B300139932 /* ExpensesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DF7FFC15E9E5B300139932 /* ExpensesViewController.m */; };
+		B5DF7FFF15E9E5B300139932 /* ExpensesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5DF7FFD15E9E5B300139932 /* ExpensesViewController.xib */; };
+		B5DF800315EABADE00139932 /* Expense-Tracking.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B5DF800215EABADE00139932 /* Expense-Tracking.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,7 +79,10 @@
 		B5A5757F15E9B72B00EE9A62 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		B5A5758115E9BAEC00EE9A62 /* Expense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expense.h; sourceTree = "<group>"; };
 		B5A5758215E9BAEC00EE9A62 /* Expense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expense.m; sourceTree = "<group>"; };
-		B5A5758415E9BC9000EE9A62 /* Expense-Tracking.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Expense-Tracking.sqlite"; path = "../../Desktop/Expense-Tracking.sqlite"; sourceTree = "<group>"; };
+		B5DF7FFB15E9E5B300139932 /* ExpensesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpensesViewController.h; sourceTree = "<group>"; };
+		B5DF7FFC15E9E5B300139932 /* ExpensesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpensesViewController.m; sourceTree = "<group>"; };
+		B5DF7FFD15E9E5B300139932 /* ExpensesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpensesViewController.xib; sourceTree = "<group>"; };
+		B5DF800215EABADE00139932 /* Expense-Tracking.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Expense-Tracking.sqlite"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +105,7 @@
 		B512F33D15E8B38600EDD5AF = {
 			isa = PBXGroup;
 			children = (
-				B5A5758415E9BC9000EE9A62 /* Expense-Tracking.sqlite */,
+				B5DF800215EABADE00139932 /* Expense-Tracking.sqlite */,
 				B5A5757F15E9B72B00EE9A62 /* libsqlite3.dylib */,
 				B5A5757C15E9B72300EE9A62 /* libsqlite3.0.dylib */,
 				B519A47115E93EC4005CD2D3 /* QuartzCore.framework */,
@@ -148,6 +153,9 @@
 				B512F38215E8C4FE00EDD5AF /* NewExpenseViewController.xib */,
 				B5A5758115E9BAEC00EE9A62 /* Expense.h */,
 				B5A5758215E9BAEC00EE9A62 /* Expense.m */,
+				B5DF7FFB15E9E5B300139932 /* ExpensesViewController.h */,
+				B5DF7FFC15E9E5B300139932 /* ExpensesViewController.m */,
+				B5DF7FFD15E9E5B300139932 /* ExpensesViewController.xib */,
 			);
 			path = "Expense Tracking";
 			sourceTree = "<group>";
@@ -248,7 +256,8 @@
 				B519A47015E8DC94005CD2D3 /* yellow_btn.png in Resources */,
 				B519A47615E98E11005CD2D3 /* border_seperator.png in Resources */,
 				B58BE2B315E9AE8900CA6EA8 /* add_button.png in Resources */,
-				B5A5758515E9BC9000EE9A62 /* Expense-Tracking.sqlite in Resources */,
+				B5DF7FFF15E9E5B300139932 /* ExpensesViewController.xib in Resources */,
+				B5DF800315EABADE00139932 /* Expense-Tracking.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +274,7 @@
 				B512F37E15E8C44500EDD5AF /* MonthExpenseViewController.m in Sources */,
 				B512F38315E8C4FE00EDD5AF /* NewExpenseViewController.m in Sources */,
 				B5A5758315E9BAEC00EE9A62 /* Expense.m in Sources */,
+				B5DF7FFE15E9E5B300139932 /* ExpensesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

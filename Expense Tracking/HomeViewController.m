@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "MonthExpenseViewController.h"
+#import "ExpensesViewController.h"
 #import "NewExpenseViewController.h"
 
 @interface HomeViewController ()
@@ -27,7 +28,7 @@
         // Add option items to option items array
         // TODO: move this into a model
         self.options = [[NSMutableArray alloc] init];
-        [self.options addObject:@"View this month expenses"];
+        [self.options addObject:@"View all expenses"];
         [self.options addObject:@"Add new expense"];
         [self.options addObject:@"Settings"];
         [self.options addObject:@"About this app"];
@@ -88,7 +89,7 @@
     NSInteger selectedRow = [indexPath row];
     // TODO: is there a better way to do this?
     if (selectedRow == 0) {
-        MonthExpenseViewController *a = [[MonthExpenseViewController alloc] init];
+        ExpensesViewController *a = [[ExpensesViewController alloc] init];
         [self.navigationController pushViewController:a animated:YES];
         return;
     }
