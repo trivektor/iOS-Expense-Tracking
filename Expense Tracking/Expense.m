@@ -16,7 +16,7 @@
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *dbPath = [documentsDirectory stringByAppendingPathComponent:@"Expense-Tracking.sqlite"];
+    NSString *dbPath = [documentsDirectory stringByAppendingPathComponent:@"ExpenseTracking.sqlite"];
 
     if (sqlite3_open(dbPath.UTF8String, &database) == SQLITE_OK) {
         NSLog(@"successfully opened database at the provided database path");
@@ -24,14 +24,14 @@
         if (insertStatement == nil) {
             NSLog(@"inserting new expense");
             
-            const char *sql = "insert into expenses(id, name, amount, tax, tip, category, description) values(NULL, ?, ?, ?, ?, ?, ?)";
+            const char *sql = "INSERT INTO expenses(id, name, amount, tax, tip, category, description, created_at, updated_at) VALUES(NULL, ?, ?, ?, ?, ?, ?, datetime('now'), datetime('now'))";
             
             if (sqlite3_prepare_v2(database, sql, -1, &insertStatement, NULL) != SQLITE_OK) {
                 NSLog(@"Error white creating insert statement");
                 NSAssert1(0, @"Error white creating insert statement. '%s'", sqlite3_errmsg(database));
             }
             NSLog(@"%s", ename.UTF8String);
-            sqlite3_bind_text(insertStatement, 0, ename.UTF8String, -1, SQLITE_TRANSIENT);
+            sqlite3_bind_text(insertStatement, 1, ename.UTF8String, -1, SQLITE_TRANSIENT);
             sqlite3_bind_double(insertStatement, 2, eamount);
             sqlite3_bind_double(insertStatement, 3, etax);
             sqlite3_bind_double(insertStatement, 4, etip);
@@ -56,7 +56,7 @@
     @try {
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
-        NSString *dbPath = [documentsDirectory stringByAppendingPathComponent:@"Expense-Tracking.sqlite"];
+        NSString *dbPath = [documentsDirectory stringByAppendingPathComponent:@"ExpenseTracking.sqlite"];
         
         NSFileManager *fileManager = [NSFileManager defaultManager];
         BOOL success = [fileManager fileExistsAtPath:dbPath];
@@ -71,7 +71,7 @@
             NSLog(@"An error has occured");
         }
         
-        const char *sql = "SELECT * FROM expenses";
+        const char *sql = "SELECT * FROM expenses ORDER BY created_at DESC";
         sqlite3_stmt *selectStatement;
         
         if (sqlite3_prepare(database, sql, -1, &selectStatement, NULL) != SQLITE_OK)

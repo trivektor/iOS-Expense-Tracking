@@ -64,11 +64,11 @@
     NSError *error;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"Expense-Tracking.sqlite"];
+    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"ExpenseTracking.sqlite"];
     success = [fileManager fileExistsAtPath:writableDBPath];
     if (success) return;
     // The writable database does not exist, so copy the default to the appropriate location.
-    NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Expense-Tracking.sqlite"];
+    NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"ExpenseTracking.sqlite"];
 
     // Delete remnant file
     if ([fileManager fileExistsAtPath:writableDBPath]) {
