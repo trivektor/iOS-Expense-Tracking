@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : UITableViewController
+@interface HomeViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
+    UITableView *tableView;
 }
 
+@property (nonatomic, retain) UITableView *tableView;
 @property (nonatomic, retain) NSMutableArray *options;
 @property (nonatomic, retain) NSMutableArray *optionIcons;
 

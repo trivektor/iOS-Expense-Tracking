@@ -19,10 +19,10 @@
 
 @synthesize options;
 @synthesize optionIcons;
+@synthesize tableView;
 
 - (id)init
 {
-    self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         // Custom initialization
         // Add option items to option items array
@@ -59,6 +59,19 @@
     return self;
 }
 
+- (void)loadView
+{
+    UIView *mainView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    self.view = mainView;
+    
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(13, 10, 294, 397) style:UITableViewStyleGrouped];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    self.tableView.backgroundColor = [UIColor clearColor];
+    
+    [self.view addSubview:self.tableView];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -76,6 +89,7 @@
 
 - (void)viewDidUnload
 {
+    self.tableView = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -89,7 +103,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"CustomCell";
-    CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    CustomCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
     if (!cell) {
