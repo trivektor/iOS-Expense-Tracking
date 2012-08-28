@@ -39,6 +39,8 @@
 		B5DF7FFE15E9E5B300139932 /* ExpensesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DF7FFC15E9E5B300139932 /* ExpensesViewController.m */; };
 		B5DF7FFF15E9E5B300139932 /* ExpensesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5DF7FFD15E9E5B300139932 /* ExpensesViewController.xib */; };
 		B5F09CE415EB3F4500257FC5 /* ExpenseTracking.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B5F09CE315EB3F4500257FC5 /* ExpenseTracking.sqlite */; };
+		B5F09CEA15EC8BD400257FC5 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F09CE915EC8BD400257FC5 /* CustomCell.m */; };
+		B5F09CEC15EC8C9000257FC5 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F09CEB15EC8C9000257FC5 /* CustomCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +85,9 @@
 		B5DF7FFC15E9E5B300139932 /* ExpensesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpensesViewController.m; sourceTree = "<group>"; };
 		B5DF7FFD15E9E5B300139932 /* ExpensesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpensesViewController.xib; sourceTree = "<group>"; };
 		B5F09CE315EB3F4500257FC5 /* ExpenseTracking.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ExpenseTracking.sqlite; sourceTree = "<group>"; };
+		B5F09CE815EC8BD400257FC5 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		B5F09CE915EC8BD400257FC5 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		B5F09CEB15EC8C9000257FC5 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +161,9 @@
 				B5DF7FFB15E9E5B300139932 /* ExpensesViewController.h */,
 				B5DF7FFC15E9E5B300139932 /* ExpensesViewController.m */,
 				B5DF7FFD15E9E5B300139932 /* ExpensesViewController.xib */,
+				B5F09CE815EC8BD400257FC5 /* CustomCell.h */,
+				B5F09CE915EC8BD400257FC5 /* CustomCell.m */,
+				B5F09CEB15EC8C9000257FC5 /* CustomCell.xib */,
 			);
 			path = "Expense Tracking";
 			sourceTree = "<group>";
@@ -258,6 +266,7 @@
 				B58BE2B315E9AE8900CA6EA8 /* add_button.png in Resources */,
 				B5DF7FFF15E9E5B300139932 /* ExpensesViewController.xib in Resources */,
 				B5F09CE415EB3F4500257FC5 /* ExpenseTracking.sqlite in Resources */,
+				B5F09CEC15EC8C9000257FC5 /* CustomCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +284,7 @@
 				B512F38315E8C4FE00EDD5AF /* NewExpenseViewController.m in Sources */,
 				B5A5758315E9BAEC00EE9A62 /* Expense.m in Sources */,
 				B5DF7FFE15E9E5B300139932 /* ExpensesViewController.m in Sources */,
+				B5F09CEA15EC8BD400257FC5 /* CustomCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@
 #import "MonthExpenseViewController.h"
 #import "ExpensesViewController.h"
 #import "NewExpenseViewController.h"
+#import "CustomCell.h"
 
 @interface HomeViewController ()
 @end
@@ -87,19 +88,28 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"CustomCell";
+    CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        //cell = [[CustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        NSArray *nibObjects = [[NSBundle mainBundle] loadNibNamed:@"CustomCell" owner:nil options:nil];
+        
+        for (id currentObject in nibObjects) {
+            if ([currentObject isKindOfClass:[CustomCell class]]) {
+                cell = (CustomCell *) currentObject;
+            }
+        }
     }
     cell.textLabel.text = [self.options objectAtIndex:[indexPath row]];
     cell.textLabel.font = [UIFont fontWithName:@"Arial" size:16.0];
     [cell.imageView setImage:[UIImage imageNamed:[self.optionIcons objectAtIndex:[indexPath row]]]];
     cell.selectedBackgroundView.backgroundColor = [UIColor orangeColor];
-    cell.backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 280, 44)];
+    cell.backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 275, 44)];
     cell.backgroundColor = [UIColor clearColor];
+    cell.frame = CGRectOffset(cell.frame, 10, 10);
+
     return cell;
 
 }
