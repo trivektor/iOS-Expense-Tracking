@@ -8,6 +8,7 @@
 
 #import "ExpensesViewController.h"
 #import "Expense.h"
+#import "CustomCell.h"
 
 @interface ExpensesViewController ()
 
@@ -16,10 +17,11 @@
 @implementation ExpensesViewController
 
 @synthesize expenses;
+@synthesize tableView;
 
-- (id)init
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithStyle:UITableViewStyleGrouped];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
         self.expenses = [[[Expense alloc] init] getAll];
@@ -27,18 +29,17 @@
     return self;
 }
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (void)loadView
 {
-    return [self init];
-}
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    UIView *mainView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    self.view = mainView;
+    
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(13, 10, 294, 397) style:UITableViewStyleGrouped];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    self.tableView.backgroundColor = [UIColor clearColor];
+    
+    [self.view addSubview:self.tableView];
 }
 
 - (void)viewDidLoad
@@ -46,17 +47,17 @@
     [super viewDidLoad];
     
     [self.navigationItem setTitle:@"All Expenses"];
+    
     [self.view setBackgroundColor:[UIColor clearColor]];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"envelope_form.png"]];
+    [backgroundImage setFrame:self.tableView.frame];
+    [self.tableView setBackgroundView:backgroundImage];
 }
 
 - (void)viewDidUnload
 {
+    self.tableView = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -83,16 +84,28 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"CustomCell";
+    CustomCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        //cell = [[CustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        NSArray *nibObjects = [[NSBundle mainBundle] loadNibNamed:@"CustomCell" owner:nil options:nil];
+        
+        for (id currentObject in nibObjects) {
+            if ([currentObject isKindOfClass:[CustomCell class]]) {
+                cell = (CustomCell *) currentObject;
+            }
+        }
     }
 
     Expense *e = [self.expenses objectAtIndex:[indexPath row]];
     cell.textLabel.text = e.name;
+    cell.textLabel.font = [UIFont fontWithName:@"Arial" size:16.0];
+    cell.backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 275, 44)];
+    cell.selectedBackgroundView.backgroundColor = [UIColor orangeColor];
+    cell.backgroundColor = [UIColor clearColor];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 

@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ExpensesViewController : UITableViewController
+@interface ExpensesViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+{
+    UITableView *tableView;
+}
 
 @property (nonatomic, strong) NSMutableArray *expenses;
+@property (nonatomic, retain) UITableView *tableView;
 
 @end

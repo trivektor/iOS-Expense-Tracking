@@ -122,7 +122,7 @@
     cell.selectedBackgroundView.backgroundColor = [UIColor orangeColor];
     cell.backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 275, 44)];
     cell.backgroundColor = [UIColor clearColor];
-    cell.selectionStyle = UITableViewCellSelectionStyleGray;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
 //    UIView *bgColorView = [[UIView alloc] init];
 //    [bgColorView setBackgroundColor:[UIColor grayColor]];
