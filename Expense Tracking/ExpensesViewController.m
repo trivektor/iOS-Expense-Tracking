@@ -57,6 +57,7 @@
     UINib *nib = [UINib nibWithNibName:@"ExpenseCell" bundle:nil];
     
     [self.tableView registerNib:nib forCellReuseIdentifier:@"ExpenseCell"];
+    [self.tableView setScrollEnabled:NO];
 }
 
 - (void)viewDidUnload

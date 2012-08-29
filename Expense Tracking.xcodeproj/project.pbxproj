@@ -38,6 +38,8 @@
 		B5A5758315E9BAEC00EE9A62 /* Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A5758215E9BAEC00EE9A62 /* Expense.m */; };
 		B5DF7FFE15E9E5B300139932 /* ExpensesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DF7FFC15E9E5B300139932 /* ExpensesViewController.m */; };
 		B5DF7FFF15E9E5B300139932 /* ExpensesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5DF7FFD15E9E5B300139932 /* ExpensesViewController.xib */; };
+		B5E661AF15EDF56500032BB7 /* icon@2x_et.png in Resources */ = {isa = PBXBuildFile; fileRef = B5E661AE15EDF56500032BB7 /* icon@2x_et.png */; };
+		B5E661B215EDFA1B00032BB7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5E661B115EDFA1B00032BB7 /* Default@2x.png */; };
 		B5F09CE415EB3F4500257FC5 /* ExpenseTracking.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B5F09CE315EB3F4500257FC5 /* ExpenseTracking.sqlite */; };
 		B5F09CEA15EC8BD400257FC5 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F09CE915EC8BD400257FC5 /* CustomCell.m */; };
 		B5F09CEC15EC8C9000257FC5 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F09CEB15EC8C9000257FC5 /* CustomCell.xib */; };
@@ -86,6 +88,8 @@
 		B5DF7FFB15E9E5B300139932 /* ExpensesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpensesViewController.h; sourceTree = "<group>"; };
 		B5DF7FFC15E9E5B300139932 /* ExpensesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpensesViewController.m; sourceTree = "<group>"; };
 		B5DF7FFD15E9E5B300139932 /* ExpensesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpensesViewController.xib; sourceTree = "<group>"; };
+		B5E661AE15EDF56500032BB7 /* icon@2x_et.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x_et.png"; sourceTree = "<group>"; };
+		B5E661B115EDFA1B00032BB7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B5F09CE315EB3F4500257FC5 /* ExpenseTracking.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ExpenseTracking.sqlite; sourceTree = "<group>"; };
 		B5F09CE815EC8BD400257FC5 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		B5F09CE915EC8BD400257FC5 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 		B512F33D15E8B38600EDD5AF = {
 			isa = PBXGroup;
 			children = (
+				B5E661B115EDFA1B00032BB7 /* Default@2x.png */,
+				B5E661AE15EDF56500032BB7 /* icon@2x_et.png */,
 				B5F09CF215EDDE3C00257FC5 /* ExpenseCell.xib */,
 				B5F09CEF15EDDE2B00257FC5 /* ExpenseCell.h */,
 				B5F09CF015EDDE2B00257FC5 /* ExpenseCell.m */,
@@ -276,6 +282,8 @@
 				B5F09CE415EB3F4500257FC5 /* ExpenseTracking.sqlite in Resources */,
 				B5F09CEC15EC8C9000257FC5 /* CustomCell.xib in Resources */,
 				B5F09CF315EDDE3C00257FC5 /* ExpenseCell.xib in Resources */,
+				B5E661AF15EDF56500032BB7 /* icon@2x_et.png in Resources */,
+				B5E661B215EDFA1B00032BB7 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
