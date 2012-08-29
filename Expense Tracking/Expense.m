@@ -10,7 +10,7 @@
 
 @implementation Expense
 
-@synthesize name, amount, tax, tip, description;
+@synthesize name, amount, tax, tip, description, createdAt;
 
 - (Boolean)addExpenseWithName:(NSString *)ename Amount:(float)eamount Tax:(float)etax Tip:(float)etip Description:(NSString *)edescription;
 {
@@ -91,6 +91,7 @@
             expense.tax = sqlite3_column_double(selectStatement, 3);
             expense.tip = sqlite3_column_double(selectStatement, 4);
             //expense.description = [NSString stringWithUTF8String:(char *) sqlite3_column_text(sqlStatement, 5)];
+            expense.createdAt = [NSString stringWithUTF8String:(char *) sqlite3_column_text(selectStatement, 6)];
             [expensesArray addObject:expense];
         }
     }

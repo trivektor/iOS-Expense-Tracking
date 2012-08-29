@@ -8,7 +8,7 @@
 
 #import "ExpensesViewController.h"
 #import "Expense.h"
-#import "CustomCell.h"
+#import "ExpenseCell.h"
 
 @interface ExpensesViewController ()
 
@@ -53,6 +53,10 @@
     UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"envelope_form.png"]];
     [backgroundImage setFrame:self.tableView.frame];
     [self.tableView setBackgroundView:backgroundImage];
+    
+    UINib *nib = [UINib nibWithNibName:@"ExpenseCell" bundle:nil];
+    
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"ExpenseCell"];
 }
 
 - (void)viewDidUnload
@@ -84,53 +88,47 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"CustomCell";
-    CustomCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    // Configure the cell...
-    if (!cell) {
-        //cell = [[CustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        NSArray *nibObjects = [[NSBundle mainBundle] loadNibNamed:@"CustomCell" owner:nil options:nil];
-        
-        for (id currentObject in nibObjects) {
-            if ([currentObject isKindOfClass:[CustomCell class]]) {
-                cell = (CustomCell *) currentObject;
-            }
-        }
-    }
+    ExpenseCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"ExpenseCell"];
 
     Expense *e = [self.expenses objectAtIndex:[indexPath row]];
-    cell.textLabel.text = e.name;
-    cell.textLabel.font = [UIFont fontWithName:@"Arial" size:16.0];
-    cell.backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 275, 44)];
+    NSString *truncatedExpenseName = [e.name substringToIndex:MIN(18, e.name.length)];
+    
+    cell.expenseNameLabel.text = [truncatedExpenseName stringByAppendingString:@"..."];
+    cell.expenseAmountLabel.text = [NSString stringWithFormat:@"$%.02f", e.amount];
+    cell.expenseDateLabel.text = @"05/30/2012";
+    
+    cell.backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 275, 70)];
     cell.selectedBackgroundView.backgroundColor = [UIColor orangeColor];
     cell.backgroundColor = [UIColor clearColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
-/*
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        //[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 63;
+}
 
 /*
 // Override to support rearranging the table view.

@@ -20,6 +20,7 @@
 @property (nonatomic) double tax;
 @property (nonatomic) double tip;
 @property (nonatomic, retain) NSString *description;
+@property (nonatomic, retain) NSString *createdAt;
 
 - (NSMutableArray *) getAll;
 

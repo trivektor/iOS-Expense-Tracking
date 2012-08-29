@@ -41,6 +41,8 @@
 		B5F09CE415EB3F4500257FC5 /* ExpenseTracking.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B5F09CE315EB3F4500257FC5 /* ExpenseTracking.sqlite */; };
 		B5F09CEA15EC8BD400257FC5 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F09CE915EC8BD400257FC5 /* CustomCell.m */; };
 		B5F09CEC15EC8C9000257FC5 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F09CEB15EC8C9000257FC5 /* CustomCell.xib */; };
+		B5F09CF115EDDE2B00257FC5 /* ExpenseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F09CF015EDDE2B00257FC5 /* ExpenseCell.m */; };
+		B5F09CF315EDDE3C00257FC5 /* ExpenseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F09CF215EDDE3C00257FC5 /* ExpenseCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +90,9 @@
 		B5F09CE815EC8BD400257FC5 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		B5F09CE915EC8BD400257FC5 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		B5F09CEB15EC8C9000257FC5 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		B5F09CEF15EDDE2B00257FC5 /* ExpenseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseCell.h; sourceTree = "<group>"; };
+		B5F09CF015EDDE2B00257FC5 /* ExpenseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseCell.m; sourceTree = "<group>"; };
+		B5F09CF215EDDE3C00257FC5 /* ExpenseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpenseCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +115,9 @@
 		B512F33D15E8B38600EDD5AF = {
 			isa = PBXGroup;
 			children = (
+				B5F09CF215EDDE3C00257FC5 /* ExpenseCell.xib */,
+				B5F09CEF15EDDE2B00257FC5 /* ExpenseCell.h */,
+				B5F09CF015EDDE2B00257FC5 /* ExpenseCell.m */,
 				B5F09CE315EB3F4500257FC5 /* ExpenseTracking.sqlite */,
 				B5A5757F15E9B72B00EE9A62 /* libsqlite3.dylib */,
 				B5A5757C15E9B72300EE9A62 /* libsqlite3.0.dylib */,
@@ -267,6 +275,7 @@
 				B5DF7FFF15E9E5B300139932 /* ExpensesViewController.xib in Resources */,
 				B5F09CE415EB3F4500257FC5 /* ExpenseTracking.sqlite in Resources */,
 				B5F09CEC15EC8C9000257FC5 /* CustomCell.xib in Resources */,
+				B5F09CF315EDDE3C00257FC5 /* ExpenseCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +294,7 @@
 				B5A5758315E9BAEC00EE9A62 /* Expense.m in Sources */,
 				B5DF7FFE15E9E5B300139932 /* ExpensesViewController.m in Sources */,
 				B5F09CEA15EC8BD400257FC5 /* CustomCell.m in Sources */,
+				B5F09CF115EDDE2B00257FC5 /* ExpenseCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
