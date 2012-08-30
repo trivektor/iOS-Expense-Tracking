@@ -57,7 +57,6 @@
     UINib *nib = [UINib nibWithNibName:@"ExpenseCell" bundle:nil];
     
     [self.tableView registerNib:nib forCellReuseIdentifier:@"ExpenseCell"];
-    [self.tableView setScrollEnabled:NO];
 }
 
 - (void)viewDidUnload
@@ -95,8 +94,8 @@
     NSString *truncatedExpenseName = [e.name substringToIndex:MIN(18, e.name.length)];
     
     cell.expenseNameLabel.text = [truncatedExpenseName stringByAppendingString:@"..."];
-    cell.expenseAmountLabel.text = [NSString stringWithFormat:@"$%.02f", e.amount];
-    cell.expenseDateLabel.text = @"05/30/2012";
+    cell.expenseAmountLabel.text = [NSString stringWithFormat:@"$%.02f", e.amount];    
+    cell.expenseDateLabel.text = e.createdAt;
     
     cell.backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 275, 70)];
     cell.selectedBackgroundView.backgroundColor = [UIColor orangeColor];
