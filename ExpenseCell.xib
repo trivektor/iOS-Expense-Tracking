@@ -119,7 +119,7 @@
 								<string key="IBUIText">$2.50</string>
 								<object class="NSColor" key="IBUITextColor">
 									<int key="NSColorSpace">1</int>
-									<bytes key="NSRGB">MC42ODQ0MzYwMTI1IDAuNjkyMzAzMDkzMSAwLjY5MjMwMzA5MzEAA</bytes>
+									<bytes key="NSRGB">MC41NDkzMTAyOTE0IDAuNTU1NjI0MjAyOCAwLjU1NTYyNDIwMjgAA</bytes>
 								</object>
 								<reference key="IBUIHighlightedColor" ref="627099867"/>
 								<int key="IBUIBaselineAdjustment">0</int>
@@ -156,6 +156,7 @@
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="1069080234"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
+				<reference key="IBUIBackgroundColor" ref="627099867"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<reference key="IBUIContentView" ref="1069080234"/>
 				<real value="63" key="IBUIRowHeight"/>

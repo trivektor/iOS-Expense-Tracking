@@ -32,9 +32,13 @@
 - (void)loadView
 {
     UIView *mainView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    //mainView.backgroundColor = [UIColor whiteColor];
     self.view = mainView;
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 480) style:UITableViewStylePlain];
+    UIImageView *topBorderView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"envelope_border.png"]];
+    [self.view addSubview:topBorderView];
+    
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 4, 320, 480) style:UITableViewStylePlain];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.tableView.backgroundColor = [UIColor clearColor];
@@ -47,8 +51,6 @@
     [super viewDidLoad];
     
     [self.navigationItem setTitle:@"All Expenses"];
-    
-    [self.view setBackgroundColor:[UIColor clearColor]];
     
 //    UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"envelope_form.png"]];
 //    [backgroundImage setFrame:self.tableView.frame];
@@ -97,8 +99,8 @@
     cell.expenseAmountLabel.text = [NSString stringWithFormat:@"$%.02f", e.amount];    
     cell.expenseDateLabel.text = e.createdAt;
     
-    cell.backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 305, 60)];
-    cell.contentView.backgroundColor = [UIColor whiteColor];
+    cell.backgroundView = [[UIView alloc] initWithFrame:cell.frame];
+    cell.backgroundView.backgroundColor = [UIColor whiteColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }

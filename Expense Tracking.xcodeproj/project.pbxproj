@@ -31,6 +31,8 @@
 		B597FEA015EF27FE00EC0AC9 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9715EF27FE00EC0AC9 /* settings.png */; };
 		B597FEA115EF27FE00EC0AC9 /* spechbubble.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9815EF27FE00EC0AC9 /* spechbubble.png */; };
 		B597FEA215EF27FE00EC0AC9 /* yellow_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9915EF27FE00EC0AC9 /* yellow_btn.png */; };
+		B597FEA515EF485800EC0AC9 /* envelope_border.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FEA415EF485800EC0AC9 /* envelope_border.png */; };
+		B597FEA715EF4A5100EC0AC9 /* wood-wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B597FEA615EF4A5100EC0AC9 /* wood-wallpaper.jpg */; };
 		B5A5757D15E9B72300EE9A62 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A5757C15E9B72300EE9A62 /* libsqlite3.0.dylib */; };
 		B5A5758015E9B72B00EE9A62 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A5757F15E9B72B00EE9A62 /* libsqlite3.dylib */; };
 		B5A5758315E9BAEC00EE9A62 /* Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A5758215E9BAEC00EE9A62 /* Expense.m */; };
@@ -77,6 +79,8 @@
 		B597FE9715EF27FE00EC0AC9 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		B597FE9815EF27FE00EC0AC9 /* spechbubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spechbubble.png; sourceTree = "<group>"; };
 		B597FE9915EF27FE00EC0AC9 /* yellow_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow_btn.png; sourceTree = "<group>"; };
+		B597FEA415EF485800EC0AC9 /* envelope_border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope_border.png; sourceTree = "<group>"; };
+		B597FEA615EF4A5100EC0AC9 /* wood-wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wood-wallpaper.jpg"; sourceTree = "<group>"; };
 		B5A5757C15E9B72300EE9A62 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		B5A5757F15E9B72B00EE9A62 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		B5A5758115E9BAEC00EE9A62 /* Expense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expense.h; sourceTree = "<group>"; };
@@ -192,6 +196,8 @@
 		B512F36815E8B40E00EDD5AF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B597FEA615EF4A5100EC0AC9 /* wood-wallpaper.jpg */,
+				B597FEA415EF485800EC0AC9 /* envelope_border.png */,
 				B597FE9115EF27FE00EC0AC9 /* add_button.png */,
 				B597FE9215EF27FE00EC0AC9 /* border_seperator.png */,
 				B597FE9315EF27FE00EC0AC9 /* calendar.png */,
@@ -276,6 +282,8 @@
 				B597FEA015EF27FE00EC0AC9 /* settings.png in Resources */,
 				B597FEA115EF27FE00EC0AC9 /* spechbubble.png in Resources */,
 				B597FEA215EF27FE00EC0AC9 /* yellow_btn.png in Resources */,
+				B597FEA515EF485800EC0AC9 /* envelope_border.png in Resources */,
+				B597FEA715EF4A5100EC0AC9 /* wood-wallpaper.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
