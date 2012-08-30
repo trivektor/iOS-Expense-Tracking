@@ -15,24 +15,22 @@
 		B512F35D15E8B38600EDD5AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B512F35C15E8B38600EDD5AF /* AppDelegate.m */; };
 		B512F36615E8B39500EDD5AF /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B512F36415E8B39500EDD5AF /* HomeViewController.m */; };
 		B512F36715E8B39500EDD5AF /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B512F36515E8B39500EDD5AF /* HomeViewController.xib */; };
-		B512F36A15E8B43000EDD5AF /* header.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B512F36915E8B43000EDD5AF /* header.jpg */; };
-		B512F36C15E8B63700EDD5AF /* wood-wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B512F36B15E8B63700EDD5AF /* wood-wallpaper.jpg */; };
-		B512F37215E8BD2800EDD5AF /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = B512F36D15E8BD2800EDD5AF /* calendar.png */; };
-		B512F37315E8BD2800EDD5AF /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = B512F36E15E8BD2800EDD5AF /* list.png */; };
-		B512F37415E8BD2800EDD5AF /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = B512F36F15E8BD2800EDD5AF /* plus.png */; };
-		B512F37515E8BD2800EDD5AF /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = B512F37015E8BD2800EDD5AF /* settings.png */; };
-		B512F37615E8BD2800EDD5AF /* spechbubble.png in Resources */ = {isa = PBXBuildFile; fileRef = B512F37115E8BD2800EDD5AF /* spechbubble.png */; };
 		B512F37815E8C38300EDD5AF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B512F37715E8C38300EDD5AF /* Default.png */; };
 		B512F37A15E8C3D100EDD5AF /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B512F37915E8C3D100EDD5AF /* icon.png */; };
 		B512F37E15E8C44500EDD5AF /* MonthExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B512F37C15E8C44500EDD5AF /* MonthExpenseViewController.m */; };
 		B512F37F15E8C44500EDD5AF /* MonthExpenseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B512F37D15E8C44500EDD5AF /* MonthExpenseViewController.xib */; };
 		B512F38315E8C4FE00EDD5AF /* NewExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B512F38115E8C4FE00EDD5AF /* NewExpenseViewController.m */; };
 		B512F38415E8C4FE00EDD5AF /* NewExpenseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B512F38215E8C4FE00EDD5AF /* NewExpenseViewController.xib */; };
-		B519A46B15E8D4A4005CD2D3 /* envelope_form.png in Resources */ = {isa = PBXBuildFile; fileRef = B519A46A15E8D4A4005CD2D3 /* envelope_form.png */; };
-		B519A47015E8DC94005CD2D3 /* yellow_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = B519A46F15E8DC94005CD2D3 /* yellow_btn.png */; };
 		B519A47215E93EC4005CD2D3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B519A47115E93EC4005CD2D3 /* QuartzCore.framework */; };
-		B519A47615E98E11005CD2D3 /* border_seperator.png in Resources */ = {isa = PBXBuildFile; fileRef = B519A47515E98E11005CD2D3 /* border_seperator.png */; };
-		B58BE2B315E9AE8900CA6EA8 /* add_button.png in Resources */ = {isa = PBXBuildFile; fileRef = B58BE2B215E9AE8900CA6EA8 /* add_button.png */; };
+		B597FE9A15EF27FE00EC0AC9 /* add_button.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9115EF27FE00EC0AC9 /* add_button.png */; };
+		B597FE9B15EF27FE00EC0AC9 /* border_seperator.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9215EF27FE00EC0AC9 /* border_seperator.png */; };
+		B597FE9C15EF27FE00EC0AC9 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9315EF27FE00EC0AC9 /* calendar.png */; };
+		B597FE9D15EF27FE00EC0AC9 /* envelope_form.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9415EF27FE00EC0AC9 /* envelope_form.png */; };
+		B597FE9E15EF27FE00EC0AC9 /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9515EF27FE00EC0AC9 /* list.png */; };
+		B597FE9F15EF27FE00EC0AC9 /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9615EF27FE00EC0AC9 /* plus.png */; };
+		B597FEA015EF27FE00EC0AC9 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9715EF27FE00EC0AC9 /* settings.png */; };
+		B597FEA115EF27FE00EC0AC9 /* spechbubble.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9815EF27FE00EC0AC9 /* spechbubble.png */; };
+		B597FEA215EF27FE00EC0AC9 /* yellow_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9915EF27FE00EC0AC9 /* yellow_btn.png */; };
 		B5A5757D15E9B72300EE9A62 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A5757C15E9B72300EE9A62 /* libsqlite3.0.dylib */; };
 		B5A5758015E9B72B00EE9A62 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A5757F15E9B72B00EE9A62 /* libsqlite3.dylib */; };
 		B5A5758315E9BAEC00EE9A62 /* Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A5758215E9BAEC00EE9A62 /* Expense.m */; };
@@ -61,13 +59,6 @@
 		B512F36315E8B39500EDD5AF /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		B512F36415E8B39500EDD5AF /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		B512F36515E8B39500EDD5AF /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		B512F36915E8B43000EDD5AF /* header.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = header.jpg; path = "../../Expense-Tracker/www/images/header.jpg"; sourceTree = "<group>"; };
-		B512F36B15E8B63700EDD5AF /* wood-wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "wood-wallpaper.jpg"; path = "../../Expense-Tracker/www/images/wood-wallpaper.jpg"; sourceTree = "<group>"; };
-		B512F36D15E8BD2800EDD5AF /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calendar.png; path = ../../../Desktop/iphone_dev/calendar.png; sourceTree = "<group>"; };
-		B512F36E15E8BD2800EDD5AF /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = list.png; path = ../../../Desktop/iphone_dev/list.png; sourceTree = "<group>"; };
-		B512F36F15E8BD2800EDD5AF /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plus.png; path = ../../../Desktop/iphone_dev/plus.png; sourceTree = "<group>"; };
-		B512F37015E8BD2800EDD5AF /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings.png; path = ../../../Desktop/iphone_dev/settings.png; sourceTree = "<group>"; };
-		B512F37115E8BD2800EDD5AF /* spechbubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spechbubble.png; path = ../../../Desktop/iphone_dev/spechbubble.png; sourceTree = "<group>"; };
 		B512F37715E8C38300EDD5AF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B512F37915E8C3D100EDD5AF /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		B512F37B15E8C44500EDD5AF /* MonthExpenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthExpenseViewController.h; sourceTree = "<group>"; };
@@ -76,11 +67,16 @@
 		B512F38015E8C4FE00EDD5AF /* NewExpenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewExpenseViewController.h; sourceTree = "<group>"; };
 		B512F38115E8C4FE00EDD5AF /* NewExpenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewExpenseViewController.m; sourceTree = "<group>"; };
 		B512F38215E8C4FE00EDD5AF /* NewExpenseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewExpenseViewController.xib; sourceTree = "<group>"; };
-		B519A46A15E8D4A4005CD2D3 /* envelope_form.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = envelope_form.png; path = ../../../Desktop/iphone_dev/envelope_form.png; sourceTree = "<group>"; };
-		B519A46F15E8DC94005CD2D3 /* yellow_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yellow_btn.png; path = ../../../Desktop/iphone_dev/yellow_btn.png; sourceTree = "<group>"; };
 		B519A47115E93EC4005CD2D3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		B519A47515E98E11005CD2D3 /* border_seperator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = border_seperator.png; path = ../../../Desktop/iphone_dev/border_seperator.png; sourceTree = "<group>"; };
-		B58BE2B215E9AE8900CA6EA8 /* add_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = add_button.png; path = ../../../Desktop/iphone_dev/add_button.png; sourceTree = "<group>"; };
+		B597FE9115EF27FE00EC0AC9 /* add_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_button.png; sourceTree = "<group>"; };
+		B597FE9215EF27FE00EC0AC9 /* border_seperator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border_seperator.png; sourceTree = "<group>"; };
+		B597FE9315EF27FE00EC0AC9 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
+		B597FE9415EF27FE00EC0AC9 /* envelope_form.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope_form.png; sourceTree = "<group>"; };
+		B597FE9515EF27FE00EC0AC9 /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
+		B597FE9615EF27FE00EC0AC9 /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
+		B597FE9715EF27FE00EC0AC9 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		B597FE9815EF27FE00EC0AC9 /* spechbubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spechbubble.png; sourceTree = "<group>"; };
+		B597FE9915EF27FE00EC0AC9 /* yellow_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow_btn.png; sourceTree = "<group>"; };
 		B5A5757C15E9B72300EE9A62 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		B5A5757F15E9B72B00EE9A62 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		B5A5758115E9BAEC00EE9A62 /* Expense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expense.h; sourceTree = "<group>"; };
@@ -196,17 +192,15 @@
 		B512F36815E8B40E00EDD5AF /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				B58BE2B215E9AE8900CA6EA8 /* add_button.png */,
-				B519A47515E98E11005CD2D3 /* border_seperator.png */,
-				B519A46F15E8DC94005CD2D3 /* yellow_btn.png */,
-				B519A46A15E8D4A4005CD2D3 /* envelope_form.png */,
-				B512F36D15E8BD2800EDD5AF /* calendar.png */,
-				B512F36E15E8BD2800EDD5AF /* list.png */,
-				B512F36F15E8BD2800EDD5AF /* plus.png */,
-				B512F37015E8BD2800EDD5AF /* settings.png */,
-				B512F37115E8BD2800EDD5AF /* spechbubble.png */,
-				B512F36B15E8B63700EDD5AF /* wood-wallpaper.jpg */,
-				B512F36915E8B43000EDD5AF /* header.jpg */,
+				B597FE9115EF27FE00EC0AC9 /* add_button.png */,
+				B597FE9215EF27FE00EC0AC9 /* border_seperator.png */,
+				B597FE9315EF27FE00EC0AC9 /* calendar.png */,
+				B597FE9415EF27FE00EC0AC9 /* envelope_form.png */,
+				B597FE9515EF27FE00EC0AC9 /* list.png */,
+				B597FE9615EF27FE00EC0AC9 /* plus.png */,
+				B597FE9715EF27FE00EC0AC9 /* settings.png */,
+				B597FE9815EF27FE00EC0AC9 /* spechbubble.png */,
+				B597FE9915EF27FE00EC0AC9 /* yellow_btn.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -263,27 +257,25 @@
 			files = (
 				B512F35715E8B38600EDD5AF /* InfoPlist.strings in Resources */,
 				B512F36715E8B39500EDD5AF /* HomeViewController.xib in Resources */,
-				B512F36A15E8B43000EDD5AF /* header.jpg in Resources */,
-				B512F36C15E8B63700EDD5AF /* wood-wallpaper.jpg in Resources */,
-				B512F37215E8BD2800EDD5AF /* calendar.png in Resources */,
-				B512F37315E8BD2800EDD5AF /* list.png in Resources */,
-				B512F37415E8BD2800EDD5AF /* plus.png in Resources */,
-				B512F37515E8BD2800EDD5AF /* settings.png in Resources */,
-				B512F37615E8BD2800EDD5AF /* spechbubble.png in Resources */,
 				B512F37815E8C38300EDD5AF /* Default.png in Resources */,
 				B512F37A15E8C3D100EDD5AF /* icon.png in Resources */,
 				B512F37F15E8C44500EDD5AF /* MonthExpenseViewController.xib in Resources */,
 				B512F38415E8C4FE00EDD5AF /* NewExpenseViewController.xib in Resources */,
-				B519A46B15E8D4A4005CD2D3 /* envelope_form.png in Resources */,
-				B519A47015E8DC94005CD2D3 /* yellow_btn.png in Resources */,
-				B519A47615E98E11005CD2D3 /* border_seperator.png in Resources */,
-				B58BE2B315E9AE8900CA6EA8 /* add_button.png in Resources */,
 				B5DF7FFF15E9E5B300139932 /* ExpensesViewController.xib in Resources */,
 				B5F09CE415EB3F4500257FC5 /* ExpenseTracking.sqlite in Resources */,
 				B5F09CEC15EC8C9000257FC5 /* CustomCell.xib in Resources */,
 				B5F09CF315EDDE3C00257FC5 /* ExpenseCell.xib in Resources */,
 				B5E661AF15EDF56500032BB7 /* icon@2x_et.png in Resources */,
 				B5E661B215EDFA1B00032BB7 /* Default@2x.png in Resources */,
+				B597FE9A15EF27FE00EC0AC9 /* add_button.png in Resources */,
+				B597FE9B15EF27FE00EC0AC9 /* border_seperator.png in Resources */,
+				B597FE9C15EF27FE00EC0AC9 /* calendar.png in Resources */,
+				B597FE9D15EF27FE00EC0AC9 /* envelope_form.png in Resources */,
+				B597FE9E15EF27FE00EC0AC9 /* list.png in Resources */,
+				B597FE9F15EF27FE00EC0AC9 /* plus.png in Resources */,
+				B597FEA015EF27FE00EC0AC9 /* settings.png in Resources */,
+				B597FEA115EF27FE00EC0AC9 /* spechbubble.png in Resources */,
+				B597FEA215EF27FE00EC0AC9 /* yellow_btn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
