@@ -34,7 +34,7 @@
     UIView *mainView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
     self.view = mainView;
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(13, 10, 294, 397) style:UITableViewStyleGrouped];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 480) style:UITableViewStylePlain];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.tableView.backgroundColor = [UIColor clearColor];
@@ -50,9 +50,9 @@
     
     [self.view setBackgroundColor:[UIColor clearColor]];
     
-    UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"envelope_form.png"]];
-    [backgroundImage setFrame:self.tableView.frame];
-    [self.tableView setBackgroundView:backgroundImage];
+//    UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"envelope_form.png"]];
+//    [backgroundImage setFrame:self.tableView.frame];
+//    [self.tableView setBackgroundView:backgroundImage];
     
     UINib *nib = [UINib nibWithNibName:@"ExpenseCell" bundle:nil];
     
@@ -97,9 +97,8 @@
     cell.expenseAmountLabel.text = [NSString stringWithFormat:@"$%.02f", e.amount];    
     cell.expenseDateLabel.text = e.createdAt;
     
-    cell.backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 275, 70)];
-    cell.selectedBackgroundView.backgroundColor = [UIColor orangeColor];
-    cell.backgroundColor = [UIColor clearColor];
+    cell.backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 305, 60)];
+    cell.contentView.backgroundColor = [UIColor whiteColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }

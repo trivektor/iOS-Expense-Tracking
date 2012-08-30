@@ -83,7 +83,11 @@
     [backgroundImage setFrame:self.tableView.frame];
     [self.tableView setBackgroundView:backgroundImage];
     [self.tableView setScrollEnabled:NO];
-    //self.tableView.contentInset = UIEdgeInsetsMake(5, 20, 20, 20);
+    
+    UINib *nib = [UINib nibWithNibName:@"CustomCell" bundle:nil];
+    
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"CustomCell"];
+
 
 }
 
@@ -105,19 +109,9 @@
     static NSString *CellIdentifier = @"CustomCell";
     CustomCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    // Configure the cell...
-    if (!cell) {
-        //cell = [[CustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        NSArray *nibObjects = [[NSBundle mainBundle] loadNibNamed:@"CustomCell" owner:nil options:nil];
-        
-        for (id currentObject in nibObjects) {
-            if ([currentObject isKindOfClass:[CustomCell class]]) {
-                cell = (CustomCell *) currentObject;
-            }
-        }
-    }
     cell.textLabel.text = [self.options objectAtIndex:[indexPath row]];
-    cell.textLabel.font = [UIFont fontWithName:@"Arial" size:16.0];
+    cell.textLabel.font = [UIFont fontWithName:@"Arial" size:14.0];
+    cell.textLabel.textColor = [UIColor colorWithHue:0.0/255.0 saturation:0.0/255.0 brightness:76.0/255.0 alpha:1.0];
     [cell.imageView setImage:[UIImage imageNamed:[self.optionIcons objectAtIndex:[indexPath row]]]];
     cell.selectedBackgroundView.backgroundColor = [UIColor orangeColor];
     cell.backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 275, 44)];
