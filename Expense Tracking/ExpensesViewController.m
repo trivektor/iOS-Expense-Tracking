@@ -7,6 +7,7 @@
 //
 
 #import "ExpensesViewController.h"
+#import "NewExpenseViewController.h"
 #import "Expense.h"
 #import "ExpenseCell.h"
 
@@ -59,6 +60,13 @@
     UINib *nib = [UINib nibWithNibName:@"ExpenseCell" bundle:nil];
     
     [self.tableView registerNib:nib forCellReuseIdentifier:@"ExpenseCell"];
+    
+//    UIBarButtonItem *plusSignButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"white_plus_sign.png"] style:UIBarButtonSystemItemAdd target:nil action:nil];
+//    
+    UIBarButtonItem *plusSignBtn = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonSystemItemAdd target:self action:@selector(addNewExpense)];
+    [plusSignBtn setTintColor:[UIColor blackColor]];
+    [plusSignBtn setImage:[UIImage imageNamed:@"white_plus_sign.png"]];
+    [self.navigationItem setRightBarButtonItem:plusSignBtn];
 }
 
 - (void)viewDidUnload
@@ -93,9 +101,13 @@
     ExpenseCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"ExpenseCell"];
 
     Expense *e = [self.expenses objectAtIndex:[indexPath row]];
-    NSString *truncatedExpenseName = [e.name substringToIndex:MIN(18, e.name.length)];
     
-    cell.expenseNameLabel.text = [truncatedExpenseName stringByAppendingString:@"..."];
+    if (e.name.length >= 18) {
+        NSString *truncatedExpenseName = [e.name substringToIndex:MIN(18, e.name.length)];
+        cell.expenseNameLabel.text = [truncatedExpenseName stringByAppendingString:@"..."];
+    } else {
+        cell.expenseNameLabel.text = e.name;
+    }
     cell.expenseAmountLabel.text = [NSString stringWithFormat:@"$%.02f", e.amount];    
     cell.expenseDateLabel.text = e.createdAt;
     
@@ -160,6 +172,15 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+- (void)addNewExpense
+{
+    NewExpenseViewController *n = [[NewExpenseViewController alloc] init];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    [backButton setTintColor:[UIColor blackColor]];
+    [self.navigationItem setBackBarButtonItem:backButton];
+    [self.navigationController pushViewController:n animated:YES];
 }
 
 @end
