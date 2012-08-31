@@ -16,15 +16,15 @@
 
 @implementation ExpensesViewController
 
-@synthesize expenses;
-@synthesize tableView;
+@synthesize expenseDAO, expenses, tableView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.expenses = [[[Expense alloc] init] getAll];
+        self.expenseDAO = [[Expense alloc] init];
+        self.expenses = [self.expenseDAO getAll];
     }
     return self;
 }
@@ -32,7 +32,7 @@
 - (void)loadView
 {
     UIView *mainView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
-    //mainView.backgroundColor = [UIColor whiteColor];
+    mainView.backgroundColor = [UIColor whiteColor];
     self.view = mainView;
     
     UIImageView *topBorderView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"envelope_border.png"]];
@@ -118,8 +118,10 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        //[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        Expense *deletedExpense = [self.expenses objectAtIndex:[indexPath row]];
+        [self.expenses removeObjectIdenticalTo:deletedExpense];
+        [self.expenseDAO deleteExpenseByID:deletedExpense.expenseId];
+        [self.tableView reloadData];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view

@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Expense.h"
 
 @interface ExpensesViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
     UITableView *tableView;
 }
 
+@property (nonatomic, strong) Expense *expenseDAO;
 @property (nonatomic, strong) NSMutableArray *expenses;
 @property (nonatomic, retain) UITableView *tableView;
 

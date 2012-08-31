@@ -12,9 +12,9 @@
 @interface Expense : NSObject
 {
     sqlite3 *database;
-    sqlite3_stmt *insertStatement;
 }
 
+@property (nonatomic) int expenseId;
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic) double amount;
 @property (nonatomic) double tax;
@@ -24,6 +24,8 @@
 
 - (NSMutableArray *) getAll;
 
-- (Boolean)addExpenseWithName:(NSString *)name Amount:(float)amount Tax:(float)tax Tip:(float)tip Description:(NSString *)description;
+- (Boolean) addExpenseWithName:(NSString *)name Amount:(float)amount Tax:(float)tax Tip:(float)tip Description:(NSString *)description;
+
+- (void) deleteExpenseByID:(int)expenseID;
 
 @end

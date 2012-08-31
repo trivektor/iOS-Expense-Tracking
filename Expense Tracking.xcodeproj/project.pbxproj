@@ -94,9 +94,9 @@
 		B5F09CE815EC8BD400257FC5 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		B5F09CE915EC8BD400257FC5 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		B5F09CEB15EC8C9000257FC5 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
-		B5F09CEF15EDDE2B00257FC5 /* ExpenseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseCell.h; sourceTree = "<group>"; };
-		B5F09CF015EDDE2B00257FC5 /* ExpenseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseCell.m; sourceTree = "<group>"; };
-		B5F09CF215EDDE3C00257FC5 /* ExpenseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpenseCell.xib; sourceTree = "<group>"; };
+		B5F09CEF15EDDE2B00257FC5 /* ExpenseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpenseCell.h; path = ../ExpenseCell.h; sourceTree = "<group>"; };
+		B5F09CF015EDDE2B00257FC5 /* ExpenseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpenseCell.m; path = ../ExpenseCell.m; sourceTree = "<group>"; };
+		B5F09CF215EDDE3C00257FC5 /* ExpenseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ExpenseCell.xib; path = ../ExpenseCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,13 +121,9 @@
 			children = (
 				B5E661B115EDFA1B00032BB7 /* Default@2x.png */,
 				B5E661AE15EDF56500032BB7 /* icon@2x_et.png */,
-				B5F09CF215EDDE3C00257FC5 /* ExpenseCell.xib */,
-				B5F09CEF15EDDE2B00257FC5 /* ExpenseCell.h */,
-				B5F09CF015EDDE2B00257FC5 /* ExpenseCell.m */,
 				B5F09CE315EB3F4500257FC5 /* ExpenseTracking.sqlite */,
 				B5A5757F15E9B72B00EE9A62 /* libsqlite3.dylib */,
 				B5A5757C15E9B72300EE9A62 /* libsqlite3.0.dylib */,
-				B519A47115E93EC4005CD2D3 /* QuartzCore.framework */,
 				B512F37915E8C3D100EDD5AF /* icon.png */,
 				B512F37715E8C38300EDD5AF /* Default.png */,
 				B512F35215E8B38600EDD5AF /* Expense Tracking */,
@@ -147,6 +143,7 @@
 		B512F34B15E8B38600EDD5AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B519A47115E93EC4005CD2D3 /* QuartzCore.framework */,
 				B512F34C15E8B38600EDD5AF /* UIKit.framework */,
 				B512F34E15E8B38600EDD5AF /* Foundation.framework */,
 				B512F35015E8B38600EDD5AF /* CoreGraphics.framework */,
@@ -162,6 +159,9 @@
 				B512F35C15E8B38600EDD5AF /* AppDelegate.m */,
 				B512F35315E8B38600EDD5AF /* Supporting Files */,
 				B512F36315E8B39500EDD5AF /* HomeViewController.h */,
+				B5F09CF215EDDE3C00257FC5 /* ExpenseCell.xib */,
+				B5F09CEF15EDDE2B00257FC5 /* ExpenseCell.h */,
+				B5F09CF015EDDE2B00257FC5 /* ExpenseCell.m */,
 				B512F36415E8B39500EDD5AF /* HomeViewController.m */,
 				B512F36515E8B39500EDD5AF /* HomeViewController.xib */,
 				B512F37B15E8C44500EDD5AF /* MonthExpenseViewController.h */,
