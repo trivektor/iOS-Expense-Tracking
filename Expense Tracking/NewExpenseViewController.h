@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
-@interface NewExpenseViewController : UIViewController <UITextFieldDelegate>
+@interface NewExpenseViewController : UIViewController <UITextFieldDelegate, UIScrollViewDelegate>
 {
+    __weak IBOutlet UIImageView *formBackground;
+    __weak IBOutlet UIScrollView *scrollView;
     __weak IBOutlet UITextField *nameTextField;
     __weak IBOutlet UITextField *amountTextField;
     __weak IBOutlet UITextField *taxTextField;

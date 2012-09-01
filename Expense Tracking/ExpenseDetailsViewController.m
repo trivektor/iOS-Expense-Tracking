@@ -80,6 +80,11 @@
         [cell.expenseDetail setText:self.expenseItem.createdAt];
     }
     
+    // Make the expense detail label stretched enough to fit its text without resizing
+    // http://stackoverflow.com/questions/793015/how-to-fit-a-text-in-uilabel-when-the-size-is-not-proportionally
+    CGRect bounds = cell.expenseDetail.bounds;
+    bounds.size = [cell.expenseDetail.text sizeWithFont:cell.expenseDetail.font];
+    cell.expenseDetail.bounds = bounds;
     
     return cell;
 }

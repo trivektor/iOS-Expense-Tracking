@@ -39,6 +39,8 @@
     [self.navigationItem setTitle:@"Add Expense"];
     
     [addExpenseButton setTitleColor:[UIColor colorWithRed:141/255.0 green:67/255.0 blue:2/255.0 alpha:1] forState:UIControlStateNormal];
+    
+    scrollView.contentSize = CGSizeMake(320, 550);
 //    
 //    [addButton.layer setCornerRadius:8.0f];
 //    [addButton.layer setMasksToBounds:YES];
@@ -70,6 +72,8 @@
     tipTextField = nil;
     descriptionTextField = nil;
     addExpenseButton = nil;
+    scrollView = nil;
+    formBackground = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
