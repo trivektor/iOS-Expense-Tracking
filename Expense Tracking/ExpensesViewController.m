@@ -8,6 +8,7 @@
 
 #import "ExpensesViewController.h"
 #import "NewExpenseViewController.h"
+#import "ExpenseDetailsViewController.h"
 #import "Expense.h"
 #import "ExpenseCell.h"
 
@@ -165,22 +166,24 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    ExpenseDetailsViewController *d = [[ExpenseDetailsViewController alloc] init];
+    [d setExpenseItem:[self.expenses objectAtIndex:[indexPath row]]];
+    [self addBackButton];
+    [self.navigationController pushViewController:d animated:YES];
 }
 
 - (void)addNewExpense
 {
     NewExpenseViewController *n = [[NewExpenseViewController alloc] init];
+    [self addBackButton];
+    [self.navigationController pushViewController:n animated:YES];
+}
+
+- (void)addBackButton
+{
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil];
     [backButton setTintColor:[UIColor blackColor]];
     [self.navigationItem setBackBarButtonItem:backButton];
-    [self.navigationController pushViewController:n animated:YES];
 }
 
 @end
