@@ -24,7 +24,7 @@
 
 - (NSMutableArray *) getAll;
 
-- (Boolean) addExpenseWithName:(NSString *)name Amount:(float)amount Tax:(float)tax Tip:(float)tip Description:(NSString *)description;
+- (Boolean) addExpenseWithName:(NSString *)name Amount:(float)amount Tax:(float)tax Tip:(float)tip Category:(NSString *)category Description:(NSString *)description;
 
 - (void) deleteExpenseByID:(int)expenseID;
 

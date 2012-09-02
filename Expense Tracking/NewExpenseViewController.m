@@ -8,6 +8,7 @@
 
 #import "NewExpenseViewController.h"
 #import "Expense.h"
+#import "ExpenseCategory.h"
 
 @interface NewExpenseViewController ()
 
@@ -15,11 +16,15 @@
 
 @implementation NewExpenseViewController
 
+@synthesize expenseCategories, selectedCategory;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.expenseCategories = [ExpenseCategory getAll];
+        self.selectedCategory = @"";
     }
     return self;
 }
@@ -41,6 +46,10 @@
     [addExpenseButton setTitleColor:[UIColor colorWithRed:141/255.0 green:67/255.0 blue:2/255.0 alpha:1] forState:UIControlStateNormal];
     
     scrollView.contentSize = CGSizeMake(320, 550);
+    
+    [categoryPicker setDelegate:self];
+    [categoryPicker setDataSource:self];
+    [categoryPicker setHidden:YES];
 //    
 //    [addButton.layer setCornerRadius:8.0f];
 //    [addButton.layer setMasksToBounds:YES];
@@ -74,6 +83,8 @@
     addExpenseButton = nil;
     scrollView = nil;
     formBackground = nil;
+    categoryPicker = nil;
+    categoryButton = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -98,6 +109,27 @@
     return YES;
 }
 
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return [self.expenseCategories count];
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    return [self.expenseCategories objectAtIndex:row];
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    self.selectedCategory = [self.expenseCategories objectAtIndex:[categoryPicker selectedRowInComponent:0]];
+    [categoryButton setTitle:self.selectedCategory forState:UIControlStateNormal];
+}
+
 - (IBAction)addExpenseButtonTapped:(id)sender
 {
     UIAlertView *dialog;
@@ -116,6 +148,7 @@
                                      Amount:[amountTextField text].doubleValue 
                                         Tax:[taxTextField text].doubleValue
                                         Tip:[tipTextField text].doubleValue
+                                   Category:self.selectedCategory
                                 Description:[descriptionTextField text]];
         
         dialog = [[UIAlertView alloc] initWithTitle:@"Alert" 
@@ -132,6 +165,11 @@
         
         [dialog show];
     }
+}
+
+- (IBAction)categoryLabelTapped:(id)sender
+{
+    [categoryPicker setHidden:![categoryPicker isHidden]];
 }
 
 @end

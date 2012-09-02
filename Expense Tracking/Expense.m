@@ -12,7 +12,7 @@
 
 @synthesize expenseId, name, amount, tax, tip, description, createdAt;
 
-- (Boolean)addExpenseWithName:(NSString *)ename Amount:(float)eamount Tax:(float)etax Tip:(float)etip Description:(NSString *)edescription;
+- (Boolean)addExpenseWithName:(NSString *)ename Amount:(float)eamount Tax:(float)etax Tip:(float)etip Category:(NSString *)ecategory Description:(NSString *)edescription;
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -32,6 +32,7 @@
         sqlite3_bind_double(insertStatement, 2, eamount);
         sqlite3_bind_double(insertStatement, 3, etax);
         sqlite3_bind_double(insertStatement, 4, etip);
+        sqlite3_bind_text(insertStatement, 5, ecategory.UTF8String, -1, SQLITE_TRANSIENT);
         sqlite3_bind_text(insertStatement, 6, edescription.UTF8String, -1, SQLITE_TRANSIENT);
         
         if (sqlite3_step(insertStatement) == SQLITE_DONE) {

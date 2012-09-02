@@ -38,6 +38,7 @@
 		B597FEAE15F1E29000EC0AC9 /* ExpenseDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B597FEAC15F1E29000EC0AC9 /* ExpenseDetailsViewController.xib */; };
 		B597FEB715F1F29000EC0AC9 /* ExpenseDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B597FEB615F1F29000EC0AC9 /* ExpenseDetailCell.m */; };
 		B597FEB915F1F2B300EC0AC9 /* ExpenseDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B597FEB815F1F2B300EC0AC9 /* ExpenseDetailCell.xib */; };
+		B597FEC115F2CFAA00EC0AC9 /* ExpenseCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B597FEC015F2CFAA00EC0AC9 /* ExpenseCategory.m */; };
 		B5A5757D15E9B72300EE9A62 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A5757C15E9B72300EE9A62 /* libsqlite3.0.dylib */; };
 		B5A5758015E9B72B00EE9A62 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A5757F15E9B72B00EE9A62 /* libsqlite3.dylib */; };
 		B5A5758315E9BAEC00EE9A62 /* Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A5758215E9BAEC00EE9A62 /* Expense.m */; };
@@ -93,6 +94,8 @@
 		B597FEB515F1F29000EC0AC9 /* ExpenseDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseDetailCell.h; sourceTree = "<group>"; };
 		B597FEB615F1F29000EC0AC9 /* ExpenseDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseDetailCell.m; sourceTree = "<group>"; };
 		B597FEB815F1F2B300EC0AC9 /* ExpenseDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpenseDetailCell.xib; sourceTree = "<group>"; };
+		B597FEBF15F2CFAA00EC0AC9 /* ExpenseCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseCategory.h; sourceTree = "<group>"; };
+		B597FEC015F2CFAA00EC0AC9 /* ExpenseCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseCategory.m; sourceTree = "<group>"; };
 		B5A5757C15E9B72300EE9A62 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		B5A5757F15E9B72B00EE9A62 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		B5A5758115E9BAEC00EE9A62 /* Expense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expense.h; sourceTree = "<group>"; };
@@ -166,6 +169,7 @@
 		B512F35215E8B38600EDD5AF /* Expense Tracking */ = {
 			isa = PBXGroup;
 			children = (
+				B597FEBE15F2CF8A00EC0AC9 /* Models */,
 				B512F36815E8B40E00EDD5AF /* Images */,
 				B512F35B15E8B38600EDD5AF /* AppDelegate.h */,
 				B512F35C15E8B38600EDD5AF /* AppDelegate.m */,
@@ -185,8 +189,6 @@
 				B512F38015E8C4FE00EDD5AF /* NewExpenseViewController.h */,
 				B512F38115E8C4FE00EDD5AF /* NewExpenseViewController.m */,
 				B512F38215E8C4FE00EDD5AF /* NewExpenseViewController.xib */,
-				B5A5758115E9BAEC00EE9A62 /* Expense.h */,
-				B5A5758215E9BAEC00EE9A62 /* Expense.m */,
 				B5DF7FFB15E9E5B300139932 /* ExpensesViewController.h */,
 				B5DF7FFC15E9E5B300139932 /* ExpensesViewController.m */,
 				B5DF7FFD15E9E5B300139932 /* ExpensesViewController.xib */,
@@ -228,6 +230,17 @@
 				B597FE9915EF27FE00EC0AC9 /* yellow_btn.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		B597FEBE15F2CF8A00EC0AC9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B5A5758115E9BAEC00EE9A62 /* Expense.h */,
+				B5A5758215E9BAEC00EE9A62 /* Expense.m */,
+				B597FEBF15F2CFAA00EC0AC9 /* ExpenseCategory.h */,
+				B597FEC015F2CFAA00EC0AC9 /* ExpenseCategory.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +340,7 @@
 				B5F09CF115EDDE2B00257FC5 /* ExpenseCell.m in Sources */,
 				B597FEAD15F1E29000EC0AC9 /* ExpenseDetailsViewController.m in Sources */,
 				B597FEB715F1F29000EC0AC9 /* ExpenseDetailCell.m in Sources */,
+				B597FEC115F2CFAA00EC0AC9 /* ExpenseCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
