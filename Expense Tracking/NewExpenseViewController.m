@@ -41,36 +41,26 @@
     descriptionTextField.delegate = self;
 
     [self.view setBackgroundColor:[UIColor clearColor]];
+    
+    // Set title of navigation bar
     [self.navigationItem setTitle:@"Add Expense"];
     
+    // Set the text color of 'Add Expense' button
     [addExpenseButton setTitleColor:[UIColor colorWithRed:141/255.0 green:67/255.0 blue:2/255.0 alpha:1] forState:UIControlStateNormal];
     
-    scrollView.contentSize = CGSizeMake(320, 550);
+    // Create the expense form reset button
+    UIBarButtonItem *clearFormButton = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonSystemItemTrash target:self action:@selector(clearExpenseForm)];
+    [clearFormButton setTintColor:[UIColor blackColor]];
+    [clearFormButton setImage:[UIImage imageNamed:@"trash_icon.png"]];
+    [self.navigationItem setRightBarButtonItem:clearFormButton];
     
+    // Make the whole form scrollable
+    scrollView.contentSize = CGSizeMake(320, 540);
+    
+    // Set delegate, datasource and hide category picker
     [categoryPicker setDelegate:self];
     [categoryPicker setDataSource:self];
     [categoryPicker setHidden:YES];
-//    
-//    [addButton.layer setCornerRadius:8.0f];
-//    [addButton.layer setMasksToBounds:YES];
-//    [addButton.layer setBorderWidth:1.0f];
-//    [addButton.layer setBackgroundColor:[UIColor orangeColor].CGColor];
-//    [addButton setBackgroundColor:[UIColor orangeColor]];
-//    [addButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    
-//    [addButton.layer setBackgroundColor:[UIColor orangeColor].CGColor];
-//    [addButton setTintColor:[UIColor orangeColor]];
-//    [addButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
-//    gradientLayer.frame = addButton.layer.bounds;
-//    gradientLayer.colors = [NSArray arrayWithObjects:
-//                            [UIColor colorWithHue:0x45/255.0 saturation:0x63/255.0 brightness:0x99/255.0 alpha:1.0].CGColor,
-//                            [UIColor colorWithHue:0x39/255.0 saturation:0x84/255.0 brightness:0x96/255.0 alpha:1.0].CGColor,
-//                            nil];
-//    gradientLayer.cornerRadius = addButton.layer.cornerRadius;
-//    [addButton.layer addSublayer:gradientLayer];
-//    [addButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//    //[addButton.layer setBorderColor:[UIColor ].CGColor];
 }
 
 - (void)viewDidUnload
@@ -128,6 +118,16 @@
 {
     self.selectedCategory = [self.expenseCategories objectAtIndex:[categoryPicker selectedRowInComponent:0]];
     [categoryButton setTitle:self.selectedCategory forState:UIControlStateNormal];
+}
+
+- (void)clearExpenseForm
+{
+    [nameTextField setText:@""];
+    [amountTextField setText:@""];
+    [taxTextField setText:@""];
+    [tipTextField setText:@""];
+    [categoryButton setTitle:@"Category" forState:UIControlStateNormal];
+    [descriptionTextField setText:@""];
 }
 
 - (IBAction)addExpenseButtonTapped:(id)sender

@@ -26,8 +26,8 @@
 @property (nonatomic, retain) NSArray *expenseCategories;
 @property (nonatomic, retain) NSString *selectedCategory;
 
+- (void)clearExpenseForm;
 - (IBAction)addExpenseButtonTapped:(id)sender;
-
 - (IBAction)categoryLabelTapped:(id)sender;
 
 @end
