@@ -69,13 +69,6 @@
         [cell.expenseDetail setNumberOfLines:0];
         [cell.expenseDetail setText:self.expenseItem.name];
         [cell.expenseDetail sizeToFit];
-        CGSize labelSize = [self.expenseItem.name 
-                            sizeWithFont:cell.expenseDetail.font 
-                            constrainedToSize:cell.expenseDetail.frame.size 
-                            lineBreakMode:cell.expenseDetail.lineBreakMode];
-        
-        [cell.expenseDetail setFrame:CGRectMake(cell.expenseDetail.frame.origin.x, cell.expenseDetail.frame.origin.y, cell.expenseDetail.frame.size.width, labelSize.height)];
-        
     } else if (row == 1) {
         [cell.expenseDetail setText:[NSString stringWithFormat:@"%.02f", self.expenseItem.amount]];
     } else if (row == 2) {
