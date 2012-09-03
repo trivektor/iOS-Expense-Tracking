@@ -26,6 +26,8 @@
 		B567118F15F4553D005DAF03 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B567118D15F4553D005DAF03 /* FeedbackViewController.m */; };
 		B567119015F4553D005DAF03 /* FeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B567118E15F4553D005DAF03 /* FeedbackViewController.xib */; };
 		B567119315F45AC7005DAF03 /* refresh_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B567119215F45AC7005DAF03 /* refresh_icon.png */; };
+		B567119615F46EB2005DAF03 /* SpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B567119515F46EB1005DAF03 /* SpinnerView.m */; };
+		B567119815F47B80005DAF03 /* spinner_background.png in Resources */ = {isa = PBXBuildFile; fileRef = B567119715F47B80005DAF03 /* spinner_background.png */; };
 		B597FE9A15EF27FE00EC0AC9 /* add_button.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9115EF27FE00EC0AC9 /* add_button.png */; };
 		B597FE9B15EF27FE00EC0AC9 /* border_seperator.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9215EF27FE00EC0AC9 /* border_seperator.png */; };
 		B597FE9C15EF27FE00EC0AC9 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9315EF27FE00EC0AC9 /* calendar.png */; };
@@ -85,6 +87,9 @@
 		B567118D15F4553D005DAF03 /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
 		B567118E15F4553D005DAF03 /* FeedbackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedbackViewController.xib; sourceTree = "<group>"; };
 		B567119215F45AC7005DAF03 /* refresh_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh_icon.png; sourceTree = "<group>"; };
+		B567119415F46EB1005DAF03 /* SpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpinnerView.h; sourceTree = "<group>"; };
+		B567119515F46EB1005DAF03 /* SpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpinnerView.m; sourceTree = "<group>"; };
+		B567119715F47B80005DAF03 /* spinner_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spinner_background.png; sourceTree = "<group>"; };
 		B597FE9115EF27FE00EC0AC9 /* add_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_button.png; sourceTree = "<group>"; };
 		B597FE9215EF27FE00EC0AC9 /* border_seperator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border_seperator.png; sourceTree = "<group>"; };
 		B597FE9315EF27FE00EC0AC9 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
@@ -196,6 +201,8 @@
 				B597FEB515F1F29000EC0AC9 /* ExpenseDetailCell.h */,
 				B597FEB615F1F29000EC0AC9 /* ExpenseDetailCell.m */,
 				B597FEB815F1F2B300EC0AC9 /* ExpenseDetailCell.xib */,
+				B567119415F46EB1005DAF03 /* SpinnerView.h */,
+				B567119515F46EB1005DAF03 /* SpinnerView.m */,
 			);
 			path = "Expense Tracking";
 			sourceTree = "<group>";
@@ -214,6 +221,7 @@
 		B512F36815E8B40E00EDD5AF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B567119715F47B80005DAF03 /* spinner_background.png */,
 				B567119215F45AC7005DAF03 /* refresh_icon.png */,
 				B567118A15F323B5005DAF03 /* trash_icon.png */,
 				B597FEA815F08CF200EC0AC9 /* white_plus_sign.png */,
@@ -344,6 +352,7 @@
 				B567118B15F323B5005DAF03 /* trash_icon.png in Resources */,
 				B567119015F4553D005DAF03 /* FeedbackViewController.xib in Resources */,
 				B567119315F45AC7005DAF03 /* refresh_icon.png in Resources */,
+				B567119815F47B80005DAF03 /* spinner_background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +376,7 @@
 				B597FEB715F1F29000EC0AC9 /* ExpenseDetailCell.m in Sources */,
 				B597FEC115F2CFAA00EC0AC9 /* ExpenseCategory.m in Sources */,
 				B567118F15F4553D005DAF03 /* FeedbackViewController.m in Sources */,
+				B567119615F46EB2005DAF03 /* SpinnerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

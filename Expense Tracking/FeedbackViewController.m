@@ -7,6 +7,7 @@
 //
 
 #import "FeedbackViewController.h"
+#import "SpinnerView.h"
 
 @interface FeedbackViewController ()
 
@@ -17,6 +18,7 @@
 @synthesize emailTextField;
 @synthesize feedbackTextView;
 @synthesize sendFeedbackButton;
+@synthesize spinnerView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -64,6 +66,8 @@
 
 - (IBAction)sendFeedbackButtonTapped:(id)sender
 {
+    self.spinnerView = [SpinnerView loadSpinnerIntoView:self.view];
+    
     NSMutableURLRequest *request = [NSMutableURLRequest 
 									requestWithURL:[NSURL URLWithString:@"http://expense-tracking.herokuapp.com/feedback"]];
     NSString *requestParams = @"name=";
@@ -81,7 +85,9 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    NSLog(@"feedback posted");
+    [self.spinnerView removeFromSuperview];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Your feedback has been sent" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 }
 
 - (void)clearFeedbackForm

@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextView *feedbackTextView;
 @property (weak, nonatomic) IBOutlet UIButton *sendFeedbackButton;
+@property (strong, nonatomic) UIView *spinnerView;
 
 - (IBAction)sendFeedbackButtonTapped:(id)sender;
 - (void)clearFeedbackForm;
