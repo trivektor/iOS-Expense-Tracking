@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FeedbackViewController : UIViewController <NSURLConnectionDelegate, UITextFieldDelegate>
+@interface FeedbackViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *sendFeedbackButton;
 @property (strong, nonatomic) UIView *spinnerView;
 
-- (IBAction)sendFeedbackButtonTapped:(id)sender;
+- (void)sendFeedbackButtonTapped:(id)sender;
 - (void)clearFeedbackForm;
 
 @end

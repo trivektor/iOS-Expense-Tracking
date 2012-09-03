@@ -8,6 +8,8 @@
 
 #import "FeedbackViewController.h"
 #import "SpinnerView.h"
+#import "AFJSONRequestOperation.h"
+#import "AFHTTPClient.h"
 
 @interface FeedbackViewController ()
 
@@ -64,30 +66,42 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (IBAction)sendFeedbackButtonTapped:(id)sender
+- (void)sendFeedbackButtonTapped:(id)sender
 {
     self.spinnerView = [SpinnerView loadSpinnerIntoView:self.view];
     
-    NSMutableURLRequest *request = [NSMutableURLRequest 
-									requestWithURL:[NSURL URLWithString:@"http://expense-tracking.herokuapp.com/feedback"]];
-    NSString *requestParams = @"name=";
-    requestParams = [requestParams stringByAppendingString:nameTextField.text];
-    requestParams = [requestParams stringByAppendingString:@"&email="];
-    requestParams = [requestParams stringByAppendingString:emailTextField.text];
-    requestParams = [requestParams stringByAppendingString:@"feedback="];
-    requestParams = [requestParams stringByAppendingString:feedbackTextView.text];
+    NSURL *baseURL = [NSURL URLWithString:@"http://expense-tracking.herokuapp.com"];
     
-    NSString *params = [[NSString alloc] initWithFormat:requestParams];
-    [request setHTTPMethod:@"POST"];
-    [request setHTTPBody:[params dataUsingEncoding:NSUTF8StringEncoding]];
-    [[NSURLConnection alloc] initWithRequest:request delegate:self];
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection
-{
-    [self.spinnerView removeFromSuperview];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Your feedback has been sent" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    [alert show];
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
+    [httpClient defaultValueForHeader:@"Accept"];
+    
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+                            [nameTextField text], @"name",
+                            [emailTextField text], @"email",
+                            [feedbackTextView text], @"feedback",
+                            nil];
+    
+    NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST" 
+                                                            path:@"http://expense-tracking.herokuapp.com/feedback" 
+                                                      parameters:params];
+    
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    
+    [httpClient registerHTTPOperationClass:[AFHTTPRequestOperation class]];
+    
+    [operation setCompletionBlockWithSuccess:
+        ^(AFHTTPRequestOperation *operation, id responseObject) {
+            NSString *response = [operation responseString];
+            NSLog(@"response: [%@]",response);
+            [self.spinnerView removeFromSuperview];
+        }
+     failure:
+        ^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"error: %@", [operation error]);
+        }
+     ];
+    
+    [operation start];
 }
 
 - (void)clearFeedbackForm
