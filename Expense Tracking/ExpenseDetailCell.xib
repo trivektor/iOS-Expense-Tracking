@@ -42,7 +42,7 @@
 							<object class="IBUILabel" id="502588151">
 								<reference key="NSNextResponder" ref="890239025"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{8, 14}, {91, 21}}</string>
+								<string key="NSFrame">{{4, 14}, {88, 21}}</string>
 								<reference key="NSSuperview" ref="890239025"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="398074771"/>
@@ -66,18 +66,18 @@
 								<int key="IBUITextAlignment">2</int>
 								<object class="IBUIFontDescription" key="IBUIFontDescription">
 									<int key="type">2</int>
-									<double key="pointSize">16</double>
+									<double key="pointSize">15</double>
 								</object>
 								<object class="NSFont" key="IBUIFont">
 									<string key="NSName">Helvetica-Bold</string>
-									<double key="NSSize">16</double>
+									<double key="NSSize">15</double>
 									<int key="NSfFlags">16</int>
 								</object>
 							</object>
 							<object class="IBUILabel" id="398074771">
 								<reference key="NSNextResponder" ref="890239025"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{123, 14}, {197, 21}}</string>
+								<string key="NSFrame">{{111, 14}, {193, 21}}</string>
 								<reference key="NSSuperview" ref="890239025"/>
 								<reference key="NSWindow"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -91,6 +91,7 @@
 								<reference key="IBUIHighlightedColor" ref="701185090"/>
 								<int key="IBUIBaselineAdjustment">0</int>
 								<float key="IBUIMinimumFontSize">10</float>
+								<int key="IBUILineBreakMode">1</int>
 								<object class="IBUIFontDescription" key="IBUIFontDescription">
 									<int key="type">1</int>
 									<double key="pointSize">14</double>
@@ -100,6 +101,7 @@
 									<double key="NSSize">14</double>
 									<int key="NSfFlags">16</int>
 								</object>
+								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 						</array>
 						<string key="NSFrameSize">{320, 48}</string>

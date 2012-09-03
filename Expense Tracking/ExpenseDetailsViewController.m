@@ -61,11 +61,21 @@
 {
     ExpenseDetailCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"ExpenseDetailCell"];
     [cell.sectionName setText:[self.sectionNames objectAtIndex:[indexPath row]]];
+    [cell setSelectionStyle:UITableViewCellEditingStyleNone];
     
     int row = [indexPath row];
     
     if (row == 0) {
+        [cell.expenseDetail setNumberOfLines:0];
         [cell.expenseDetail setText:self.expenseItem.name];
+        [cell.expenseDetail sizeToFit];
+        CGSize labelSize = [self.expenseItem.name 
+                            sizeWithFont:cell.expenseDetail.font 
+                            constrainedToSize:cell.expenseDetail.frame.size 
+                            lineBreakMode:cell.expenseDetail.lineBreakMode];
+        
+        [cell.expenseDetail setFrame:CGRectMake(cell.expenseDetail.frame.origin.x, cell.expenseDetail.frame.origin.y, cell.expenseDetail.frame.size.width, labelSize.height)];
+        
     } else if (row == 1) {
         [cell.expenseDetail setText:[NSString stringWithFormat:@"%.02f", self.expenseItem.amount]];
     } else if (row == 2) {
@@ -82,9 +92,9 @@
     
     // Make the expense detail label stretched enough to fit its text without resizing
     // http://stackoverflow.com/questions/793015/how-to-fit-a-text-in-uilabel-when-the-size-is-not-proportionally
-    CGRect bounds = cell.expenseDetail.bounds;
-    bounds.size = [cell.expenseDetail.text sizeWithFont:cell.expenseDetail.font];
-    cell.expenseDetail.bounds = bounds;
+//    CGRect bounds = cell.expenseDetail.bounds;
+//    bounds.size = [cell.expenseDetail.text sizeWithFont:cell.expenseDetail.font];
+//    cell.expenseDetail.bounds = bounds;
     
     return cell;
 }
@@ -103,7 +113,17 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 49;
+    int row = [indexPath row];
+    
+    if (row == 0) {
+        NSString *text = self.expenseItem.name;
+        CGSize constraint = CGSizeMake(320.0f - (10.0f * 2), 20000.0f);
+        CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:14.0f] constrainedToSize:constraint lineBreakMode:UILineBreakModeWordWrap];
+        CGFloat height = MAX(size.height, 49.0f);
+        return height + (10.0f * 2) + 15;
+    } else {
+        return 49;  
+    }
 }
 
 
