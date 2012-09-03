@@ -10,6 +10,7 @@
 #import "MonthExpenseViewController.h"
 #import "ExpensesViewController.h"
 #import "NewExpenseViewController.h"
+#import "FeedbackViewController.h"
 #import "CustomCell.h"
 
 @interface HomeViewController ()
@@ -143,6 +144,12 @@
     if (selectedRow == 1) {
         NewExpenseViewController *b = [[NewExpenseViewController alloc] init];
         [self.navigationController pushViewController:b animated:YES];
+        return;
+    }
+    
+    if (selectedRow == 4) {
+        FeedbackViewController *f = [[FeedbackViewController alloc] init];
+        [self.navigationController pushViewController:f animated:YES];
         return;
     }
 }

@@ -23,6 +23,9 @@
 		B512F38415E8C4FE00EDD5AF /* NewExpenseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B512F38215E8C4FE00EDD5AF /* NewExpenseViewController.xib */; };
 		B519A47215E93EC4005CD2D3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B519A47115E93EC4005CD2D3 /* QuartzCore.framework */; };
 		B567118B15F323B5005DAF03 /* trash_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B567118A15F323B5005DAF03 /* trash_icon.png */; };
+		B567118F15F4553D005DAF03 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B567118D15F4553D005DAF03 /* FeedbackViewController.m */; };
+		B567119015F4553D005DAF03 /* FeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B567118E15F4553D005DAF03 /* FeedbackViewController.xib */; };
+		B567119315F45AC7005DAF03 /* refresh_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B567119215F45AC7005DAF03 /* refresh_icon.png */; };
 		B597FE9A15EF27FE00EC0AC9 /* add_button.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9115EF27FE00EC0AC9 /* add_button.png */; };
 		B597FE9B15EF27FE00EC0AC9 /* border_seperator.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9215EF27FE00EC0AC9 /* border_seperator.png */; };
 		B597FE9C15EF27FE00EC0AC9 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9315EF27FE00EC0AC9 /* calendar.png */; };
@@ -78,6 +81,10 @@
 		B512F38215E8C4FE00EDD5AF /* NewExpenseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewExpenseViewController.xib; sourceTree = "<group>"; };
 		B519A47115E93EC4005CD2D3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B567118A15F323B5005DAF03 /* trash_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trash_icon.png; sourceTree = "<group>"; };
+		B567118C15F4553C005DAF03 /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
+		B567118D15F4553D005DAF03 /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
+		B567118E15F4553D005DAF03 /* FeedbackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedbackViewController.xib; sourceTree = "<group>"; };
+		B567119215F45AC7005DAF03 /* refresh_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh_icon.png; sourceTree = "<group>"; };
 		B597FE9115EF27FE00EC0AC9 /* add_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_button.png; sourceTree = "<group>"; };
 		B597FE9215EF27FE00EC0AC9 /* border_seperator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border_seperator.png; sourceTree = "<group>"; };
 		B597FE9315EF27FE00EC0AC9 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
@@ -171,29 +178,18 @@
 		B512F35215E8B38600EDD5AF /* Expense Tracking */ = {
 			isa = PBXGroup;
 			children = (
+				B567119115F45546005DAF03 /* ViewControllers */,
 				B597FEBE15F2CF8A00EC0AC9 /* Models */,
 				B512F36815E8B40E00EDD5AF /* Images */,
 				B512F35B15E8B38600EDD5AF /* AppDelegate.h */,
 				B512F35C15E8B38600EDD5AF /* AppDelegate.m */,
 				B512F35315E8B38600EDD5AF /* Supporting Files */,
-				B512F36315E8B39500EDD5AF /* HomeViewController.h */,
 				B5F09CF215EDDE3C00257FC5 /* ExpenseCell.xib */,
-				B597FEAA15F1E29000EC0AC9 /* ExpenseDetailsViewController.h */,
-				B597FEAB15F1E29000EC0AC9 /* ExpenseDetailsViewController.m */,
-				B597FEAC15F1E29000EC0AC9 /* ExpenseDetailsViewController.xib */,
 				B5F09CEF15EDDE2B00257FC5 /* ExpenseCell.h */,
 				B5F09CF015EDDE2B00257FC5 /* ExpenseCell.m */,
-				B512F36415E8B39500EDD5AF /* HomeViewController.m */,
-				B512F36515E8B39500EDD5AF /* HomeViewController.xib */,
 				B512F37B15E8C44500EDD5AF /* MonthExpenseViewController.h */,
 				B512F37C15E8C44500EDD5AF /* MonthExpenseViewController.m */,
 				B512F37D15E8C44500EDD5AF /* MonthExpenseViewController.xib */,
-				B512F38015E8C4FE00EDD5AF /* NewExpenseViewController.h */,
-				B512F38115E8C4FE00EDD5AF /* NewExpenseViewController.m */,
-				B512F38215E8C4FE00EDD5AF /* NewExpenseViewController.xib */,
-				B5DF7FFB15E9E5B300139932 /* ExpensesViewController.h */,
-				B5DF7FFC15E9E5B300139932 /* ExpensesViewController.m */,
-				B5DF7FFD15E9E5B300139932 /* ExpensesViewController.xib */,
 				B5F09CE815EC8BD400257FC5 /* CustomCell.h */,
 				B5F09CE915EC8BD400257FC5 /* CustomCell.m */,
 				B5F09CEB15EC8C9000257FC5 /* CustomCell.xib */,
@@ -218,6 +214,7 @@
 		B512F36815E8B40E00EDD5AF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B567119215F45AC7005DAF03 /* refresh_icon.png */,
 				B567118A15F323B5005DAF03 /* trash_icon.png */,
 				B597FEA815F08CF200EC0AC9 /* white_plus_sign.png */,
 				B597FEA615EF4A5100EC0AC9 /* wood-wallpaper.jpg */,
@@ -233,6 +230,28 @@
 				B597FE9915EF27FE00EC0AC9 /* yellow_btn.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		B567119115F45546005DAF03 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B512F36315E8B39500EDD5AF /* HomeViewController.h */,
+				B512F36415E8B39500EDD5AF /* HomeViewController.m */,
+				B512F36515E8B39500EDD5AF /* HomeViewController.xib */,
+				B597FEAA15F1E29000EC0AC9 /* ExpenseDetailsViewController.h */,
+				B597FEAB15F1E29000EC0AC9 /* ExpenseDetailsViewController.m */,
+				B597FEAC15F1E29000EC0AC9 /* ExpenseDetailsViewController.xib */,
+				B567118C15F4553C005DAF03 /* FeedbackViewController.h */,
+				B567118D15F4553D005DAF03 /* FeedbackViewController.m */,
+				B567118E15F4553D005DAF03 /* FeedbackViewController.xib */,
+				B512F38015E8C4FE00EDD5AF /* NewExpenseViewController.h */,
+				B512F38115E8C4FE00EDD5AF /* NewExpenseViewController.m */,
+				B512F38215E8C4FE00EDD5AF /* NewExpenseViewController.xib */,
+				B5DF7FFB15E9E5B300139932 /* ExpensesViewController.h */,
+				B5DF7FFC15E9E5B300139932 /* ExpensesViewController.m */,
+				B5DF7FFD15E9E5B300139932 /* ExpensesViewController.xib */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		B597FEBE15F2CF8A00EC0AC9 /* Models */ = {
@@ -323,6 +342,8 @@
 				B597FEAE15F1E29000EC0AC9 /* ExpenseDetailsViewController.xib in Resources */,
 				B597FEB915F1F2B300EC0AC9 /* ExpenseDetailCell.xib in Resources */,
 				B567118B15F323B5005DAF03 /* trash_icon.png in Resources */,
+				B567119015F4553D005DAF03 /* FeedbackViewController.xib in Resources */,
+				B567119315F45AC7005DAF03 /* refresh_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +366,7 @@
 				B597FEAD15F1E29000EC0AC9 /* ExpenseDetailsViewController.m in Sources */,
 				B597FEB715F1F29000EC0AC9 /* ExpenseDetailCell.m in Sources */,
 				B597FEC115F2CFAA00EC0AC9 /* ExpenseCategory.m in Sources */,
+				B567118F15F4553D005DAF03 /* FeedbackViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
