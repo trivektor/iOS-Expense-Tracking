@@ -215,6 +215,7 @@
 		B512F35215E8B38600EDD5AF /* Expense Tracking */ = {
 			isa = PBXGroup;
 			children = (
+				B5EA763C15F541AE00D32A93 /* Libraries */,
 				B567119115F45546005DAF03 /* ViewControllers */,
 				B597FEBE15F2CF8A00EC0AC9 /* Models */,
 				B512F36815E8B40E00EDD5AF /* Images */,
@@ -331,6 +332,13 @@
 				B5EA763115F5384B00D32A93 /* UIImageView+AFNetworking.m */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		B5EA763C15F541AE00D32A93 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

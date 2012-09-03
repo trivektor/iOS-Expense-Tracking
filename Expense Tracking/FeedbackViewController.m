@@ -92,7 +92,26 @@
     [operation setCompletionBlockWithSuccess:
         ^(AFHTTPRequestOperation *operation, id responseObject) {
             NSString *response = [operation responseString];
-            NSLog(@"response: [%@]",response);
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[response dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:nil];
+            
+            UIAlertView *alert;
+
+            if ([[json valueForKey:@"success"] integerValue] == 1) {
+                alert = [[UIAlertView alloc] initWithTitle:@"Alert" 
+                                                   message:[json valueForKey:@"message"]
+                                                  delegate:self 
+                                         cancelButtonTitle:@"OK" 
+                                         otherButtonTitles:nil];
+                
+            } else {
+                alert = [[UIAlertView alloc] initWithTitle:@"Alert" 
+                                                   message:@"An error ocurred while sending feedback" 
+                                                  delegate:self 
+                                         cancelButtonTitle:@"OK" 
+                                         otherButtonTitles:nil];
+            }
+            
+            [alert show];
             [self.spinnerView removeFromSuperview];
         }
      failure:
