@@ -45,6 +45,10 @@
     self.tableView.delegate = self;
     self.tableView.backgroundColor = [UIColor clearColor];
     
+    // Make sure that we don't have to touch and drag the table view upward to see the last row
+    // http://stackoverflow.com/questions/7678910/uitableviewcontroller-last-row-cut-off
+    self.tableView.autoresizingMask = ~UIViewAutoresizingFlexibleBottomMargin;
+    
     [self.view addSubview:self.tableView];
 }
 
