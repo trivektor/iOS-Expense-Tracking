@@ -22,7 +22,6 @@
 		B512F38315E8C4FE00EDD5AF /* NewExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B512F38115E8C4FE00EDD5AF /* NewExpenseViewController.m */; };
 		B512F38415E8C4FE00EDD5AF /* NewExpenseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B512F38215E8C4FE00EDD5AF /* NewExpenseViewController.xib */; };
 		B519A47215E93EC4005CD2D3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B519A47115E93EC4005CD2D3 /* QuartzCore.framework */; };
-		B567118B15F323B5005DAF03 /* trash_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B567118A15F323B5005DAF03 /* trash_icon.png */; };
 		B567118F15F4553D005DAF03 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B567118D15F4553D005DAF03 /* FeedbackViewController.m */; };
 		B567119015F4553D005DAF03 /* FeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B567118E15F4553D005DAF03 /* FeedbackViewController.xib */; };
 		B567119615F46EB2005DAF03 /* SpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B567119515F46EB1005DAF03 /* SpinnerView.m */; };
@@ -62,6 +61,9 @@
 		B5EA763915F5384B00D32A93 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EA762D15F5384B00D32A93 /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B5EA763A15F5384B00D32A93 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EA762F15F5384B00D32A93 /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B5EA763B15F5384B00D32A93 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EA763115F5384B00D32A93 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B5EA764315F5A95700D32A93 /* wood_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B5EA764215F5A95700D32A93 /* wood_bg.png */; };
+		B5EA764B15F5AB4500D32A93 /* trash_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B5EA764A15F5AB4500D32A93 /* trash_icon.png */; };
+		B5EA765115F5ADC600D32A93 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = B5EA765015F5ADC600D32A93 /* header.png */; };
 		B5F09CE415EB3F4500257FC5 /* ExpenseTracking.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B5F09CE315EB3F4500257FC5 /* ExpenseTracking.sqlite */; };
 		B5F09CEA15EC8BD400257FC5 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F09CE915EC8BD400257FC5 /* CustomCell.m */; };
 		B5F09CEC15EC8C9000257FC5 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F09CEB15EC8C9000257FC5 /* CustomCell.xib */; };
@@ -92,7 +94,6 @@
 		B512F38115E8C4FE00EDD5AF /* NewExpenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewExpenseViewController.m; sourceTree = "<group>"; };
 		B512F38215E8C4FE00EDD5AF /* NewExpenseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewExpenseViewController.xib; sourceTree = "<group>"; };
 		B519A47115E93EC4005CD2D3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		B567118A15F323B5005DAF03 /* trash_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trash_icon.png; sourceTree = "<group>"; };
 		B567118C15F4553C005DAF03 /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
 		B567118D15F4553D005DAF03 /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
 		B567118E15F4553D005DAF03 /* FeedbackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedbackViewController.xib; sourceTree = "<group>"; };
@@ -150,6 +151,9 @@
 		B5EA762F15F5384B00D32A93 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		B5EA763015F5384B00D32A93 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		B5EA763115F5384B00D32A93 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		B5EA764215F5A95700D32A93 /* wood_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wood_bg.png; sourceTree = "<group>"; };
+		B5EA764A15F5AB4500D32A93 /* trash_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trash_icon.png; sourceTree = "<group>"; };
+		B5EA765015F5ADC600D32A93 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
 		B5F09CE315EB3F4500257FC5 /* ExpenseTracking.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ExpenseTracking.sqlite; sourceTree = "<group>"; };
 		B5F09CE815EC8BD400257FC5 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		B5F09CE915EC8BD400257FC5 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
@@ -254,9 +258,11 @@
 		B512F36815E8B40E00EDD5AF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B5EA765015F5ADC600D32A93 /* header.png */,
+				B5EA764A15F5AB4500D32A93 /* trash_icon.png */,
+				B5EA764215F5A95700D32A93 /* wood_bg.png */,
 				B56711A215F50965005DAF03 /* refresh_icon.png */,
 				B567119715F47B80005DAF03 /* spinner_background.png */,
-				B567118A15F323B5005DAF03 /* trash_icon.png */,
 				B597FEA815F08CF200EC0AC9 /* white_plus_sign.png */,
 				B597FEA615EF4A5100EC0AC9 /* wood-wallpaper.jpg */,
 				B597FEA415EF485800EC0AC9 /* envelope_border.png */,
@@ -417,10 +423,12 @@
 				B597FEA915F08CF200EC0AC9 /* white_plus_sign.png in Resources */,
 				B597FEAE15F1E29000EC0AC9 /* ExpenseDetailsViewController.xib in Resources */,
 				B597FEB915F1F2B300EC0AC9 /* ExpenseDetailCell.xib in Resources */,
-				B567118B15F323B5005DAF03 /* trash_icon.png in Resources */,
 				B567119015F4553D005DAF03 /* FeedbackViewController.xib in Resources */,
 				B567119815F47B80005DAF03 /* spinner_background.png in Resources */,
 				B56711A315F50965005DAF03 /* refresh_icon.png in Resources */,
+				B5EA764315F5A95700D32A93 /* wood_bg.png in Resources */,
+				B5EA764B15F5AB4500D32A93 /* trash_icon.png in Resources */,
+				B5EA765115F5ADC600D32A93 /* header.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

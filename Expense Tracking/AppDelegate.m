@@ -21,10 +21,10 @@
     self.window.backgroundColor = [UIColor whiteColor];
     HomeViewController *h = [[HomeViewController alloc] init];
     UINavigationController *mainNavController = [[UINavigationController alloc] initWithRootViewController:h];
-    [mainNavController.navigationBar setBackgroundImage:[UIImage imageNamed:@"header.jpg"] forBarMetrics:nil];
+    [mainNavController.navigationBar setBackgroundImage:[UIImage imageNamed:@"header.png"] forBarMetrics:nil];
 
     [self.window setRootViewController:mainNavController];
-    [self.window setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"wood-wallpaper.jpg"]]];
+    [self.window setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"wood_bg.png"]]];
     [self.window makeKeyAndVisible];
     return YES;
 }
