@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "MonthExpenseViewController.h"
 #import "ExpensesViewController.h"
+#import "MonthsViewController.h"
 #import "NewExpenseViewController.h"
 #import "FeedbackViewController.h"
 #import "CustomCell.h"
@@ -30,12 +31,14 @@
         // TODO: move this into a model
         self.options = [[NSMutableArray alloc] init];
         [self.options addObject:@"View all expenses"];
+        [self.options addObject:@"View expenses by month"];
         [self.options addObject:@"Add new expense"];
         [self.options addObject:@"Settings"];
         [self.options addObject:@"About this app"];
         [self.options addObject:@"Feedback"];
         
         self.optionIcons = [[NSMutableArray alloc] init];
+        [self.optionIcons addObject:@"dollar_sign.png"];
         [self.optionIcons addObject:@"calendar.png"];
         [self.optionIcons addObject:@"plus.png"];
         [self.optionIcons addObject:@"settings.png"];
@@ -142,6 +145,12 @@
     }
     
     if (selectedRow == 1) {
+        MonthsViewController *m = [[MonthsViewController alloc] init];
+        [self.navigationController pushViewController:m animated:YES];
+        return;
+    }
+    
+    if (selectedRow == 2) {
         NewExpenseViewController *b = [[NewExpenseViewController alloc] init];
         [self.navigationController pushViewController:b animated:YES];
         return;

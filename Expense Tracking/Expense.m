@@ -103,6 +103,11 @@
     }
 }
 
+- (NSMutableArray *) findByMonth:(NSString *)month
+{
+    return [[NSMutableArray alloc] initWithObjects:nil];
+}
+
 - (void) deleteExpenseByID:(int)expenseID 
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
