@@ -11,6 +11,7 @@
 #import "ExpensesViewController.h"
 #import "MonthsViewController.h"
 #import "NewExpenseViewController.h"
+#import "AboutViewController.h"
 #import "FeedbackViewController.h"
 #import "CustomCell.h"
 
@@ -157,6 +158,12 @@
     }
     
     if (selectedRow == 4) {
+        AboutViewController *o = [[AboutViewController alloc] init];
+        [self.navigationController pushViewController:o animated:YES];
+        return;
+    }
+    
+    if (selectedRow == 5) {
         FeedbackViewController *f = [[FeedbackViewController alloc] init];
         [self.navigationController pushViewController:f animated:YES];
         return;

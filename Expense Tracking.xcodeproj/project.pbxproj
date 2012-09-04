@@ -68,6 +68,10 @@
 		B5EA765715F5B08500D32A93 /* MonthsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EA765515F5B08500D32A93 /* MonthsViewController.m */; };
 		B5EA765815F5B08500D32A93 /* MonthsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5EA765615F5B08500D32A93 /* MonthsViewController.xib */; };
 		B5EA765A15F5B3A400D32A93 /* add_button_long.png in Resources */ = {isa = PBXBuildFile; fileRef = B5EA765915F5B3A400D32A93 /* add_button_long.png */; };
+		B5EA765E15F5C46100D32A93 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EA765C15F5C46000D32A93 /* AboutViewController.m */; };
+		B5EA765F15F5C46100D32A93 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5EA765D15F5C46100D32A93 /* AboutViewController.xib */; };
+		B5EA766115F5C63600D32A93 /* trivuong.png in Resources */ = {isa = PBXBuildFile; fileRef = B5EA766015F5C63600D32A93 /* trivuong.png */; };
+		B5EA766C15F5D49900D32A93 /* bio_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B5EA766B15F5D49900D32A93 /* bio_bg.png */; };
 		B5F09CE415EB3F4500257FC5 /* ExpenseTracking.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B5F09CE315EB3F4500257FC5 /* ExpenseTracking.sqlite */; };
 		B5F09CEA15EC8BD400257FC5 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F09CE915EC8BD400257FC5 /* CustomCell.m */; };
 		B5F09CEC15EC8C9000257FC5 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F09CEB15EC8C9000257FC5 /* CustomCell.xib */; };
@@ -163,6 +167,11 @@
 		B5EA765515F5B08500D32A93 /* MonthsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthsViewController.m; sourceTree = "<group>"; };
 		B5EA765615F5B08500D32A93 /* MonthsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthsViewController.xib; sourceTree = "<group>"; };
 		B5EA765915F5B3A400D32A93 /* add_button_long.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_button_long.png; sourceTree = "<group>"; };
+		B5EA765B15F5C46000D32A93 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		B5EA765C15F5C46000D32A93 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		B5EA765D15F5C46100D32A93 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		B5EA766015F5C63600D32A93 /* trivuong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trivuong.png; sourceTree = "<group>"; };
+		B5EA766B15F5D49900D32A93 /* bio_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bio_bg.png; sourceTree = "<group>"; };
 		B5F09CE315EB3F4500257FC5 /* ExpenseTracking.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ExpenseTracking.sqlite; sourceTree = "<group>"; };
 		B5F09CE815EC8BD400257FC5 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		B5F09CE915EC8BD400257FC5 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
@@ -192,7 +201,6 @@
 		B512F33D15E8B38600EDD5AF = {
 			isa = PBXGroup;
 			children = (
-				B5EA761C15F5384B00D32A93 /* AFNetworking */,
 				B5E661B115EDFA1B00032BB7 /* Default@2x.png */,
 				B5E661AE15EDF56500032BB7 /* icon@2x_et.png */,
 				B5F09CE315EB3F4500257FC5 /* ExpenseTracking.sqlite */,
@@ -267,6 +275,8 @@
 		B512F36815E8B40E00EDD5AF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B5EA766B15F5D49900D32A93 /* bio_bg.png */,
+				B5EA766015F5C63600D32A93 /* trivuong.png */,
 				B5EA765915F5B3A400D32A93 /* add_button_long.png */,
 				B5EA765215F5AFEA00D32A93 /* dollar_sign.png */,
 				B5EA765015F5ADC600D32A93 /* header.png */,
@@ -311,6 +321,9 @@
 				B5EA765415F5B08500D32A93 /* MonthsViewController.h */,
 				B5EA765515F5B08500D32A93 /* MonthsViewController.m */,
 				B5EA765615F5B08500D32A93 /* MonthsViewController.xib */,
+				B5EA765B15F5C46000D32A93 /* AboutViewController.h */,
+				B5EA765C15F5C46000D32A93 /* AboutViewController.m */,
+				B5EA765D15F5C46100D32A93 /* AboutViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -351,12 +364,14 @@
 				B5EA763015F5384B00D32A93 /* UIImageView+AFNetworking.h */,
 				B5EA763115F5384B00D32A93 /* UIImageView+AFNetworking.m */,
 			);
-			path = AFNetworking;
+			name = AFNetworking;
+			path = ../AFNetworking;
 			sourceTree = "<group>";
 		};
 		B5EA763C15F541AE00D32A93 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				B5EA761C15F5384B00D32A93 /* AFNetworking */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -446,6 +461,9 @@
 				B5EA765315F5AFEA00D32A93 /* dollar_sign.png in Resources */,
 				B5EA765815F5B08500D32A93 /* MonthsViewController.xib in Resources */,
 				B5EA765A15F5B3A400D32A93 /* add_button_long.png in Resources */,
+				B5EA765F15F5C46100D32A93 /* AboutViewController.xib in Resources */,
+				B5EA766115F5C63600D32A93 /* trivuong.png in Resources */,
+				B5EA766C15F5D49900D32A93 /* bio_bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +499,7 @@
 				B5EA763A15F5384B00D32A93 /* AFXMLRequestOperation.m in Sources */,
 				B5EA763B15F5384B00D32A93 /* UIImageView+AFNetworking.m in Sources */,
 				B5EA765715F5B08500D32A93 /* MonthsViewController.m in Sources */,
+				B5EA765E15F5C46100D32A93 /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
