@@ -19,6 +19,20 @@
                ReferencedContainer = "container:Expense Tracking.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D2AAC07D0554694100DB518D"
+               BuildableName = "libKal.a"
+               BlueprintName = "Kal"
+               ReferencedContainer = "container:../Kal/src/Kal.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

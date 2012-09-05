@@ -9,7 +9,8 @@
 #import "HomeViewController.h"
 #import "MonthExpenseViewController.h"
 #import "ExpensesViewController.h"
-#import "MonthsViewController.h"
+#import "Kal.h"
+#import "KalViewController.h"
 #import "NewExpenseViewController.h"
 #import "AboutViewController.h"
 #import "FeedbackViewController.h"
@@ -146,8 +147,8 @@
     }
     
     if (selectedRow == 1) {
-        MonthsViewController *m = [[MonthsViewController alloc] init];
-        [self.navigationController pushViewController:m animated:YES];
+        KalViewController *k = [[KalViewController alloc] init];
+        [self.navigationController pushViewController:k animated:YES];
         return;
     }
     

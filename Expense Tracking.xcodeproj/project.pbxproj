@@ -27,6 +27,8 @@
 		B567119615F46EB2005DAF03 /* SpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B567119515F46EB1005DAF03 /* SpinnerView.m */; };
 		B567119815F47B80005DAF03 /* spinner_background.png in Resources */ = {isa = PBXBuildFile; fileRef = B567119715F47B80005DAF03 /* spinner_background.png */; };
 		B56711A315F50965005DAF03 /* refresh_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B56711A215F50965005DAF03 /* refresh_icon.png */; };
+		B57FD7D215F72FD300F5AE99 /* libKal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B57FD7CE15F72FBC00F5AE99 /* libKal.a */; };
+		B57FD7D415F7300F00F5AE99 /* Kal.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B57FD7D315F7300E00F5AE99 /* Kal.bundle */; };
 		B597FE9A15EF27FE00EC0AC9 /* add_button.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9115EF27FE00EC0AC9 /* add_button.png */; };
 		B597FE9B15EF27FE00EC0AC9 /* border_seperator.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9215EF27FE00EC0AC9 /* border_seperator.png */; };
 		B597FE9C15EF27FE00EC0AC9 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9315EF27FE00EC0AC9 /* calendar.png */; };
@@ -79,6 +81,23 @@
 		B5F09CF315EDDE3C00257FC5 /* ExpenseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F09CF215EDDE3C00257FC5 /* ExpenseCell.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B57FD7CD15F72FBC00F5AE99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B57FD7C615F72FBB00F5AE99 /* Kal.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = Kal;
+		};
+		B57FD7D015F72FC800F5AE99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B57FD7C615F72FBB00F5AE99 /* Kal.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = Kal;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		B512F34815E8B38600EDD5AF /* Expense Tracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Expense Tracking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B512F34C15E8B38600EDD5AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -109,6 +128,8 @@
 		B567119515F46EB1005DAF03 /* SpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpinnerView.m; sourceTree = "<group>"; };
 		B567119715F47B80005DAF03 /* spinner_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spinner_background.png; sourceTree = "<group>"; };
 		B56711A215F50965005DAF03 /* refresh_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh_icon.png; sourceTree = "<group>"; };
+		B57FD7C615F72FBB00F5AE99 /* Kal.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kal.xcodeproj; path = ../Kal/src/Kal.xcodeproj; sourceTree = "<group>"; };
+		B57FD7D315F7300E00F5AE99 /* Kal.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Kal.bundle; path = ../Kal/src/Kal.bundle; sourceTree = "<group>"; };
 		B597FE9115EF27FE00EC0AC9 /* add_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_button.png; sourceTree = "<group>"; };
 		B597FE9215EF27FE00EC0AC9 /* border_seperator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border_seperator.png; sourceTree = "<group>"; };
 		B597FE9315EF27FE00EC0AC9 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
@@ -186,6 +207,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B57FD7D215F72FD300F5AE99 /* libKal.a in Frameworks */,
 				B5A5758015E9B72B00EE9A62 /* libsqlite3.dylib in Frameworks */,
 				B5A5757D15E9B72300EE9A62 /* libsqlite3.0.dylib in Frameworks */,
 				B519A47215E93EC4005CD2D3 /* QuartzCore.framework in Frameworks */,
@@ -201,6 +223,8 @@
 		B512F33D15E8B38600EDD5AF = {
 			isa = PBXGroup;
 			children = (
+				B57FD7D315F7300E00F5AE99 /* Kal.bundle */,
+				B57FD7C615F72FBB00F5AE99 /* Kal.xcodeproj */,
 				B5E661B115EDFA1B00032BB7 /* Default@2x.png */,
 				B5E661AE15EDF56500032BB7 /* icon@2x_et.png */,
 				B5F09CE315EB3F4500257FC5 /* ExpenseTracking.sqlite */,
@@ -328,6 +352,14 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
+		B57FD7C715F72FBB00F5AE99 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B57FD7CE15F72FBC00F5AE99 /* libKal.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B597FEBE15F2CF8A00EC0AC9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +422,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B57FD7D115F72FC800F5AE99 /* PBXTargetDependency */,
 			);
 			name = "Expense Tracking";
 			productName = "Expense Tracking";
@@ -414,6 +447,12 @@
 			mainGroup = B512F33D15E8B38600EDD5AF;
 			productRefGroup = B512F34915E8B38600EDD5AF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B57FD7C715F72FBB00F5AE99 /* Products */;
+					ProjectRef = B57FD7C615F72FBB00F5AE99 /* Kal.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B512F34715E8B38600EDD5AF /* Expense Tracking */,
@@ -421,11 +460,22 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		B57FD7CE15F72FBC00F5AE99 /* libKal.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libKal.a;
+			remoteRef = B57FD7CD15F72FBC00F5AE99 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		B512F34615E8B38600EDD5AF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B57FD7D415F7300F00F5AE99 /* Kal.bundle in Resources */,
 				B512F35715E8B38600EDD5AF /* InfoPlist.strings in Resources */,
 				B512F36715E8B39500EDD5AF /* HomeViewController.xib in Resources */,
 				B512F37815E8C38300EDD5AF /* Default.png in Resources */,
@@ -505,6 +555,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B57FD7D115F72FC800F5AE99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kal;
+			targetProxy = B57FD7D015F72FC800F5AE99 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		B512F35515E8B38600EDD5AF /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -567,8 +625,12 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Expense Tracking/Expense Tracking-Prefix.pch";
+				HEADER_SEARCH_PATHS = "/Users/trivuong/Projects/Kal/**";
 				INFOPLIST_FILE = "Expense Tracking/Expense Tracking-Info.plist";
+				LIBRARY_SEARCH_PATHS = "/Users/trivuong/Projects/Kal/**";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/Users/trivuong/Projects/Kal/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -578,8 +640,12 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Expense Tracking/Expense Tracking-Prefix.pch";
+				HEADER_SEARCH_PATHS = "/Users/trivuong/Projects/Kal/**";
 				INFOPLIST_FILE = "Expense Tracking/Expense Tracking-Info.plist";
+				LIBRARY_SEARCH_PATHS = "/Users/trivuong/Projects/Kal/**";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/Users/trivuong/Projects/Kal/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
