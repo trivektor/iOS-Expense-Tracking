@@ -139,7 +139,8 @@
     NSInteger selectedRow = [indexPath row];
     // TODO: is there a better way to do this?
     if (selectedRow == 0) {
-        ExpensesViewController *a = [[ExpensesViewController alloc] init];
+        Expense *dao = [[Expense alloc] init];
+        ExpensesViewController *a = [[ExpensesViewController alloc] initWithExpenses:[dao getAll]];
         [self.navigationController pushViewController:a animated:YES];
         return;
     }

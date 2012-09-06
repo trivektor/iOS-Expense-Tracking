@@ -103,9 +103,44 @@
     }
 }
 
-- (NSMutableArray *) findByMonth:(NSString *)month
+- (NSMutableArray *) findBetweenFirstDate:(NSDate *)firstDate LastDate:(NSDate *)lastDate;
 {
-    return [[NSMutableArray alloc] initWithObjects:nil];
+    NSMutableArray *expensesArray = [[NSMutableArray alloc] init];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *dbPath = [documentsDirectory stringByAppendingPathComponent:@"ExpenseTracking.sqlite"];
+    
+    if (sqlite3_open(dbPath.UTF8String, &database) == SQLITE_OK) {
+        char *sql = "SELECT * FROM expenses WHERE created_at >= ? AND created_at < ?";
+        sqlite3_stmt *selectStatement;
+                
+        if (sqlite3_prepare_v2(database, sql, -1, &selectStatement, NULL) == SQLITE_OK) {
+            sqlite3_bind_text(selectStatement, 1, [firstDate.description UTF8String], -1, SQLITE_TRANSIENT);
+            sqlite3_bind_text(selectStatement, 2, [lastDate.description UTF8String], -1, SQLITE_TRANSIENT);
+
+            while (sqlite3_step(selectStatement) == SQLITE_ROW) 
+            {
+                Expense *expense = [[Expense alloc] init];
+                expense.expenseId = sqlite3_column_int(selectStatement, 0);
+                if ((char*)sqlite3_column_text(selectStatement, 1) != NULL)
+                {
+                    expense.name = [NSString stringWithUTF8String:(char*)sqlite3_column_text(selectStatement, 1)];
+                } else {
+                    expense.name = @"Untitled expense";
+                }
+                expense.amount = sqlite3_column_double(selectStatement, 2);
+                expense.tax = sqlite3_column_double(selectStatement, 3);
+                expense.tip = sqlite3_column_double(selectStatement, 4);
+                expense.description = ((char*)sqlite3_column_text(selectStatement, 5)) ? 
+                [NSString stringWithUTF8String:sqlite3_column_text(selectStatement, 5)] : @"";
+                expense.createdAt = [NSString stringWithUTF8String:(char*)sqlite3_column_text(selectStatement, 7)];
+                [expensesArray addObject:expense];
+                
+            }
+        }
+    }
+    
+    return expensesArray;
 }
 
 - (void) deleteExpenseByID:(int)expenseID 

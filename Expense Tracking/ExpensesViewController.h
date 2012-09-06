@@ -18,6 +18,7 @@
 @property (nonatomic, strong) NSMutableArray *expenses;
 @property (nonatomic, retain) UITableView *tableView;
 
+- (id)initWithExpenses:(NSMutableArray *)expenses;
 - (void) addNewExpense;
 
 @end

@@ -23,7 +23,7 @@
 @property (nonatomic, retain) NSString *createdAt;
 
 - (NSMutableArray *) getAll;
-- (NSMutableArray *) findByMonth:(NSString *)month;
+- (NSMutableArray *) findBetweenFirstDate:(NSDate *)firstDate LastDate:(NSDate *)lastDate;
 
 - (Boolean) addExpenseWithName:(NSString *)name Amount:(float)amount Tax:(float)tax Tip:(float)tip Category:(NSString *)category Description:(NSString *)description;
 

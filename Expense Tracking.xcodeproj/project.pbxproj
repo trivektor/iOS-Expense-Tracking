@@ -21,14 +21,14 @@
 		B512F37F15E8C44500EDD5AF /* MonthExpenseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B512F37D15E8C44500EDD5AF /* MonthExpenseViewController.xib */; };
 		B512F38315E8C4FE00EDD5AF /* NewExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B512F38115E8C4FE00EDD5AF /* NewExpenseViewController.m */; };
 		B512F38415E8C4FE00EDD5AF /* NewExpenseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B512F38215E8C4FE00EDD5AF /* NewExpenseViewController.xib */; };
+		B5199DDD15F8770000CE6304 /* expenses_list.png in Resources */ = {isa = PBXBuildFile; fileRef = B5199DDC15F8770000CE6304 /* expenses_list.png */; };
 		B519A47215E93EC4005CD2D3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B519A47115E93EC4005CD2D3 /* QuartzCore.framework */; };
+		B561766F15F86AFD00B52DC2 /* libKal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B561766C15F86AD400B52DC2 /* libKal.a */; };
 		B567118F15F4553D005DAF03 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B567118D15F4553D005DAF03 /* FeedbackViewController.m */; };
 		B567119015F4553D005DAF03 /* FeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B567118E15F4553D005DAF03 /* FeedbackViewController.xib */; };
 		B567119615F46EB2005DAF03 /* SpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B567119515F46EB1005DAF03 /* SpinnerView.m */; };
 		B567119815F47B80005DAF03 /* spinner_background.png in Resources */ = {isa = PBXBuildFile; fileRef = B567119715F47B80005DAF03 /* spinner_background.png */; };
 		B56711A315F50965005DAF03 /* refresh_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B56711A215F50965005DAF03 /* refresh_icon.png */; };
-		B57FD7D215F72FD300F5AE99 /* libKal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B57FD7CE15F72FBC00F5AE99 /* libKal.a */; };
-		B57FD7D415F7300F00F5AE99 /* Kal.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B57FD7D315F7300E00F5AE99 /* Kal.bundle */; };
 		B597FE9A15EF27FE00EC0AC9 /* add_button.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9115EF27FE00EC0AC9 /* add_button.png */; };
 		B597FE9B15EF27FE00EC0AC9 /* border_seperator.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9215EF27FE00EC0AC9 /* border_seperator.png */; };
 		B597FE9C15EF27FE00EC0AC9 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9315EF27FE00EC0AC9 /* calendar.png */; };
@@ -68,7 +68,6 @@
 		B5EA765115F5ADC600D32A93 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = B5EA765015F5ADC600D32A93 /* header.png */; };
 		B5EA765315F5AFEA00D32A93 /* dollar_sign.png in Resources */ = {isa = PBXBuildFile; fileRef = B5EA765215F5AFEA00D32A93 /* dollar_sign.png */; };
 		B5EA765715F5B08500D32A93 /* MonthsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EA765515F5B08500D32A93 /* MonthsViewController.m */; };
-		B5EA765815F5B08500D32A93 /* MonthsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5EA765615F5B08500D32A93 /* MonthsViewController.xib */; };
 		B5EA765A15F5B3A400D32A93 /* add_button_long.png in Resources */ = {isa = PBXBuildFile; fileRef = B5EA765915F5B3A400D32A93 /* add_button_long.png */; };
 		B5EA765E15F5C46100D32A93 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EA765C15F5C46000D32A93 /* AboutViewController.m */; };
 		B5EA765F15F5C46100D32A93 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5EA765D15F5C46100D32A93 /* AboutViewController.xib */; };
@@ -82,16 +81,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B57FD7CD15F72FBC00F5AE99 /* PBXContainerItemProxy */ = {
+		B561766B15F86AD400B52DC2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B57FD7C615F72FBB00F5AE99 /* Kal.xcodeproj */;
+			containerPortal = B561766415F86AD400B52DC2 /* Kal.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = Kal;
 		};
-		B57FD7D015F72FC800F5AE99 /* PBXContainerItemProxy */ = {
+		B561766D15F86AF800B52DC2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B57FD7C615F72FBB00F5AE99 /* Kal.xcodeproj */;
+			containerPortal = B561766415F86AD400B52DC2 /* Kal.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = Kal;
@@ -120,7 +119,9 @@
 		B512F38015E8C4FE00EDD5AF /* NewExpenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewExpenseViewController.h; sourceTree = "<group>"; };
 		B512F38115E8C4FE00EDD5AF /* NewExpenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewExpenseViewController.m; sourceTree = "<group>"; };
 		B512F38215E8C4FE00EDD5AF /* NewExpenseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewExpenseViewController.xib; sourceTree = "<group>"; };
+		B5199DDC15F8770000CE6304 /* expenses_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = expenses_list.png; path = ../../../Desktop/iphone_dev/expenses_list.png; sourceTree = "<group>"; };
 		B519A47115E93EC4005CD2D3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B561766415F86AD400B52DC2 /* Kal.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kal.xcodeproj; path = ../Kal/src/Kal.xcodeproj; sourceTree = "<group>"; };
 		B567118C15F4553C005DAF03 /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
 		B567118D15F4553D005DAF03 /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
 		B567118E15F4553D005DAF03 /* FeedbackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedbackViewController.xib; sourceTree = "<group>"; };
@@ -128,8 +129,6 @@
 		B567119515F46EB1005DAF03 /* SpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpinnerView.m; sourceTree = "<group>"; };
 		B567119715F47B80005DAF03 /* spinner_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spinner_background.png; sourceTree = "<group>"; };
 		B56711A215F50965005DAF03 /* refresh_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh_icon.png; sourceTree = "<group>"; };
-		B57FD7C615F72FBB00F5AE99 /* Kal.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kal.xcodeproj; path = ../Kal/src/Kal.xcodeproj; sourceTree = "<group>"; };
-		B57FD7D315F7300E00F5AE99 /* Kal.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Kal.bundle; path = ../Kal/src/Kal.bundle; sourceTree = "<group>"; };
 		B597FE9115EF27FE00EC0AC9 /* add_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_button.png; sourceTree = "<group>"; };
 		B597FE9215EF27FE00EC0AC9 /* border_seperator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border_seperator.png; sourceTree = "<group>"; };
 		B597FE9315EF27FE00EC0AC9 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
@@ -186,7 +185,6 @@
 		B5EA765215F5AFEA00D32A93 /* dollar_sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dollar_sign.png; sourceTree = "<group>"; };
 		B5EA765415F5B08500D32A93 /* MonthsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthsViewController.h; sourceTree = "<group>"; };
 		B5EA765515F5B08500D32A93 /* MonthsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthsViewController.m; sourceTree = "<group>"; };
-		B5EA765615F5B08500D32A93 /* MonthsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthsViewController.xib; sourceTree = "<group>"; };
 		B5EA765915F5B3A400D32A93 /* add_button_long.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_button_long.png; sourceTree = "<group>"; };
 		B5EA765B15F5C46000D32A93 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		B5EA765C15F5C46000D32A93 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
@@ -207,7 +205,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B57FD7D215F72FD300F5AE99 /* libKal.a in Frameworks */,
+				B561766F15F86AFD00B52DC2 /* libKal.a in Frameworks */,
 				B5A5758015E9B72B00EE9A62 /* libsqlite3.dylib in Frameworks */,
 				B5A5757D15E9B72300EE9A62 /* libsqlite3.0.dylib in Frameworks */,
 				B519A47215E93EC4005CD2D3 /* QuartzCore.framework in Frameworks */,
@@ -223,8 +221,7 @@
 		B512F33D15E8B38600EDD5AF = {
 			isa = PBXGroup;
 			children = (
-				B57FD7D315F7300E00F5AE99 /* Kal.bundle */,
-				B57FD7C615F72FBB00F5AE99 /* Kal.xcodeproj */,
+				B561766415F86AD400B52DC2 /* Kal.xcodeproj */,
 				B5E661B115EDFA1B00032BB7 /* Default@2x.png */,
 				B5E661AE15EDF56500032BB7 /* icon@2x_et.png */,
 				B5F09CE315EB3F4500257FC5 /* ExpenseTracking.sqlite */,
@@ -299,6 +296,7 @@
 		B512F36815E8B40E00EDD5AF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B5199DDC15F8770000CE6304 /* expenses_list.png */,
 				B5EA766B15F5D49900D32A93 /* bio_bg.png */,
 				B5EA766015F5C63600D32A93 /* trivuong.png */,
 				B5EA765915F5B3A400D32A93 /* add_button_long.png */,
@@ -324,6 +322,14 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		B561766515F86AD400B52DC2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B561766C15F86AD400B52DC2 /* libKal.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B567119115F45546005DAF03 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,20 +350,11 @@
 				B5DF7FFD15E9E5B300139932 /* ExpensesViewController.xib */,
 				B5EA765415F5B08500D32A93 /* MonthsViewController.h */,
 				B5EA765515F5B08500D32A93 /* MonthsViewController.m */,
-				B5EA765615F5B08500D32A93 /* MonthsViewController.xib */,
 				B5EA765B15F5C46000D32A93 /* AboutViewController.h */,
 				B5EA765C15F5C46000D32A93 /* AboutViewController.m */,
 				B5EA765D15F5C46100D32A93 /* AboutViewController.xib */,
 			);
 			name = ViewControllers;
-			sourceTree = "<group>";
-		};
-		B57FD7C715F72FBB00F5AE99 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B57FD7CE15F72FBC00F5AE99 /* libKal.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		B597FEBE15F2CF8A00EC0AC9 /* Models */ = {
@@ -422,7 +419,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				B57FD7D115F72FC800F5AE99 /* PBXTargetDependency */,
+				B561766E15F86AF800B52DC2 /* PBXTargetDependency */,
 			);
 			name = "Expense Tracking";
 			productName = "Expense Tracking";
@@ -449,8 +446,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = B57FD7C715F72FBB00F5AE99 /* Products */;
-					ProjectRef = B57FD7C615F72FBB00F5AE99 /* Kal.xcodeproj */;
+					ProductGroup = B561766515F86AD400B52DC2 /* Products */;
+					ProjectRef = B561766415F86AD400B52DC2 /* Kal.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -461,11 +458,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		B57FD7CE15F72FBC00F5AE99 /* libKal.a */ = {
+		B561766C15F86AD400B52DC2 /* libKal.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libKal.a;
-			remoteRef = B57FD7CD15F72FBC00F5AE99 /* PBXContainerItemProxy */;
+			remoteRef = B561766B15F86AD400B52DC2 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -475,7 +472,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B57FD7D415F7300F00F5AE99 /* Kal.bundle in Resources */,
 				B512F35715E8B38600EDD5AF /* InfoPlist.strings in Resources */,
 				B512F36715E8B39500EDD5AF /* HomeViewController.xib in Resources */,
 				B512F37815E8C38300EDD5AF /* Default.png in Resources */,
@@ -509,11 +505,11 @@
 				B5EA764B15F5AB4500D32A93 /* trash_icon.png in Resources */,
 				B5EA765115F5ADC600D32A93 /* header.png in Resources */,
 				B5EA765315F5AFEA00D32A93 /* dollar_sign.png in Resources */,
-				B5EA765815F5B08500D32A93 /* MonthsViewController.xib in Resources */,
 				B5EA765A15F5B3A400D32A93 /* add_button_long.png in Resources */,
 				B5EA765F15F5C46100D32A93 /* AboutViewController.xib in Resources */,
 				B5EA766115F5C63600D32A93 /* trivuong.png in Resources */,
 				B5EA766C15F5D49900D32A93 /* bio_bg.png in Resources */,
+				B5199DDD15F8770000CE6304 /* expenses_list.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,10 +552,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B57FD7D115F72FC800F5AE99 /* PBXTargetDependency */ = {
+		B561766E15F86AF800B52DC2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Kal;
-			targetProxy = B57FD7D015F72FC800F5AE99 /* PBXContainerItemProxy */;
+			targetProxy = B561766D15F86AF800B52DC2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -578,7 +574,7 @@
 		B512F35E15E8B38600EDD5AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -595,15 +591,21 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/Users/trivuong/Projects/Expense,
+					"Tracking/**",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = "/Users/trivuong/Projects/Kal/**";
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "/Users/trivuong/Projects/Kal/src/**";
 			};
 			name = Debug;
 		};
 		B512F35F15E8B38600EDD5AF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -613,9 +615,15 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/Users/trivuong/Projects/Expense,
+					"Tracking/**",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				LIBRARY_SEARCH_PATHS = "/Users/trivuong/Projects/Kal/**";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "/Users/trivuong/Projects/Kal/src/**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -623,13 +631,18 @@
 		B512F36115E8B38600EDD5AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Expense Tracking/Expense Tracking-Prefix.pch";
-				HEADER_SEARCH_PATHS = "/Users/trivuong/Projects/Kal/**";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Expense Tracking/Expense Tracking-Info.plist";
-				LIBRARY_SEARCH_PATHS = "/Users/trivuong/Projects/Kal/**";
-				OTHER_LDFLAGS = "-ObjC";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "“$(TARGET_NAME)” ";
 				USER_HEADER_SEARCH_PATHS = "/Users/trivuong/Projects/Kal/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -638,13 +651,18 @@
 		B512F36215E8B38600EDD5AF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Expense Tracking/Expense Tracking-Prefix.pch";
-				HEADER_SEARCH_PATHS = "/Users/trivuong/Projects/Kal/**";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Expense Tracking/Expense Tracking-Info.plist";
-				LIBRARY_SEARCH_PATHS = "/Users/trivuong/Projects/Kal/**";
-				OTHER_LDFLAGS = "-ObjC";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "“$(TARGET_NAME)” ";
 				USER_HEADER_SEARCH_PATHS = "/Users/trivuong/Projects/Kal/**";
 				WRAPPER_EXTENSION = app;
 			};

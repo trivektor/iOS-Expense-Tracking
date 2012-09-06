@@ -20,13 +20,18 @@
 
 @synthesize expenseDAO, expenses, tableView;
 
+- (id)initWithExpenses:(NSMutableArray *)_expenses
+{
+    self = [super init];
+    self.expenses = _expenses;
+    return self;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.expenseDAO = [[Expense alloc] init];
-        self.expenses = [self.expenseDAO getAll];
     }
     return self;
 }
