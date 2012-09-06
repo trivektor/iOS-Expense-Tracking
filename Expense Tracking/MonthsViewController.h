@@ -7,13 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Kal.h"
+#import "KalViewController.h"
+#import "KalDate.h"
 
-@interface MonthsViewController : UIViewController
-{
-    __weak IBOutlet UIDatePicker *monthPicker;
-    __weak IBOutlet UIButton *viewExpensesButton;
-}
-
-- (IBAction)viewExpensesButtonTapped:(id)sender;
-
+@interface MonthsViewController : KalViewController
 @end
