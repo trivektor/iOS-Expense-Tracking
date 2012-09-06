@@ -12,4 +12,10 @@
 #import "KalDate.h"
 
 @interface MonthsViewController : KalViewController
+{
+    
+}
+
+-(void)viewMonthExpenses;
+
 @end
