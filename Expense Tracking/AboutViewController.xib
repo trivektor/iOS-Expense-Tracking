@@ -77,7 +77,6 @@
 								<string key="NSFrame">{{30, 204}, {260, 153}}</string>
 								<reference key="NSSuperview" ref="992058322"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">3</int>
@@ -86,6 +85,7 @@
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<bool key="IBUIMultipleTouchEnabled">YES</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<bool key="IBUIScrollEnabled">NO</bool>
 								<bool key="IBUIEditable">NO</bool>
 								<string key="IBUIText">Hi, My name is Tri Vuong and I'm the developer behind this app. The app was developed on iOS5 with Xcode 4.3.3. Graphics and icons were provided by Virgil  Pana, Wunderkinder and Icon Finder. The source code of the application is available on Github at github.com/trivektor/iOS-Expense-Tracking.</string>
 								<object class="NSColor" key="IBUITextColor">
