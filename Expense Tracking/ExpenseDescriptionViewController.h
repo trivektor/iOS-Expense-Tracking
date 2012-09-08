@@ -9,12 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "Expense.h"
 
+@protocol ExpenseDescriptionViewController <NSObject>
+- (void) didFinishComposingDescriptionForExpense:(Expense *)expense;
+@end
+
 @interface ExpenseDescriptionViewController : UIViewController
 {
     
     __weak IBOutlet UITextView *descriptionTextView;
 }
 
+@property (nonatomic, weak) id <ExpenseDescriptionViewController> delegate;
 @property (nonatomic, retain) Expense *expense;
+
+- (void)doneDescription;
 
 @end

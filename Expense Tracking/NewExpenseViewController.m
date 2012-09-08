@@ -106,6 +106,7 @@
     [b setTintColor:[UIColor blackColor]];
     [b setTitle:@"Back"];
     [self.navigationItem setBackBarButtonItem:b];
+    [d setDelegate:self];
     [self.navigationController pushViewController:d animated:YES];
 
     return NO;
@@ -192,11 +193,22 @@
 
 - (void)didFinishSelectingCategoryForExpense:(Expense *)expense
 {
+    [self populateFieldsWithExpenseData:expense];
+    [categoryButton setTitle:expense.category forState:UIControlStateNormal];
+}
+
+- (void)didFinishComposingDescriptionForExpense:(Expense *)expense
+{
+    [self populateFieldsWithExpenseData:expense];
+    [descriptionTextField setText:expense.description];
+}
+
+- (void)populateFieldsWithExpenseData:(Expense *)expense
+{
     [nameTextField setText:expense.name];
     [amountTextField setText:[NSString stringWithFormat:@"%f", expense.amount]];
     [taxTextField setText:[NSString stringWithFormat:@"%f", expense.tax]];
     [tipTextField setText:[NSString stringWithFormat:@"%f", expense.tip]];
-    [categoryButton setTitle:expense.category forState:UIControlStateNormal];
 }
 
 @end

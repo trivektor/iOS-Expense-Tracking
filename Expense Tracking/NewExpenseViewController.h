@@ -11,7 +11,7 @@
 #import "CategoriesViewController.h"
 #import "ExpenseDescriptionViewController.h"
 
-@interface NewExpenseViewController : UIViewController <UITextFieldDelegate, UIScrollViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource, CategoriesViewControllerDelegate>
+@interface NewExpenseViewController : UIViewController <UITextFieldDelegate, UIScrollViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource, CategoriesViewControllerDelegate, ExpenseDescriptionViewController>
 {
     __weak IBOutlet UIImageView *formBackground;
     __weak IBOutlet UIScrollView *scrollView;
@@ -30,5 +30,6 @@
 - (void)clearExpenseForm;
 - (IBAction)addExpenseButtonTapped:(id)sender;
 - (IBAction)categoryLabelTapped:(id)sender;
+- (void)populateFieldsWithExpenseData:(Expense *)expense;
 
 @end

@@ -14,7 +14,7 @@
 
 @implementation ExpenseDescriptionViewController
 
-@synthesize expense;
+@synthesize expense, delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,7 +33,7 @@
     [self.view setBackgroundColor:[UIColor clearColor]];
     [descriptionTextView becomeFirstResponder];
     
-    UIBarButtonItem *finishDescriptionButton = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleDone target:self action:nil];
+    UIBarButtonItem *finishDescriptionButton = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleDone target:self action:@selector(doneDescription)];
     [finishDescriptionButton setImage:[UIImage imageNamed:@"done_icon.png"]];
     [finishDescriptionButton setTintColor:[UIColor blackColor]];
     [self.navigationItem setRightBarButtonItem:finishDescriptionButton];
@@ -45,6 +45,14 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+}
+
+- (void)doneDescription
+{
+    [self.expense setDescription:descriptionTextView.text];
+    NSLog(@"%@", descriptionTextView.text);
+    [self.delegate didFinishComposingDescriptionForExpense:self.expense];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
