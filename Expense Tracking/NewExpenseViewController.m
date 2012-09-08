@@ -7,6 +7,7 @@
 //
 
 #import "NewExpenseViewController.h"
+#import "CategoriesViewController.h"
 #import "Expense.h"
 #import "ExpenseCategory.h"
 
@@ -169,7 +170,13 @@
 
 - (IBAction)categoryLabelTapped:(id)sender
 {
-    [categoryPicker setHidden:![categoryPicker isHidden]];
+    CategoriesViewController *c = [[CategoriesViewController alloc] init];
+    
+    UIBarButtonItem *b = [[UIBarButtonItem alloc] init];
+    [b setTintColor:[UIColor blackColor]];
+    
+    [self.navigationItem setBackBarButtonItem:b];
+    [self.navigationController pushViewController:c animated:YES];
 }
 
 @end

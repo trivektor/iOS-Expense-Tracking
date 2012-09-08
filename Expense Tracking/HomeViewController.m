@@ -113,6 +113,10 @@
     static NSString *CellIdentifier = @"CustomCell";
     CustomCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
+    if (!cell) {
+        cell = [[CustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
     cell.textLabel.text = [self.options objectAtIndex:[indexPath row]];
     cell.textLabel.font = [UIFont fontWithName:@"Arial" size:14.0];
     cell.textLabel.textColor = [UIColor colorWithHue:0.0/255.0 saturation:0.0/255.0 brightness:76.0/255.0 alpha:1.0];
