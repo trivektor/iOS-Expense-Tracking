@@ -7,7 +7,6 @@
 //
 
 #import "NewExpenseViewController.h"
-#import "CategoriesViewController.h"
 #import "Expense.h"
 #import "ExpenseCategory.h"
 
@@ -170,13 +169,28 @@
 
 - (IBAction)categoryLabelTapped:(id)sender
 {
-    CategoriesViewController *c = [[CategoriesViewController alloc] init];
+    CategoriesViewController *c = [[CategoriesViewController alloc] initWithNibName:@"CategoriesViewController" bundle:nil];
+    Expense *newExpense = [[Expense alloc] init];
+    [newExpense setName:nameTextField.text];
+    [newExpense setAmount:amountTextField.text.doubleValue];
+    [newExpense setTax:taxTextField.text.doubleValue];
+    [c setExpense:newExpense];
+    [c setDelegate:self];
     
     UIBarButtonItem *b = [[UIBarButtonItem alloc] init];
     [b setTintColor:[UIColor blackColor]];
     
     [self.navigationItem setBackBarButtonItem:b];
     [self.navigationController pushViewController:c animated:YES];
+}
+
+- (void)didFinishSelectingCategoryForExpense:(Expense *)expense
+{
+    [nameTextField setText:expense.name];
+    [amountTextField setText:[NSString stringWithFormat:@"%f", expense.amount]];
+    [taxTextField setText:[NSString stringWithFormat:@"%f", expense.tax]];
+    [tipTextField setText:[NSString stringWithFormat:@"%f", expense.tip]];
+    [categoryButton setTitle:expense.category forState:UIControlStateNormal];
 }
 
 @end

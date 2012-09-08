@@ -10,7 +10,7 @@
 
 @implementation Expense
 
-@synthesize expenseId, name, amount, tax, tip, description, createdAt;
+@synthesize expenseId, name, amount, tax, tip, category, description, createdAt;
 
 - (Boolean)addExpenseWithName:(NSString *)ename Amount:(float)eamount Tax:(float)etax Tip:(float)etip Category:(NSString *)ecategory Description:(NSString *)edescription;
 {

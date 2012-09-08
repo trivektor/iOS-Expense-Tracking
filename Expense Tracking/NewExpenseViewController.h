@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import "CategoriesViewController.h"
 
-@interface NewExpenseViewController : UIViewController <UITextFieldDelegate, UIScrollViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
+@interface NewExpenseViewController : UIViewController <UITextFieldDelegate, UIScrollViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource, CategoriesViewControllerDelegate>
 {
     __weak IBOutlet UIImageView *formBackground;
     __weak IBOutlet UIScrollView *scrollView;

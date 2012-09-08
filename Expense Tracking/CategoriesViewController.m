@@ -15,7 +15,7 @@
 
 @implementation CategoriesViewController
 
-@synthesize categories, tableView;
+@synthesize categories, tableView, expense, delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -83,6 +83,13 @@
     cell.textLabel.text = [self.categories objectAtIndex:[indexPath row]];
     [cell setSelectionStyle:UITableViewCellEditingStyleNone];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.expense.category = [self.categories objectAtIndex:[indexPath row]];
+    [self.delegate didFinishSelectingCategoryForExpense:self.expense];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
