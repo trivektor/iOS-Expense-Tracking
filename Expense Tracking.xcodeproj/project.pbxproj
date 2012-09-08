@@ -17,8 +17,6 @@
 		B512F36715E8B39500EDD5AF /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B512F36515E8B39500EDD5AF /* HomeViewController.xib */; };
 		B512F37815E8C38300EDD5AF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B512F37715E8C38300EDD5AF /* Default.png */; };
 		B512F37A15E8C3D100EDD5AF /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B512F37915E8C3D100EDD5AF /* icon.png */; };
-		B512F37E15E8C44500EDD5AF /* MonthExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B512F37C15E8C44500EDD5AF /* MonthExpenseViewController.m */; };
-		B512F37F15E8C44500EDD5AF /* MonthExpenseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B512F37D15E8C44500EDD5AF /* MonthExpenseViewController.xib */; };
 		B512F38315E8C4FE00EDD5AF /* NewExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B512F38115E8C4FE00EDD5AF /* NewExpenseViewController.m */; };
 		B512F38415E8C4FE00EDD5AF /* NewExpenseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B512F38215E8C4FE00EDD5AF /* NewExpenseViewController.xib */; };
 		B5199DDD15F8770000CE6304 /* expenses_list.png in Resources */ = {isa = PBXBuildFile; fileRef = B5199DDC15F8770000CE6304 /* expenses_list.png */; };
@@ -117,9 +115,6 @@
 		B512F36515E8B39500EDD5AF /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		B512F37715E8C38300EDD5AF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B512F37915E8C3D100EDD5AF /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		B512F37B15E8C44500EDD5AF /* MonthExpenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthExpenseViewController.h; sourceTree = "<group>"; };
-		B512F37C15E8C44500EDD5AF /* MonthExpenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthExpenseViewController.m; sourceTree = "<group>"; };
-		B512F37D15E8C44500EDD5AF /* MonthExpenseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthExpenseViewController.xib; sourceTree = "<group>"; };
 		B512F38015E8C4FE00EDD5AF /* NewExpenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewExpenseViewController.h; sourceTree = "<group>"; };
 		B512F38115E8C4FE00EDD5AF /* NewExpenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewExpenseViewController.m; sourceTree = "<group>"; };
 		B512F38215E8C4FE00EDD5AF /* NewExpenseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewExpenseViewController.xib; sourceTree = "<group>"; };
@@ -277,9 +272,6 @@
 				B5F09CF215EDDE3C00257FC5 /* ExpenseCell.xib */,
 				B5F09CEF15EDDE2B00257FC5 /* ExpenseCell.h */,
 				B5F09CF015EDDE2B00257FC5 /* ExpenseCell.m */,
-				B512F37B15E8C44500EDD5AF /* MonthExpenseViewController.h */,
-				B512F37C15E8C44500EDD5AF /* MonthExpenseViewController.m */,
-				B512F37D15E8C44500EDD5AF /* MonthExpenseViewController.xib */,
 				B5F09CE815EC8BD400257FC5 /* CustomCell.h */,
 				B5F09CE915EC8BD400257FC5 /* CustomCell.m */,
 				B5F09CEB15EC8C9000257FC5 /* CustomCell.xib */,
@@ -492,7 +484,6 @@
 				B512F36715E8B39500EDD5AF /* HomeViewController.xib in Resources */,
 				B512F37815E8C38300EDD5AF /* Default.png in Resources */,
 				B512F37A15E8C3D100EDD5AF /* icon.png in Resources */,
-				B512F37F15E8C44500EDD5AF /* MonthExpenseViewController.xib in Resources */,
 				B512F38415E8C4FE00EDD5AF /* NewExpenseViewController.xib in Resources */,
 				B5DF7FFF15E9E5B300139932 /* ExpensesViewController.xib in Resources */,
 				B5F09CE415EB3F4500257FC5 /* ExpenseTracking.sqlite in Resources */,
@@ -541,7 +532,6 @@
 				B512F35915E8B38600EDD5AF /* main.m in Sources */,
 				B512F35D15E8B38600EDD5AF /* AppDelegate.m in Sources */,
 				B512F36615E8B39500EDD5AF /* HomeViewController.m in Sources */,
-				B512F37E15E8C44500EDD5AF /* MonthExpenseViewController.m in Sources */,
 				B512F38315E8C4FE00EDD5AF /* NewExpenseViewController.m in Sources */,
 				B5A5758315E9BAEC00EE9A62 /* Expense.m in Sources */,
 				B5DF7FFE15E9E5B300139932 /* ExpensesViewController.m in Sources */,
