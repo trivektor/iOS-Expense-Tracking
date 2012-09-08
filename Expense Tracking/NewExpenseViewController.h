@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import "CategoriesViewController.h"
+#import "ExpenseDescriptionViewController.h"
 
 @interface NewExpenseViewController : UIViewController <UITextFieldDelegate, UIScrollViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource, CategoriesViewControllerDelegate>
 {
@@ -18,7 +19,6 @@
     __weak IBOutlet UITextField *amountTextField;
     __weak IBOutlet UITextField *taxTextField;
     __weak IBOutlet UITextField *tipTextField;
-    __weak IBOutlet UIPickerView *categoryPicker;
     __weak IBOutlet UIButton *categoryButton;
     __weak IBOutlet UITextView *descriptionTextField;
     __weak IBOutlet UIButton *addExpenseButton;

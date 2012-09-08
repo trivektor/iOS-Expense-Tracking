@@ -16,7 +16,6 @@
 			<string>IBUIButton</string>
 			<string>IBUITextField</string>
 			<string>IBUITextView</string>
-			<string>IBUIPickerView</string>
 			<string>IBUIScrollView</string>
 			<string>IBUIView</string>
 		</array>
@@ -47,7 +46,7 @@
 							<object class="IBUIImageView" id="826479029">
 								<reference key="NSNextResponder" ref="324301164"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{13, 9}, {294, 449}}</string>
+								<string key="NSFrame">{{13, 9}, {294, 400}}</string>
 								<reference key="NSSuperview" ref="324301164"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="205924565"/>
@@ -257,7 +256,7 @@
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MQA</bytes>
 								</object>
-								<object class="NSColor" key="IBUINormalTitleColor">
+								<object class="NSColor" key="IBUINormalTitleColor" id="44916154">
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MC42NjY2NjY2NjY3AA</bytes>
 								</object>
@@ -285,7 +284,7 @@
 							<object class="IBUITextView" id="163783957">
 								<reference key="NSNextResponder" ref="324301164"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{28, 245}, {263, 102}}</string>
+								<string key="NSFrame">{{28, 245}, {263, 91}}</string>
 								<reference key="NSSuperview" ref="324301164"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="419241557"/>
@@ -297,7 +296,8 @@
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<bool key="IBUIMultipleTouchEnabled">YES</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<string key="IBUIText"/>
+								<string key="IBUIText">Description...</string>
+								<reference key="IBUITextColor" ref="44916154"/>
 								<object class="IBUITextInputTraits" key="IBUITextInputTraits">
 									<int key="IBUIAutocapitalizationType">2</int>
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -308,7 +308,7 @@
 							<object class="IBUIImageView" id="419241557">
 								<reference key="NSNextResponder" ref="324301164"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{19, 370}, {282, 1}}</string>
+								<string key="NSFrame">{{19, 337}, {282, 1}}</string>
 								<reference key="NSSuperview" ref="324301164"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="1006158142"/>
@@ -322,10 +322,10 @@
 							<object class="IBUIButton" id="1006158142">
 								<reference key="NSNextResponder" ref="324301164"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{95, 388}, {130, 37}}</string>
+								<string key="NSFrame">{{95, 352}, {130, 37}}</string>
 								<reference key="NSSuperview" ref="324301164"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="131782381"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -365,21 +365,6 @@
 						<int key="IBUIContentMode">4</int>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-					</object>
-					<object class="IBUIPickerView" id="131782381">
-						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">290</int>
-						<string key="NSFrame">{{0, 286}, {320, 216}}</string>
-						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
-						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<object class="NSColor" key="IBUIBackgroundColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC42MTAzMzE2MzI3IDAuNjE3MzQ2OTM4OCAwLjYxNzM0NjkzODgAA</bytes>
-						</object>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<bool key="IBUIShowsSelectionIndicator">YES</bool>
 					</object>
 				</array>
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
@@ -478,14 +463,6 @@
 					<int key="connectionID">73</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">categoryPicker</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="131782381"/>
-					</object>
-					<int key="connectionID">68</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">addExpenseButtonTapped:</string>
 						<reference key="source" ref="1006158142"/>
@@ -517,7 +494,6 @@
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="324301164"/>
-							<reference ref="131782381"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -619,11 +595,6 @@
 						<reference key="parent" ref="324301164"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">67</int>
-						<reference key="object" ref="131782381"/>
-						<reference key="parent" ref="191373211"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">71</int>
 						<reference key="object" ref="247448592"/>
 						<reference key="parent" ref="324301164"/>
@@ -649,7 +620,6 @@
 				<string key="59.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="60.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="63.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="67.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="71.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="72.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
@@ -682,7 +652,6 @@
 						<string key="addExpenseButton">UIButton</string>
 						<string key="amountTextField">UITextField</string>
 						<string key="categoryButton">UIButton</string>
-						<string key="categoryPicker">UIPickerView</string>
 						<string key="descriptionTextField">UITextView</string>
 						<string key="formBackground">UIImageView</string>
 						<string key="nameTextField">UITextField</string>
@@ -702,10 +671,6 @@
 						<object class="IBToOneOutletInfo" key="categoryButton">
 							<string key="name">categoryButton</string>
 							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="categoryPicker">
-							<string key="name">categoryPicker</string>
-							<string key="candidateClassName">UIPickerView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="descriptionTextField">
 							<string key="name">descriptionTextField</string>

@@ -56,11 +56,6 @@
     
     // Make the whole form scrollable
     scrollView.contentSize = CGSizeMake(320, 540);
-    
-    // Set delegate, datasource and hide category picker
-    [categoryPicker setDelegate:self];
-    [categoryPicker setDataSource:self];
-    [categoryPicker setHidden:YES];
 }
 
 - (void)viewDidUnload
@@ -73,7 +68,6 @@
     addExpenseButton = nil;
     scrollView = nil;
     formBackground = nil;
-    categoryPicker = nil;
     categoryButton = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -99,6 +93,24 @@
     return YES;
 }
 
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView
+{
+    ExpenseDescriptionViewController *d = [[ExpenseDescriptionViewController alloc] init];
+    Expense *newExpense = [[Expense alloc] init];
+    [newExpense setName:nameTextField.text];
+    [newExpense setAmount:amountTextField.text.doubleValue];
+    [newExpense setTax:taxTextField.text.doubleValue];
+    [d setExpense:newExpense];
+    
+    UIBarButtonItem *b = [[UIBarButtonItem alloc] init];
+    [b setTintColor:[UIColor blackColor]];
+    [b setTitle:@"Back"];
+    [self.navigationItem setBackBarButtonItem:b];
+    [self.navigationController pushViewController:d animated:YES];
+
+    return NO;
+}
+
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
     return 1;
@@ -112,12 +124,6 @@
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     return [self.expenseCategories objectAtIndex:row];
-}
-
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
-{
-    self.selectedCategory = [self.expenseCategories objectAtIndex:[categoryPicker selectedRowInComponent:0]];
-    [categoryButton setTitle:self.selectedCategory forState:UIControlStateNormal];
 }
 
 - (void)clearExpenseForm
