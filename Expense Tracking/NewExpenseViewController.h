@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import "CategoriesViewController.h"
-#import "ExpenseDescriptionViewController.h"
 
-@interface NewExpenseViewController : UIViewController <UITextFieldDelegate, UIScrollViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource, CategoriesViewControllerDelegate, ExpenseDescriptionViewController>
+@interface NewExpenseViewController : UIViewController <UITextFieldDelegate, UIScrollViewDelegate, UITextViewDelegate, CategoriesViewControllerDelegate>
 {
     __weak IBOutlet UIImageView *formBackground;
     __weak IBOutlet UIScrollView *scrollView;
@@ -24,12 +23,8 @@
     __weak IBOutlet UIButton *addExpenseButton;
 }
 
-@property (nonatomic, retain) NSArray *expenseCategories;
-@property (nonatomic, retain) NSString *selectedCategory;
-
 - (void)clearExpenseForm;
 - (IBAction)addExpenseButtonTapped:(id)sender;
 - (IBAction)categoryLabelTapped:(id)sender;
-- (void)populateFieldsWithExpenseData:(Expense *)expense;
 
 @end

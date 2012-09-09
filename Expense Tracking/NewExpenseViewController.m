@@ -16,15 +16,11 @@
 
 @implementation NewExpenseViewController
 
-@synthesize expenseCategories, selectedCategory;
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.expenseCategories = [ExpenseCategory getAll];
-        self.selectedCategory = @"";
     }
     return self;
 }
@@ -56,6 +52,12 @@
     
     // Make the whole form scrollable
     scrollView.contentSize = CGSizeMake(320, 540);
+    
+    // Dismiss the keyboard for the 'Description' field when tapping outside of it
+    // http://stackoverflow.com/questions/5306240/iphone-dismiss-keyboard-when-touching-outside-of-textfield
+    UITapGestureRecognizer *descriptionKeyboardOutsideTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissDescriptionKeyboard)];
+    [descriptionKeyboardOutsideTap setCancelsTouchesInView:NO];
+    [self.view addGestureRecognizer:descriptionKeyboardOutsideTap];
 }
 
 - (void)viewDidUnload
@@ -85,46 +87,37 @@
     return YES;
 }
 
-- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
-    if ([text isEqual:@"\n"]) {
-        [textView resignFirstResponder];
-        return NO;
-    }
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView
+{
+//    ExpenseDescriptionViewController *d = [[ExpenseDescriptionViewController alloc] init];
+//    Expense *newExpense = [[Expense alloc] init];
+//    [newExpense setName:nameTextField.text];
+//    [newExpense setAmount:amountTextField.text.doubleValue];
+//    [newExpense setTax:taxTextField.text.doubleValue];
+//    [d setExpense:newExpense];
+//    
+//    UIBarButtonItem *b = [[UIBarButtonItem alloc] init];
+//    [b setTintColor:[UIColor blackColor]];
+//    [b setTitle:@"Back"];
+//    [self.navigationItem setBackBarButtonItem:b];
+//    [d setDelegate:self];
+//    [self.navigationController pushViewController:d animated:YES];
+    //[scrollView setContentSize:CGSizeMake(320, 740)];
+    [scrollView setContentOffset:CGPointMake(0, 200) animated:YES];
     return YES;
 }
 
-- (BOOL)textViewShouldBeginEditing:(UITextView *)textView
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
 {
-    ExpenseDescriptionViewController *d = [[ExpenseDescriptionViewController alloc] init];
-    Expense *newExpense = [[Expense alloc] init];
-    [newExpense setName:nameTextField.text];
-    [newExpense setAmount:amountTextField.text.doubleValue];
-    [newExpense setTax:taxTextField.text.doubleValue];
-    [d setExpense:newExpense];
-    
-    UIBarButtonItem *b = [[UIBarButtonItem alloc] init];
-    [b setTintColor:[UIColor blackColor]];
-    [b setTitle:@"Back"];
-    [self.navigationItem setBackBarButtonItem:b];
-    [d setDelegate:self];
-    [self.navigationController pushViewController:d animated:YES];
-
-    return NO;
+    return YES;
 }
 
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+- (void)dismissDescriptionKeyboard
 {
-    return 1;
-}
-
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
-    return [self.expenseCategories count];
-}
-
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    return [self.expenseCategories objectAtIndex:row];
+    if (descriptionTextField.isFirstResponder) {
+        [scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+        [descriptionTextField resignFirstResponder];
+    }
 }
 
 - (void)clearExpenseForm
@@ -142,11 +135,7 @@
     UIAlertView *dialog;
     
     if (nameTextField.text.length == 0 || amountTextField.text.length == 0) {
-        dialog = [[UIAlertView alloc] initWithTitle:@"Alert" 
-                                            message:@"Please enter a name and an amount" 
-                                           delegate:self 
-                                  cancelButtonTitle:@"OK" 
-                                  otherButtonTitles:nil];
+        dialog = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Please enter a name and an amount" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [dialog show];
         return;
     } else {
@@ -155,14 +144,10 @@
                                      Amount:[amountTextField text].doubleValue 
                                         Tax:[taxTextField text].doubleValue
                                         Tip:[tipTextField text].doubleValue
-                                   Category:self.selectedCategory
+                                   Category:[categoryButton.titleLabel text]
                                 Description:[descriptionTextField text]];
         
-        dialog = [[UIAlertView alloc] initWithTitle:@"Alert" 
-                                            message:nil 
-                                           delegate:self 
-                                  cancelButtonTitle:@"OK" 
-                                  otherButtonTitles:nil];
+        dialog = [[UIAlertView alloc] initWithTitle:@"Alert" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         
         if (result == YES) {
             [dialog setMessage:@"Expense has been added"];
@@ -185,6 +170,7 @@
     [c setDelegate:self];
     
     UIBarButtonItem *b = [[UIBarButtonItem alloc] init];
+    [b setTitle:@"Back"];
     [b setTintColor:[UIColor blackColor]];
     
     [self.navigationItem setBackBarButtonItem:b];
@@ -195,12 +181,6 @@
 {
     [self populateFieldsWithExpenseData:expense];
     [categoryButton setTitle:expense.category forState:UIControlStateNormal];
-}
-
-- (void)didFinishComposingDescriptionForExpense:(Expense *)expense
-{
-    [self populateFieldsWithExpenseData:expense];
-    [descriptionTextField setText:expense.description];
 }
 
 - (void)populateFieldsWithExpenseData:(Expense *)expense
