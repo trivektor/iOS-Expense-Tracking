@@ -186,9 +186,10 @@
 - (void)populateFieldsWithExpenseData:(Expense *)expense
 {
     [nameTextField setText:expense.name];
-    [amountTextField setText:[NSString stringWithFormat:@"%f", expense.amount]];
-    [taxTextField setText:[NSString stringWithFormat:@"%f", expense.tax]];
-    [tipTextField setText:[NSString stringWithFormat:@"%f", expense.tip]];
+    
+    [amountTextField setText:[NSString stringWithFormat:@"%.02f", expense.amount]];
+    [taxTextField setText:[NSString stringWithFormat:@"%.02f", expense.tax]];
+    [tipTextField setText:[NSString stringWithFormat:@"%.02f", expense.tip]];
 }
 
 @end

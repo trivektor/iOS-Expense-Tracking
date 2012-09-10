@@ -21,6 +21,7 @@
 		B512F38415E8C4FE00EDD5AF /* NewExpenseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B512F38215E8C4FE00EDD5AF /* NewExpenseViewController.xib */; };
 		B5199DDD15F8770000CE6304 /* expenses_list.png in Resources */ = {isa = PBXBuildFile; fileRef = B5199DDC15F8770000CE6304 /* expenses_list.png */; };
 		B519A47215E93EC4005CD2D3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B519A47115E93EC4005CD2D3 /* QuartzCore.framework */; };
+		B54745AF15FD953300DF8A39 /* wood_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B54745AE15FD953300DF8A39 /* wood_bg.png */; };
 		B561766F15F86AFD00B52DC2 /* libKal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B561766C15F86AD400B52DC2 /* libKal.a */; };
 		B567118F15F4553D005DAF03 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B567118D15F4553D005DAF03 /* FeedbackViewController.m */; };
 		B567119015F4553D005DAF03 /* FeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B567118E15F4553D005DAF03 /* FeedbackViewController.xib */; };
@@ -29,7 +30,6 @@
 		B56711A315F50965005DAF03 /* refresh_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B56711A215F50965005DAF03 /* refresh_icon.png */; };
 		B581028315FB0E0A008ADFE5 /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B581028115FB0E0A008ADFE5 /* CategoriesViewController.m */; };
 		B581028415FB0E0A008ADFE5 /* CategoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B581028215FB0E0A008ADFE5 /* CategoriesViewController.xib */; };
-		B581028615FB15BF008ADFE5 /* wood_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B581028515FB15BF008ADFE5 /* wood_bg.png */; };
 		B581028A15FB234D008ADFE5 /* ExpenseDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B581028815FB234D008ADFE5 /* ExpenseDescriptionViewController.m */; };
 		B581028B15FB234D008ADFE5 /* ExpenseDescriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B581028915FB234D008ADFE5 /* ExpenseDescriptionViewController.xib */; };
 		B581028D15FB2D63008ADFE5 /* done_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B581028C15FB2D63008ADFE5 /* done_icon.png */; };
@@ -120,6 +120,7 @@
 		B512F38215E8C4FE00EDD5AF /* NewExpenseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewExpenseViewController.xib; sourceTree = "<group>"; };
 		B5199DDC15F8770000CE6304 /* expenses_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = expenses_list.png; path = ../../../Desktop/iphone_dev/expenses_list.png; sourceTree = "<group>"; };
 		B519A47115E93EC4005CD2D3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B54745AE15FD953300DF8A39 /* wood_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wood_bg.png; sourceTree = "<group>"; };
 		B561766415F86AD400B52DC2 /* Kal.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kal.xcodeproj; path = ../Kal/src/Kal.xcodeproj; sourceTree = "<group>"; };
 		B567118C15F4553C005DAF03 /* FeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
 		B567118D15F4553D005DAF03 /* FeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
@@ -131,7 +132,6 @@
 		B581028015FB0E0A008ADFE5 /* CategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesViewController.h; sourceTree = "<group>"; };
 		B581028115FB0E0A008ADFE5 /* CategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesViewController.m; sourceTree = "<group>"; };
 		B581028215FB0E0A008ADFE5 /* CategoriesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoriesViewController.xib; sourceTree = "<group>"; };
-		B581028515FB15BF008ADFE5 /* wood_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wood_bg.png; sourceTree = "<group>"; };
 		B581028715FB234D008ADFE5 /* ExpenseDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenseDescriptionViewController.h; sourceTree = "<group>"; };
 		B581028815FB234D008ADFE5 /* ExpenseDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseDescriptionViewController.m; sourceTree = "<group>"; };
 		B581028915FB234D008ADFE5 /* ExpenseDescriptionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpenseDescriptionViewController.xib; sourceTree = "<group>"; };
@@ -298,8 +298,8 @@
 		B512F36815E8B40E00EDD5AF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B54745AE15FD953300DF8A39 /* wood_bg.png */,
 				B581028C15FB2D63008ADFE5 /* done_icon.png */,
-				B581028515FB15BF008ADFE5 /* wood_bg.png */,
 				B5199DDC15F8770000CE6304 /* expenses_list.png */,
 				B5EA766B15F5D49900D32A93 /* bio_bg.png */,
 				B5EA766015F5C63600D32A93 /* trivuong.png */,
@@ -516,9 +516,9 @@
 				B5EA766C15F5D49900D32A93 /* bio_bg.png in Resources */,
 				B5199DDD15F8770000CE6304 /* expenses_list.png in Resources */,
 				B581028415FB0E0A008ADFE5 /* CategoriesViewController.xib in Resources */,
-				B581028615FB15BF008ADFE5 /* wood_bg.png in Resources */,
 				B581028B15FB234D008ADFE5 /* ExpenseDescriptionViewController.xib in Resources */,
 				B581028D15FB2D63008ADFE5 /* done_icon.png in Resources */,
+				B54745AF15FD953300DF8A39 /* wood_bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
