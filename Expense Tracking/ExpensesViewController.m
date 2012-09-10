@@ -18,12 +18,21 @@
 
 @implementation ExpensesViewController
 
-@synthesize expenseDAO, expenses, tableView;
+@synthesize expenseDAO, expenses, tableView, expensesSum, sumLabel;
 
 - (id)initWithExpenses:(NSMutableArray *)_expenses
 {
     self = [super init];
     self.expenses = _expenses;
+    
+    double sum = 0.0f;
+    
+    for (int i=0; i < self.expenses.count; i++) {
+        Expense *e = [self.expenses objectAtIndex:i];
+        sum += e.amount;
+    }
+    
+    self.expensesSum = sum;
     return self;
 }
 
@@ -45,7 +54,7 @@
     UIImageView *topBorderView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"envelope_border.png"]];
     [self.view addSubview:topBorderView];
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 4, 320, 480) style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 4, 320, 446) style:UITableViewStylePlain];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.tableView.backgroundColor = [UIColor clearColor];
@@ -55,6 +64,17 @@
     self.tableView.autoresizingMask = ~UIViewAutoresizingFlexibleBottomMargin;
     
     [self.view addSubview:self.tableView];
+    
+    UIView *sumView = [[UIView alloc] initWithFrame:CGRectMake(0, 385, 320, 35)];
+    [sumView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"header.png"]]];
+    
+    self.sumLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 7, 300, 20)];
+    [self.sumLabel setBackgroundColor:[UIColor clearColor]];
+    [self.sumLabel setText:[NSString stringWithFormat:@"Total: $%.02f", self.expensesSum]];
+    [self.sumLabel setTextColor:[UIColor whiteColor]];
+    [sumView addSubview:self.sumLabel];
+    
+    [self.view addSubview:sumView];
 }
 
 - (void)viewDidLoad

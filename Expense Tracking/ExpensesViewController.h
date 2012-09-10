@@ -17,6 +17,8 @@
 @property (nonatomic, strong) Expense *expenseDAO;
 @property (nonatomic, strong) NSMutableArray *expenses;
 @property (nonatomic, retain) UITableView *tableView;
+@property (nonatomic, retain) UILabel *sumLabel;
+@property (nonatomic) double expensesSum;
 
 - (id)initWithExpenses:(NSMutableArray *)expenses;
 - (void) addNewExpense;
