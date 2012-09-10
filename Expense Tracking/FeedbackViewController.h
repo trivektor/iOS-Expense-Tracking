@@ -18,5 +18,6 @@
 
 - (void)sendFeedbackButtonTapped:(id)sender;
 - (void)clearFeedbackForm;
+- (void)dismissFeedbackKeyboard;
 
 @end

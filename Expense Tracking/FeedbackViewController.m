@@ -37,17 +37,19 @@
     // Do any additional setup after loading the view from its nib.
     [nameTextField setDelegate:self];
     [emailTextField setDelegate:self];
-    [feedbackTextView setDelegate:self];
     
     [self.navigationItem setTitle:@"Feedback"];
     [self.view setBackgroundColor:[UIColor clearColor]];
     [sendFeedbackButton setTitleColor:[UIColor colorWithRed:141/255.0 green:67/255.0 blue:2/255.0 alpha:1] forState:UIControlStateNormal];
     
-    UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonSystemItemRefresh target:self action:@selector(clearFeedbackForm)];
-    [refreshButton setTintColor:[UIColor blackColor]];
-    [refreshButton setImage:[UIImage imageNamed:@"refresh_icon.png"]];
-    [self.navigationItem setRightBarButtonItem:refreshButton];
+    UIBarButtonItem *trashButton = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonSystemItemRefresh target:self action:@selector(clearFeedbackForm)];
+    [trashButton setTintColor:[UIColor blackColor]];
+    [trashButton setImage:[UIImage imageNamed:@"trash_icon.png"]];
+    [self.navigationItem setRightBarButtonItem:trashButton];
     
+    UITapGestureRecognizer *feedbackKeyboardOutsideTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissFeedbackKeyboard)];
+    [feedbackKeyboardOutsideTap setCancelsTouchesInView:NO];
+    [self.view addGestureRecognizer:feedbackKeyboardOutsideTap];
 }
 
 - (void)viewDidUnload
@@ -132,17 +134,17 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
+    if (feedbackTextView.isFirstResponder) {
+        [feedbackTextView resignFirstResponder];
+    }
+    
     [textField resignFirstResponder];
     return YES;
 }
 
-- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
-    if ([text isEqual:@"\n"]) {
-        [textView resignFirstResponder];
-        return NO;
-    }
-    return YES;
+- (void)dismissFeedbackKeyboard
+{
+    [feedbackTextView resignFirstResponder];
 }
-
 
 @end
