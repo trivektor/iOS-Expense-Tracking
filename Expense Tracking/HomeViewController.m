@@ -19,9 +19,7 @@
 
 @implementation HomeViewController
 
-@synthesize options;
-@synthesize optionIcons;
-@synthesize tableView;
+@synthesize options, optionIcons, tableView;
 
 - (id)init
 {
@@ -29,22 +27,23 @@
         // Custom initialization
         // Add option items to option items array
         // TODO: move this into a model
-        self.options = [[NSMutableArray alloc] init];
-        [self.options addObject:@"View all expenses"];
-        [self.options addObject:@"View expenses by month"];
-        [self.options addObject:@"Add new expense"];
-        [self.options addObject:@"Settings"];
-        [self.options addObject:@"About this app"];
-        [self.options addObject:@"Feedback"];
+        self.options = [[NSMutableArray alloc] initWithObjects:
+                        @"View all expenses",
+                        @"View expenses by month",
+                        @"Add new expense",
+                        @"Settings",
+                        @"About this app",
+                        @"Feedback",
+                        nil];
         
-        self.optionIcons = [[NSMutableArray alloc] init];
-        [self.optionIcons addObject:@"dollar_sign.png"];
-        [self.optionIcons addObject:@"calendar.png"];
-        [self.optionIcons addObject:@"plus.png"];
-        [self.optionIcons addObject:@"settings.png"];
-        [self.optionIcons addObject:@"list.png"];
-        [self.optionIcons addObject:@"spechbubble.png"];
-
+        self.optionIcons = [[NSMutableArray alloc] initWithObjects:
+                            @"dollar_sign.png",
+                            @"calendar.png",
+                            @"plus.png",
+                            @"gear.png",
+                            @"about_icon.png",
+                            @"speaker_icon.png",
+                            nil];
     }
     return self;
 }
