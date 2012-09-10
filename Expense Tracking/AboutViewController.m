@@ -28,15 +28,24 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.navigationItem setTitle:@"About This App"];
-    [self.view setBackgroundColor:[UIColor clearColor]];
+    //[self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"gray_sand.png"]]];
+    [self.view setBackgroundColor:[UIColor whiteColor]];
 }
 
 - (void)viewDidUnload
 {
     bioTextView = nil;
+    twitterButton = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+}
+
+- (void)visitTwitter:(id)sender
+{
+    NSURL *twitter = [[NSURL alloc] initWithString:@"twitter://user?screen_name=trivektor"];
+    //NSURLRequest *req = [[NSURLRequest alloc] initWithURL:twitter];
+    [[UIApplication sharedApplication] openURL:twitter];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

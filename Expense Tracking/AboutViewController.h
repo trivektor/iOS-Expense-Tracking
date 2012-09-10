@@ -10,8 +10,10 @@
 
 @interface AboutViewController : UIViewController
 {
-    
+    __weak IBOutlet UIButton *twitterButton;
     __weak IBOutlet UITextView *bioTextView;
 }
+
+- (IBAction)visitTwitter:(id)sender;
 
 @end
