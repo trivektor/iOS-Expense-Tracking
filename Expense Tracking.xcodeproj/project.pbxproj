@@ -80,6 +80,7 @@
 		B5F09CEC15EC8C9000257FC5 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F09CEB15EC8C9000257FC5 /* CustomCell.xib */; };
 		B5F09CF115EDDE2B00257FC5 /* ExpenseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F09CF015EDDE2B00257FC5 /* ExpenseCell.m */; };
 		B5F09CF315EDDE3C00257FC5 /* ExpenseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F09CF215EDDE3C00257FC5 /* ExpenseCell.xib */; };
+		B5F20BCA15FF012B00E71D64 /* charts_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B5F20BC915FF012B00E71D64 /* charts_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -203,6 +204,7 @@
 		B5F09CEF15EDDE2B00257FC5 /* ExpenseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpenseCell.h; path = ../ExpenseCell.h; sourceTree = "<group>"; };
 		B5F09CF015EDDE2B00257FC5 /* ExpenseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpenseCell.m; path = ../ExpenseCell.m; sourceTree = "<group>"; };
 		B5F09CF215EDDE3C00257FC5 /* ExpenseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ExpenseCell.xib; path = ../ExpenseCell.xib; sourceTree = "<group>"; };
+		B5F20BC915FF012B00E71D64 /* charts_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = charts_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +300,7 @@
 		B512F36815E8B40E00EDD5AF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B5F20BC915FF012B00E71D64 /* charts_icon.png */,
 				B54745D015FDB03000DF8A39 /* gear.png */,
 				B54745C415FDAB5F00DF8A39 /* speaker_icon.png */,
 				B54745BE15FDAA7C00DF8A39 /* about_icon.png */,
@@ -519,6 +522,7 @@
 				B54745BF15FDAA7C00DF8A39 /* about_icon.png in Resources */,
 				B54745C515FDAB5F00DF8A39 /* speaker_icon.png in Resources */,
 				B54745D115FDB03100DF8A39 /* gear.png in Resources */,
+				B5F20BCA15FF012B00E71D64 /* charts_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

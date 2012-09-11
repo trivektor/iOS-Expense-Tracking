@@ -70,7 +70,11 @@
 
 - (void)sendFeedbackButtonTapped:(id)sender
 {
-    self.spinnerView = [SpinnerView loadSpinnerIntoView:self.view];
+    if (nameTextField.text.length == 0 || emailTextField.text.length == 0) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Please enter your name and email" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
     
     NSURL *baseURL = [NSURL URLWithString:@"http://expense-tracking.herokuapp.com"];
     
@@ -122,6 +126,7 @@
         }
      ];
     
+    self.spinnerView = [SpinnerView loadSpinnerIntoView:self.view];
     [operation start];
 }
 

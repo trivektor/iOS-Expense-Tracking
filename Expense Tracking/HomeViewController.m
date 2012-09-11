@@ -30,6 +30,7 @@
         self.options = [[NSMutableArray alloc] initWithObjects:
                         @"View all expenses",
                         @"View expenses by month",
+                        @"View expenses by category",
                         @"Add new expense",
                         @"Settings",
                         @"About this app",
@@ -39,6 +40,7 @@
         self.optionIcons = [[NSMutableArray alloc] initWithObjects:
                             @"dollar_sign.png",
                             @"calendar.png",
+                            @"charts_icon.png",
                             @"plus.png",
                             @"gear.png",
                             @"about_icon.png",
@@ -154,19 +156,19 @@
         return;
     }
     
-    if (selectedRow == 2) {
+    if (selectedRow == 3) {
         NewExpenseViewController *b = [[NewExpenseViewController alloc] init];
         [self.navigationController pushViewController:b animated:YES];
         return;
     }
     
-    if (selectedRow == 4) {
+    if (selectedRow == 5) {
         AboutViewController *o = [[AboutViewController alloc] init];
         [self.navigationController pushViewController:o animated:YES];
         return;
     }
     
-    if (selectedRow == 5) {
+    if (selectedRow == 6) {
         FeedbackViewController *f = [[FeedbackViewController alloc] init];
         [self.navigationController pushViewController:f animated:YES];
         return;

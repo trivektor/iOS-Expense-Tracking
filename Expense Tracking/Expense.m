@@ -90,7 +90,7 @@
             expense.tax = sqlite3_column_double(selectStatement, 3);
             expense.tip = sqlite3_column_double(selectStatement, 4);
             expense.description = ((char*)sqlite3_column_text(selectStatement, 5)) ? 
-                        [NSString stringWithUTF8String:sqlite3_column_text(selectStatement, 5)] : @"";
+                        [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectStatement, 5)] : @"";
             expense.createdAt = [NSString stringWithUTF8String:(char*)sqlite3_column_text(selectStatement, 7)];
             [expensesArray addObject:expense];
         }
@@ -132,7 +132,7 @@
                 expense.tax = sqlite3_column_double(selectStatement, 3);
                 expense.tip = sqlite3_column_double(selectStatement, 4);
                 expense.description = ((char*)sqlite3_column_text(selectStatement, 5)) ? 
-                [NSString stringWithUTF8String:sqlite3_column_text(selectStatement, 5)] : @"";
+                [NSString stringWithUTF8String:(char*)sqlite3_column_text(selectStatement, 5)] : @"";
                 expense.createdAt = [NSString stringWithUTF8String:(char*)sqlite3_column_text(selectStatement, 7)];
                 [expensesArray addObject:expense];
                 
