@@ -13,6 +13,22 @@
 
 @end
 
+@interface UILabel (BPExtensions)
+- (void)sizeToFitFixedWith:(CGFloat)fixedWith;
+@end
+
+@implementation UILabel (BPExtensions)
+
+- (void)sizeToFitFixedWith:(CGFloat)fixedWith
+{
+    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, fixedWith, 0);
+    self.lineBreakMode = UILineBreakModeWordWrap;
+    self.numberOfLines = 0;
+    [self sizeToFit];
+}
+
+@end
+
 @implementation ExpenseDetailsViewController
 
 @synthesize expenseItem, tableView, sectionNames;
@@ -68,7 +84,8 @@
     if (row == 0) {
         [cell.expenseDetail setNumberOfLines:0];
         [cell.expenseDetail setText:self.expenseItem.name];
-        [cell.expenseDetail sizeToFit];
+        //[cell.expenseDetail sizeToFit];
+        [cell.expenseDetail sizeToFitFixedWith:193];
     } else if (row == 1) {
         [cell.expenseDetail setText:[NSString stringWithFormat:@"%.02f", self.expenseItem.amount]];
     } else if (row == 2) {
@@ -109,11 +126,24 @@
     int row = [indexPath row];
     
     if (row == 0) {
-        NSString *text = self.expenseItem.name;
-        CGSize constraint = CGSizeMake(320.0f - (10.0f * 2), 20000.0f);
-        CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:14.0f] constrainedToSize:constraint lineBreakMode:UILineBreakModeWordWrap];
-        CGFloat height = MAX(size.height, 49.0f);
-        return height + (10.0f * 2) + 15;
+        NSString *text = [self.expenseItem.name stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        NSLog(@"%@", text);
+//        CGSize constraint = CGSizeMake(320.0f - (10.0f * 2), 20000.0f);
+//        CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:14.0f] constrainedToSize:constraint lineBreakMode:UILineBreakModeWordWrap];
+//        CGFloat height = MAX(size.height, 49.0f);
+//        return height + (10.0f * 2) + 15;
+        UILabel *l = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 193, 21)];
+        [l setText:text];
+        [l sizeToFitFixedWith:193];
+        
+        int height = l.frame.size.height;
+        
+        NSLog(@"height is %i", height);
+        int finalHeight = 14 * 2 + height;
+        
+        NSLog(@"final height is %i", finalHeight);
+        
+        return finalHeight;
     } else {
         return 49;  
     }

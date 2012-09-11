@@ -21,6 +21,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     HomeViewController *h = [[HomeViewController alloc] init];
     UINavigationController *mainNavController = [[UINavigationController alloc] initWithRootViewController:h];
+    [mainNavController.navigationBar setBackgroundImage:[UIImage imageNamed:@"header.png"] forBarMetrics:UIBarMetricsDefault];
 
     [self.window setRootViewController:mainNavController];
     [self.window setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"wood_bg.png"]]];
