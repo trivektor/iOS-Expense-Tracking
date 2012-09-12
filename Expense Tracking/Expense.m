@@ -111,7 +111,7 @@
     NSString *dbPath = [documentsDirectory stringByAppendingPathComponent:@"ExpenseTracking.sqlite"];
     
     if (sqlite3_open(dbPath.UTF8String, &database) == SQLITE_OK) {
-        char *sql = "SELECT * FROM expenses WHERE created_at >= ? AND created_at < ?";
+        char *sql = "SELECT * FROM expenses WHERE created_at >= ? AND created_at < ? ORDER BY created_at DESC";
         sqlite3_stmt *selectStatement;
                 
         if (sqlite3_prepare_v2(database, sql, -1, &selectStatement, NULL) == SQLITE_OK) {
