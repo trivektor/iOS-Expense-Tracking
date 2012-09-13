@@ -24,6 +24,7 @@
 {
     self = [super init];
     self.expenses = _expenses;
+    self.expenseDAO = [[Expense alloc] init];
     
     double sum = 0.0f;
     

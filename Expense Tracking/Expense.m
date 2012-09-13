@@ -175,7 +175,6 @@
     NSString *dbPath = [documentsDirectory stringByAppendingPathComponent:@"ExpenseTracking.sqlite"];
 
     if (sqlite3_open(dbPath.UTF8String, &database) == SQLITE_OK) {
-        NSLog(@"about to delete the epxense");
         char *sql = "DELETE FROM expenses WHERE id = ?";
         sqlite3_stmt *deleteStatement;
         
@@ -184,12 +183,8 @@
             NSLog(@"Problem while preparing delete statement");
         }
         
-        NSLog(@"%i", expenseID);
-        
         sqlite3_bind_int(deleteStatement, 1, expenseID);
-        if (sqlite3_step(deleteStatement) == SQLITE_DONE) {
-            NSLog(@"New expense has been deleted successfully");
-        }
+        sqlite3_step(deleteStatement);
         sqlite3_finalize(deleteStatement);
         sqlite3_close(database);
     }
