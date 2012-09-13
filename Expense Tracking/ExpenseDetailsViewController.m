@@ -77,13 +77,12 @@
 {
     ExpenseDetailCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"ExpenseDetailCell"];
     [cell.sectionName setText:[self.sectionNames objectAtIndex:[indexPath row]]];
-    [cell.expenseDetail setText:self.expenseItem.description];
     [cell setSelectionStyle:UITableViewCellEditingStyleNone];
     
     int row = [indexPath row];
     
     if (row == 0) {
-        [cell.expenseDetail setNumberOfLines:0];
+        //[cell.expenseDetail setNumberOfLines:0];
         [cell.expenseDetail setText:self.expenseItem.name];
         [cell.expenseDetail sizeToFitFixedWith:193];
     } else if (row == 1) {
@@ -93,9 +92,10 @@
     } else if (row == 3) {
         [cell.expenseDetail setText:[NSString stringWithFormat:@"%.02f", self.expenseItem.tip]];
     } else if (row == 4) {
-        [cell.expenseDetail setText:@""];
+        [cell.expenseDetail setText:self.expenseItem.category];
     } else if (row == 5) {
-        [cell.expenseDetail setText:@""];
+        [cell.expenseDetail setText:self.expenseItem.description];
+        [cell.expenseDetail sizeToFitFixedWith:193];
     } else if (row == 6) {
         [cell.expenseDetail setText:self.expenseItem.createdAt];
     }
@@ -128,11 +128,18 @@
     if (row == 0 || row == 5) {
         // Nice solution to calculate UITableViewCell height dynamically based on the height of the label it contains
         // http://stackoverflow.com/questions/1012361/resize-uitableviewcell-to-the-labels-height-dynamically
-        NSString *text = [self.expenseItem.name stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
         
-        CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:14.0]
-                       constrainedToSize:CGSizeMake(193, 999)
-                           lineBreakMode:UILineBreakModeWordWrap];
+        NSString *text;
+        
+        if (row == 0) {
+            text = self.expenseItem.name;
+        } else {
+            text = self.expenseItem.description;
+        }
+        
+        if (text.length == 0) return 49;
+        
+        CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:14.0] constrainedToSize:CGSizeMake(193, 999)lineBreakMode:UILineBreakModeWordWrap];
         
         return size.height + 28;
 

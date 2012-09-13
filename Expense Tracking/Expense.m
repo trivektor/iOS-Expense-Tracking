@@ -79,19 +79,44 @@
         while (sqlite3_step(selectStatement) == SQLITE_ROW) 
         {
             Expense *expense = [[Expense alloc] init];
+            
+            // Expense ID
             expense.expenseId = sqlite3_column_int(selectStatement, 0);
-            if ((char*)sqlite3_column_text(selectStatement, 1) != NULL)
+
+            // Expense name
+            if ((char *)sqlite3_column_text(selectStatement, 1) != NULL)
             {
                 expense.name = [NSString stringWithUTF8String:(char*)sqlite3_column_text(selectStatement, 1)];
             } else {
                 expense.name = @"Untitled expense";
             }
+            
+            // Expense amount
             expense.amount = sqlite3_column_double(selectStatement, 2);
+            
+            // Expense tax
             expense.tax = sqlite3_column_double(selectStatement, 3);
+            
+            // Expense tip
             expense.tip = sqlite3_column_double(selectStatement, 4);
-            expense.description = ((char*)sqlite3_column_text(selectStatement, 5)) ? 
-                        [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectStatement, 5)] : @"";
+            
+            // Expense category
+            if ((char *) sqlite3_column_text(selectStatement, 5)) {
+                expense.category = [NSString stringWithUTF8String:(char *) sqlite3_column_text(selectStatement, 5)];
+            } else {
+                expense.category = @"Uncategorized";
+            }
+            
+            // Expense description
+            if ((char *)sqlite3_column_text(selectStatement, 6)) {
+                expense.description = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectStatement, 6)];
+            } else {
+                expense.description = @"";
+            }
+            
+            // Expense date
             expense.createdAt = [NSString stringWithUTF8String:(char*)sqlite3_column_text(selectStatement, 7)];
+            
             [expensesArray addObject:expense];
         }
     }
