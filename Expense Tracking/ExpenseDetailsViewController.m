@@ -77,6 +77,7 @@
 {
     ExpenseDetailCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"ExpenseDetailCell"];
     [cell.sectionName setText:[self.sectionNames objectAtIndex:[indexPath row]]];
+    [cell.expenseDetail setText:self.expenseItem.description];
     [cell setSelectionStyle:UITableViewCellEditingStyleNone];
     
     int row = [indexPath row];
@@ -84,7 +85,6 @@
     if (row == 0) {
         [cell.expenseDetail setNumberOfLines:0];
         [cell.expenseDetail setText:self.expenseItem.name];
-        //[cell.expenseDetail sizeToFit];
         [cell.expenseDetail sizeToFitFixedWith:193];
     } else if (row == 1) {
         [cell.expenseDetail setText:[NSString stringWithFormat:@"%.02f", self.expenseItem.amount]];
@@ -125,25 +125,17 @@
 {
     int row = [indexPath row];
     
-    if (row == 0) {
+    if (row == 0 || row == 5) {
+        // Nice solution to calculate UITableViewCell height dynamically based on the height of the label it contains
+        // http://stackoverflow.com/questions/1012361/resize-uitableviewcell-to-the-labels-height-dynamically
         NSString *text = [self.expenseItem.name stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-        NSLog(@"%@", text);
-//        CGSize constraint = CGSizeMake(320.0f - (10.0f * 2), 20000.0f);
-//        CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:14.0f] constrainedToSize:constraint lineBreakMode:UILineBreakModeWordWrap];
-//        CGFloat height = MAX(size.height, 49.0f);
-//        return height + (10.0f * 2) + 15;
-        UILabel *l = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 193, 21)];
-        [l setText:text];
-        [l sizeToFitFixedWith:193];
         
-        int height = l.frame.size.height;
+        CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:14.0]
+                       constrainedToSize:CGSizeMake(193, 999)
+                           lineBreakMode:UILineBreakModeWordWrap];
         
-        NSLog(@"height is %i", height);
-        int finalHeight = 14 * 2 + height;
-        
-        NSLog(@"final height is %i", finalHeight);
-        
-        return finalHeight;
+        return size.height + 28;
+
     } else {
         return 49;  
     }
