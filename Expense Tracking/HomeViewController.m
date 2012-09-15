@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "ExpensesViewController.h"
 #import "MonthsViewController.h"
+#import "MonthsListViewController.h"
 #import "NewExpenseViewController.h"
 #import "AboutViewController.h"
 #import "FeedbackViewController.h"
@@ -151,7 +152,10 @@
     }
     
     if (selectedRow == 1) {
-        MonthsViewController *m = [[MonthsViewController alloc] initWithSelectedDate:[NSDate date]];
+//        MonthsViewController *m = [[MonthsViewController alloc] initWithSelectedDate:[NSDate date]];
+//        [self.navigationController pushViewController:m animated:YES];
+//        return;
+        MonthsListViewController *m = [[MonthsListViewController alloc] init];
         [self.navigationController pushViewController:m animated:YES];
         return;
     }
