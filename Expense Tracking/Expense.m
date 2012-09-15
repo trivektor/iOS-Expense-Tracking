@@ -14,10 +14,8 @@
 
 - (Boolean)addExpenseWithName:(NSString *)ename Amount:(float)eamount Tax:(float)etax Tip:(float)etip Category:(NSString *)ecategory Description:(NSString *)edescription;
 {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *dbPath = [documentsDirectory stringByAppendingPathComponent:@"ExpenseTracking.sqlite"];
-
+    NSString *dbPath = [Expense getDBPath];
+    
     if (sqlite3_open(dbPath.UTF8String, &database) == SQLITE_OK) {
         NSLog(@"successfully opened database at the provided database path");
         
@@ -51,9 +49,7 @@
     NSMutableArray *expensesArray = [[NSMutableArray alloc] init];
     
     @try {
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDirectory = [paths objectAtIndex:0];
-        NSString *dbPath = [documentsDirectory stringByAppendingPathComponent:@"ExpenseTracking.sqlite"];
+        NSString *dbPath = [Expense getDBPath];
         
         NSFileManager *fileManager = [NSFileManager defaultManager];
         BOOL success = [fileManager fileExistsAtPath:dbPath];
@@ -131,9 +127,8 @@
 - (NSMutableArray *) findBetweenFirstDate:(NSDate *)firstDate LastDate:(NSDate *)lastDate;
 {
     NSMutableArray *expensesArray = [[NSMutableArray alloc] init];
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *dbPath = [documentsDirectory stringByAppendingPathComponent:@"ExpenseTracking.sqlite"];
+    
+    NSString *dbPath = [Expense getDBPath];
     
     if (sqlite3_open(dbPath.UTF8String, &database) == SQLITE_OK) {
         char *sql = "SELECT * FROM expenses WHERE created_at >= ? AND created_at < ? ORDER BY created_at DESC";
@@ -170,10 +165,8 @@
 
 - (void) deleteExpenseByID:(int)expenseID 
 {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *dbPath = [documentsDirectory stringByAppendingPathComponent:@"ExpenseTracking.sqlite"];
-
+    NSString *dbPath = [Expense getDBPath];
+    
     if (sqlite3_open(dbPath.UTF8String, &database) == SQLITE_OK) {
         char *sql = "DELETE FROM expenses WHERE id = ?";
         sqlite3_stmt *deleteStatement;
@@ -188,6 +181,14 @@
         sqlite3_finalize(deleteStatement);
         sqlite3_close(database);
     }
+}
+
++ (NSString *)getDBPath
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *dbPath = [documentsDirectory stringByAppendingPathComponent:@"ExpenseTracking.sqlite"];
+    return dbPath;
 }
 
 @end

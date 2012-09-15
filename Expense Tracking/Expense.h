@@ -23,6 +23,7 @@
 @property (nonatomic, retain) NSString *description;
 @property (nonatomic, retain) NSString *createdAt;
 
++ (NSString *) getDBPath;
 - (NSMutableArray *) getAll;
 - (NSMutableArray *) findBetweenFirstDate:(NSDate *)firstDate LastDate:(NSDate *)lastDate;
 
