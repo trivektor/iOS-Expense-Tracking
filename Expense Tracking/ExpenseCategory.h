@@ -10,6 +10,9 @@
 
 @interface ExpenseCategory : NSObject
 
+@property (nonatomic, retain) NSString *name;
+@property (nonatomic) double total;
+
 + (NSArray *)getAll;
 
 @end

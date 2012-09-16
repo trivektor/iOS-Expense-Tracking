@@ -54,6 +54,8 @@
 		B5A5757D15E9B72300EE9A62 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A5757C15E9B72300EE9A62 /* libsqlite3.0.dylib */; };
 		B5A5758015E9B72B00EE9A62 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A5757F15E9B72B00EE9A62 /* libsqlite3.dylib */; };
 		B5A5758315E9BAEC00EE9A62 /* Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A5758215E9BAEC00EE9A62 /* Expense.m */; };
+		B5C4AE991605907400DA8A87 /* ExpensesByCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C4AE971605907400DA8A87 /* ExpensesByCategoryViewController.m */; };
+		B5C4AE9A1605907400DA8A87 /* ExpensesByCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5C4AE981605907400DA8A87 /* ExpensesByCategoryViewController.xib */; };
 		B5DF7FFE15E9E5B300139932 /* ExpensesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DF7FFC15E9E5B300139932 /* ExpensesViewController.m */; };
 		B5DF7FFF15E9E5B300139932 /* ExpensesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5DF7FFD15E9E5B300139932 /* ExpensesViewController.xib */; };
 		B5E661AF15EDF56500032BB7 /* icon@2x_et.png in Resources */ = {isa = PBXBuildFile; fileRef = B5E661AE15EDF56500032BB7 /* icon@2x_et.png */; };
@@ -165,6 +167,9 @@
 		B5A5757F15E9B72B00EE9A62 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		B5A5758115E9BAEC00EE9A62 /* Expense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expense.h; sourceTree = "<group>"; };
 		B5A5758215E9BAEC00EE9A62 /* Expense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expense.m; sourceTree = "<group>"; };
+		B5C4AE961605907400DA8A87 /* ExpensesByCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpensesByCategoryViewController.h; sourceTree = "<group>"; };
+		B5C4AE971605907400DA8A87 /* ExpensesByCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpensesByCategoryViewController.m; sourceTree = "<group>"; };
+		B5C4AE981605907400DA8A87 /* ExpensesByCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpensesByCategoryViewController.xib; sourceTree = "<group>"; };
 		B5DF7FFB15E9E5B300139932 /* ExpensesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpensesViewController.h; sourceTree = "<group>"; };
 		B5DF7FFC15E9E5B300139932 /* ExpensesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpensesViewController.m; sourceTree = "<group>"; };
 		B5DF7FFD15E9E5B300139932 /* ExpensesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpensesViewController.xib; sourceTree = "<group>"; };
@@ -375,6 +380,9 @@
 				B5E9DC0F1604CC5B006FB6E6 /* MonthsListViewController.h */,
 				B5E9DC101604CC5B006FB6E6 /* MonthsListViewController.m */,
 				B5E9DC111604CC5B006FB6E6 /* MonthsListViewController.xib */,
+				B5C4AE961605907400DA8A87 /* ExpensesByCategoryViewController.h */,
+				B5C4AE971605907400DA8A87 /* ExpensesByCategoryViewController.m */,
+				B5C4AE981605907400DA8A87 /* ExpensesByCategoryViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -537,6 +545,7 @@
 				B54745D115FDB03100DF8A39 /* gear.png in Resources */,
 				B5F20BCA15FF012B00E71D64 /* charts_icon.png in Resources */,
 				B5E9DC131604CC5B006FB6E6 /* MonthsListViewController.xib in Resources */,
+				B5C4AE9A1605907400DA8A87 /* ExpensesByCategoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +585,7 @@
 				B581028A15FB234D008ADFE5 /* ExpenseDescriptionViewController.m in Sources */,
 				B5E9DC121604CC5B006FB6E6 /* MonthsListViewController.m in Sources */,
 				B5E9DC161604CDB4006FB6E6 /* Month.m in Sources */,
+				B5C4AE991605907400DA8A87 /* ExpensesByCategoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

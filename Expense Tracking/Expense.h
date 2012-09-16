@@ -26,6 +26,7 @@
 + (NSString *) getDBPath;
 - (NSMutableArray *) getAll;
 - (NSMutableArray *) findBetweenFirstDate:(NSDate *)firstDate LastDate:(NSDate *)lastDate;
+- (NSMutableDictionary *) groupExpensesByCategories;
 
 - (Boolean) addExpenseWithName:(NSString *)name Amount:(float)amount Tax:(float)tax Tip:(float)tip Category:(NSString *)category Description:(NSString *)description;
 

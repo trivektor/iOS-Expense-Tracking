@@ -10,6 +10,7 @@
 #import "ExpensesViewController.h"
 #import "MonthsViewController.h"
 #import "MonthsListViewController.h"
+#import "ExpensesByCategoryViewController.h"
 #import "NewExpenseViewController.h"
 #import "AboutViewController.h"
 #import "FeedbackViewController.h"
@@ -160,12 +161,18 @@
 //        return;
     }
     
+    if (selectedRow == 2) {
+        ExpensesByCategoryViewController *e = [[ExpensesByCategoryViewController alloc] init];
+        [self.navigationController pushViewController:e animated:YES];
+        return;
+    }
+    
     if (selectedRow == 3) {
         NewExpenseViewController *b = [[NewExpenseViewController alloc] init];
         [self.navigationController pushViewController:b animated:YES];
         return;
     }
-    
+        
     if (selectedRow == 5) {
         AboutViewController *o = [[AboutViewController alloc] init];
         [self.navigationController pushViewController:o animated:YES];

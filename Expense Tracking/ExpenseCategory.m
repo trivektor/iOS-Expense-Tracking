@@ -10,6 +10,8 @@
 
 @implementation ExpenseCategory
 
+@synthesize name, total;
+
 + (NSArray *)getAll
 {
     NSArray *allCategories = [NSArray arrayWithObjects:

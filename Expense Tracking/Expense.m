@@ -183,6 +183,37 @@
     }
 }
 
+- (NSMutableDictionary *) groupExpensesByCategories
+{
+    NSString *dbPath = [Expense getDBPath];
+    NSMutableDictionary *categoryExpenses = [[NSMutableDictionary alloc] init];
+    
+    if (sqlite3_open(dbPath.UTF8String, &database) == SQLITE_OK) {
+        char *sql = "SELECT category, total(amount) FROM expenses GROUP BY category";
+        sqlite3_stmt *selectStatement;
+        
+        if (sqlite3_prepare_v2(database, sql, -1, &selectStatement, NULL) == SQLITE_OK) {
+            while (sqlite3_step(selectStatement) == SQLITE_ROW) {
+                
+                NSNumber *_amount = [[NSNumber alloc] initWithDouble:sqlite3_column_double(selectStatement, 1)];
+                NSString *_category;
+                
+                if (sqlite3_column_text(selectStatement, 0) == NULL) {
+                    _category = @"Uncategorized";
+                } else {
+                    _category = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectStatement, 0)];
+                    
+                    if (_category.length == 0) _category = @"Uncategorized";
+                }
+                
+                [categoryExpenses setValue:_amount forKey:_category];
+            }
+        }
+    }
+    
+    return categoryExpenses;
+}
+
 + (NSString *)getDBPath
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
