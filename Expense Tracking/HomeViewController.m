@@ -152,12 +152,12 @@
     }
     
     if (selectedRow == 1) {
-//        MonthsViewController *m = [[MonthsViewController alloc] initWithSelectedDate:[NSDate date]];
-//        [self.navigationController pushViewController:m animated:YES];
-//        return;
-        MonthsListViewController *m = [[MonthsListViewController alloc] init];
+        MonthsViewController *m = [[MonthsViewController alloc] initWithSelectedDate:[NSDate date]];
         [self.navigationController pushViewController:m animated:YES];
         return;
+//        MonthsListViewController *m = [[MonthsListViewController alloc] init];
+//        [self.navigationController pushViewController:m animated:YES];
+//        return;
     }
     
     if (selectedRow == 3) {
