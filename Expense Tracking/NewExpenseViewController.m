@@ -52,12 +52,8 @@
     
     // Make the whole form scrollable
     scrollView.contentSize = CGSizeMake(320, 540);
-    
-    // Dismiss the keyboard for the 'Description' field when tapping outside of it
-    // http://stackoverflow.com/questions/5306240/iphone-dismiss-keyboard-when-touching-outside-of-textfield
-    UITapGestureRecognizer *descriptionKeyboardOutsideTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissDescriptionKeyboard)];
-    [descriptionKeyboardOutsideTap setCancelsTouchesInView:NO];
-    [self.view addGestureRecognizer:descriptionKeyboardOutsideTap];
+
+    [self addTapGestureRecognizers];
 }
 
 - (void)viewDidUnload
@@ -112,11 +108,32 @@
     return YES;
 }
 
-- (void)dismissDescriptionKeyboard
+- (void)addTapGestureRecognizers
+{
+    // Dismiss the keyboard for the 'Description' field when tapping outside of it
+    // http://stackoverflow.com/questions/5306240/iphone-dismiss-keyboard-when-touching-outside-of-textfield
+    UITapGestureRecognizer *outsideTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    
+    [outsideTap setCancelsTouchesInView:NO];
+    [self.view addGestureRecognizer:outsideTap];
+}
+
+- (void)dismissKeyboard
 {
     if (descriptionTextField.isFirstResponder) {
         [scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
         [descriptionTextField resignFirstResponder];
+    } else {
+        NSArray *elements = [[NSArray alloc] initWithObjects:nameTextField, amountTextField, taxTextField, tipTextField, nil];
+        
+        for (int i=0; i < elements.count; i++) {
+            UIView *v = [elements objectAtIndex:i];
+            
+            if (v.isFirstResponder) {
+                [v resignFirstResponder];
+                return;
+            }
+        }
     }
 }
 

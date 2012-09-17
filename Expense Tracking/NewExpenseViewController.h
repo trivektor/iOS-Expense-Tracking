@@ -26,5 +26,6 @@
 - (void)clearExpenseForm;
 - (IBAction)addExpenseButtonTapped:(id)sender;
 - (IBAction)categoryLabelTapped:(id)sender;
+- (void)addTapGestureRecognizers;
 
 @end
