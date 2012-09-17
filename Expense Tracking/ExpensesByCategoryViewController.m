@@ -17,11 +17,12 @@
 
 @implementation ExpensesByCategoryViewController
 
-@synthesize categoryName, expenses, expenseCategories;
+@synthesize categoryName, expenses, expenseCategories, expenseSum;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self.expenseSum = 0;
     if (self) {
         // Custom initialization
         self.expenses = [[NSMutableArray alloc] initWithObjects:nil];
@@ -34,9 +35,11 @@
             ExpenseCategory *ec = [[ExpenseCategory alloc] init];
             ec.name = key;
             ec.total = [[self.expenseCategories objectForKey:key] doubleValue];
+            self.expenseSum += ec.total;
             [self.expenses addObject:ec];
         }
     }
+    NSLog(@"%d", self.expenseSum);
     return self;
 }
 
@@ -92,8 +95,14 @@
     [cell.expenseDateLabel removeFromSuperview];
     
     cell.backgroundView = [[UIView alloc] initWithFrame:cell.frame];
-    cell.backgroundView.backgroundColor = [UIColor whiteColor];
+    cell.backgroundView.backgroundColor = [UIColor clearColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    double barWidth = 320*ec.total/self.expenseSum;
+    UIView *bar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, barWidth, 53)];
+    [bar setBackgroundColor:[UIColor colorWithRed:224/255.0 green:231/255.0 blue:255/255.0 alpha:0.89]];
+    [cell addSubview:bar];
+    [cell sendSubviewToBack:bar];
     
     return cell;
 }

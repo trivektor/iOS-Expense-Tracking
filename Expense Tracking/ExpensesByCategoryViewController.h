@@ -17,6 +17,7 @@
 @property (nonatomic, retain) NSMutableDictionary *expenseCategories;
 @property (nonatomic, retain) NSMutableArray *expenses;
 @property (nonatomic, retain) NSString *categoryName;
+@property (nonatomic) double expenseSum;
 
 - (id)initWithCategoryName:(NSString *)name;
 
