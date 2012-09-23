@@ -16,6 +16,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [self createEditableCopyOfDatabaseIfNeeded];
+    [self createReceiptsFolderIfNeeded];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
@@ -80,6 +81,18 @@
         NSAssert1(0, @"Failed to create writable database file with message '%@'.", [error localizedDescription]);
     }
 
+}
+
+// Copied from http://stackoverflow.com/questions/1762836/create-a-folder-inside-documents-folder-in-ios-apps
+- (void)createReceiptsFolderIfNeeded
+{
+    NSError *error;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *receiptsDirectoryPath = [documentsDirectory stringByAppendingPathComponent:@"ExpenseTrackingReceipts"];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:receiptsDirectoryPath])
+        [[NSFileManager defaultManager] createDirectoryAtPath:receiptsDirectoryPath withIntermediateDirectories:NO attributes:nil error:&error];
 }
 
 @end

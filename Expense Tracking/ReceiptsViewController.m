@@ -59,8 +59,17 @@
 {
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     
-    NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *receiptsDirectoryPath = [documentsDirectory stringByAppendingPathComponent:@"ExpenseTrackingReceipts"];
     
+    NSTimeInterval timeStamp = [[NSDate date] timeIntervalSince1970];
+    // NSTimeInterval is defined as double
+    NSNumber *timeStampObj = [NSNumber numberWithDouble: timeStamp];
+    
+    NSString *pngFilePath = [NSString stringWithFormat:@"%@/%@.png", receiptsDirectoryPath, timeStampObj];
+    NSData *data1 = [NSData dataWithData:UIImagePNGRepresentation(image)];
+    [data1 writeToFile:pngFilePath atomically:YES];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

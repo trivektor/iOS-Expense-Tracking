@@ -39,7 +39,6 @@
             [self.expenses addObject:ec];
         }
     }
-    NSLog(@"%d", self.expenseSum);
     return self;
 }
 
