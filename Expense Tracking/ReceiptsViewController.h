@@ -13,6 +13,12 @@
     
 }
 
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) NSManagedObjectModel *managedObjectModel;
+@property (nonatomic, strong) NSPersistentStoreCoordinator *persistenceStoreCoordinator;
+
 - (void)addReceipt;
+- (void)saveReceipt;
+- (NSString *)saveReceiptImage:(UIImage *)image;
 
 @end

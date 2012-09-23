@@ -42,6 +42,7 @@
 		B593524C160EB371008EC194 /* ReceiptsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B593524A160EB371008EC194 /* ReceiptsViewController.m */; };
 		B593524D160EB371008EC194 /* ReceiptsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B593524B160EB371008EC194 /* ReceiptsViewController.xib */; };
 		B593524F160EB655008EC194 /* camera_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B593524E160EB655008EC194 /* camera_icon.png */; };
+		B5935251160ED1C2008EC194 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5935250160ED1C2008EC194 /* CoreData.framework */; };
 		B597FE9A15EF27FE00EC0AC9 /* add_button.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9115EF27FE00EC0AC9 /* add_button.png */; };
 		B597FE9B15EF27FE00EC0AC9 /* border_seperator.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9215EF27FE00EC0AC9 /* border_seperator.png */; };
 		B597FE9C15EF27FE00EC0AC9 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9315EF27FE00EC0AC9 /* calendar.png */; };
@@ -156,6 +157,7 @@
 		B593524A160EB371008EC194 /* ReceiptsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiptsViewController.m; sourceTree = "<group>"; };
 		B593524B160EB371008EC194 /* ReceiptsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceiptsViewController.xib; sourceTree = "<group>"; };
 		B593524E160EB655008EC194 /* camera_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_icon.png; sourceTree = "<group>"; };
+		B5935250160ED1C2008EC194 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B597FE9115EF27FE00EC0AC9 /* add_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_button.png; sourceTree = "<group>"; };
 		B597FE9215EF27FE00EC0AC9 /* border_seperator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border_seperator.png; sourceTree = "<group>"; };
 		B597FE9315EF27FE00EC0AC9 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5935251160ED1C2008EC194 /* CoreData.framework in Frameworks */,
 				B561766F15F86AFD00B52DC2 /* libKal.a in Frameworks */,
 				B5A5758015E9B72B00EE9A62 /* libsqlite3.dylib in Frameworks */,
 				B5A5757D15E9B72300EE9A62 /* libsqlite3.0.dylib in Frameworks */,
@@ -275,6 +278,7 @@
 		B512F34B15E8B38600EDD5AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5935250160ED1C2008EC194 /* CoreData.framework */,
 				B519A47115E93EC4005CD2D3 /* QuartzCore.framework */,
 				B512F34C15E8B38600EDD5AF /* UIKit.framework */,
 				B512F34E15E8B38600EDD5AF /* Foundation.framework */,

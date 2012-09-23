@@ -7,12 +7,15 @@
 //
 
 #import "ReceiptsViewController.h"
+#import "Receipt.h"
 
 @interface ReceiptsViewController ()
 
 @end
 
 @implementation ReceiptsViewController
+
+@synthesize managedObjectContext, managedObjectModel, persistenceStoreCoordinator;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +30,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
     UIBarButtonItem *newReceipt = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"camera_icon.png"] style:UIBarButtonItemStylePlain target:self action:@selector(addReceipt)];
     [newReceipt setTintColor:[UIColor blackColor]];
 
@@ -57,8 +61,34 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
-    
+    @try {
+        UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+        NSString *imagePath = [self saveReceiptImage:image];
+        
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+        NSManagedObjectContext *context = [self managedObjectContext];
+        NSEntityDescription *entity = [NSEntityDescription insertNewObjectForEntityForName:@"Receipt" inManagedObjectContext:self.managedObjectContext];
+        [fetchRequest setEntity:entity];
+        NSError *error;
+        
+        //    [receipt setValue:@"Receipt" forKey:@"name"];
+        //    [receipt setValue:imagePath forKey:@"image"];
+        //    [receipt setValue:[NSDate date] forKey:@"created_at"];
+        
+        //    if ([context save:&error]) {
+        //        NSLog(@"Receipt has been saved successfully");
+        //    }
+    }
+    @catch (NSException *exception) {
+        NSLog(@"%@", exception.description);
+    }
+    @finally {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+}
+
+- (NSString *)saveReceiptImage:(UIImage *)image
+{
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *receiptsDirectoryPath = [documentsDirectory stringByAppendingPathComponent:@"ExpenseTrackingReceipts"];
@@ -71,7 +101,12 @@
     NSData *data1 = [NSData dataWithData:UIImagePNGRepresentation(image)];
     [data1 writeToFile:pngFilePath atomically:YES];
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    return pngFilePath;
+}
+
+- (void)saveReceipt
+{
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
