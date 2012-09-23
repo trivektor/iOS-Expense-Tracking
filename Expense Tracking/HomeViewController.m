@@ -14,6 +14,7 @@
 #import "NewExpenseViewController.h"
 #import "AboutViewController.h"
 #import "FeedbackViewController.h"
+#import "ReceiptsViewController.h"
 #import "CustomCell.h"
 
 @interface HomeViewController ()
@@ -34,6 +35,7 @@
                         @"View expenses by month",
                         @"View expenses by category",
                         @"Add new expense",
+                        @"Receipts",
                         @"Settings",
                         @"About this app",
                         @"Feedback",
@@ -44,6 +46,7 @@
                             @"calendar.png",
                             @"charts_icon.png",
                             @"plus.png",
+                            @"receipt_icon.png",
                             @"gear.png",
                             @"about_icon.png",
                             @"speaker_icon.png",
@@ -170,6 +173,12 @@
     if (selectedRow == 3) {
         NewExpenseViewController *b = [[NewExpenseViewController alloc] init];
         [self.navigationController pushViewController:b animated:YES];
+        return;
+    }
+    
+    if (selectedRow == 4) {
+        ReceiptsViewController *r = [[ReceiptsViewController alloc] init];
+        [self.navigationController pushViewController:r animated:YES];
         return;
     }
         

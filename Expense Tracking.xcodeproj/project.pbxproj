@@ -38,6 +38,10 @@
 		B581028A15FB234D008ADFE5 /* ExpenseDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B581028815FB234D008ADFE5 /* ExpenseDescriptionViewController.m */; };
 		B581028B15FB234D008ADFE5 /* ExpenseDescriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B581028915FB234D008ADFE5 /* ExpenseDescriptionViewController.xib */; };
 		B581028D15FB2D63008ADFE5 /* done_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B581028C15FB2D63008ADFE5 /* done_icon.png */; };
+		B5935248160EB2FA008EC194 /* receipt_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B5935247160EB2FA008EC194 /* receipt_icon.png */; };
+		B593524C160EB371008EC194 /* ReceiptsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B593524A160EB371008EC194 /* ReceiptsViewController.m */; };
+		B593524D160EB371008EC194 /* ReceiptsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B593524B160EB371008EC194 /* ReceiptsViewController.xib */; };
+		B593524F160EB655008EC194 /* camera_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B593524E160EB655008EC194 /* camera_icon.png */; };
 		B597FE9A15EF27FE00EC0AC9 /* add_button.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9115EF27FE00EC0AC9 /* add_button.png */; };
 		B597FE9B15EF27FE00EC0AC9 /* border_seperator.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9215EF27FE00EC0AC9 /* border_seperator.png */; };
 		B597FE9C15EF27FE00EC0AC9 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9315EF27FE00EC0AC9 /* calendar.png */; };
@@ -147,6 +151,11 @@
 		B581028815FB234D008ADFE5 /* ExpenseDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenseDescriptionViewController.m; sourceTree = "<group>"; };
 		B581028915FB234D008ADFE5 /* ExpenseDescriptionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpenseDescriptionViewController.xib; sourceTree = "<group>"; };
 		B581028C15FB2D63008ADFE5 /* done_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = done_icon.png; sourceTree = "<group>"; };
+		B5935247160EB2FA008EC194 /* receipt_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = receipt_icon.png; sourceTree = "<group>"; };
+		B5935249160EB371008EC194 /* ReceiptsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiptsViewController.h; sourceTree = "<group>"; };
+		B593524A160EB371008EC194 /* ReceiptsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiptsViewController.m; sourceTree = "<group>"; };
+		B593524B160EB371008EC194 /* ReceiptsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceiptsViewController.xib; sourceTree = "<group>"; };
+		B593524E160EB655008EC194 /* camera_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_icon.png; sourceTree = "<group>"; };
 		B597FE9115EF27FE00EC0AC9 /* add_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_button.png; sourceTree = "<group>"; };
 		B597FE9215EF27FE00EC0AC9 /* border_seperator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border_seperator.png; sourceTree = "<group>"; };
 		B597FE9315EF27FE00EC0AC9 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
@@ -313,6 +322,8 @@
 		B512F36815E8B40E00EDD5AF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B593524E160EB655008EC194 /* camera_icon.png */,
+				B5935247160EB2FA008EC194 /* receipt_icon.png */,
 				B5F20BC915FF012B00E71D64 /* charts_icon.png */,
 				B54745D015FDB03000DF8A39 /* gear.png */,
 				B54745C415FDAB5F00DF8A39 /* speaker_icon.png */,
@@ -383,6 +394,9 @@
 				B5C4AE961605907400DA8A87 /* ExpensesByCategoryViewController.h */,
 				B5C4AE971605907400DA8A87 /* ExpensesByCategoryViewController.m */,
 				B5C4AE981605907400DA8A87 /* ExpensesByCategoryViewController.xib */,
+				B5935249160EB371008EC194 /* ReceiptsViewController.h */,
+				B593524A160EB371008EC194 /* ReceiptsViewController.m */,
+				B593524B160EB371008EC194 /* ReceiptsViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -546,6 +560,9 @@
 				B5F20BCA15FF012B00E71D64 /* charts_icon.png in Resources */,
 				B5E9DC131604CC5B006FB6E6 /* MonthsListViewController.xib in Resources */,
 				B5C4AE9A1605907400DA8A87 /* ExpensesByCategoryViewController.xib in Resources */,
+				B5935248160EB2FA008EC194 /* receipt_icon.png in Resources */,
+				B593524D160EB371008EC194 /* ReceiptsViewController.xib in Resources */,
+				B593524F160EB655008EC194 /* camera_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,6 +603,7 @@
 				B5E9DC121604CC5B006FB6E6 /* MonthsListViewController.m in Sources */,
 				B5E9DC161604CDB4006FB6E6 /* Month.m in Sources */,
 				B5C4AE991605907400DA8A87 /* ExpensesByCategoryViewController.m in Sources */,
+				B593524C160EB371008EC194 /* ReceiptsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
