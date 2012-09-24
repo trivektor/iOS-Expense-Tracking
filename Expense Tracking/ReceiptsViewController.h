@@ -25,5 +25,7 @@
 - (NSString *)saveReceiptImage:(UIImage *)image;
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
++ (UIImage *)imageWithImage:(UIImage *)sourceImage scaledToSize:(CGSize)newSize;
++ (UIImage *)imageWithImage:(UIImage *)sourceImage scaledToSizeWithSameAspectRatio:(CGSize)targetSize;
 
 @end
