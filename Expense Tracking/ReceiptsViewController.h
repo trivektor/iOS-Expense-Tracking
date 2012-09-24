@@ -20,5 +20,7 @@
 - (void)addReceipt;
 - (void)saveReceipt;
 - (NSString *)saveReceiptImage:(UIImage *)image;
+- (void)saveContext;
+- (NSURL *)applicationDocumentsDirectory;
 
 @end

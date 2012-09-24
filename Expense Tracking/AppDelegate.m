@@ -65,6 +65,9 @@
     NSError *error;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
+    
+    
+    
     NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"ExpenseTracking.sqlite"];
     success = [fileManager fileExistsAtPath:writableDBPath];
     if (success) return;

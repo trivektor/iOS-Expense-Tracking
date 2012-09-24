@@ -23,6 +23,9 @@
 @implementation HomeViewController
 
 @synthesize options, optionIcons, tableView;
+@synthesize managedObjectContext = __managedObjectContext;
+@synthesize managedObjectModel = __managedObjectModel;
+@synthesize persistenceStoreCoordinator = __persistenceStoreCoordinator;
 
 - (id)init
 {
@@ -178,6 +181,7 @@
     
     if (selectedRow == 4) {
         ReceiptsViewController *r = [[ReceiptsViewController alloc] init];
+        r.managedObjectContext = self.managedObjectContext;
         [self.navigationController pushViewController:r animated:YES];
         return;
     }

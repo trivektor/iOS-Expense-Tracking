@@ -19,6 +19,9 @@
 		B512F37A15E8C3D100EDD5AF /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B512F37915E8C3D100EDD5AF /* icon.png */; };
 		B512F38315E8C4FE00EDD5AF /* NewExpenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B512F38115E8C4FE00EDD5AF /* NewExpenseViewController.m */; };
 		B512F38415E8C4FE00EDD5AF /* NewExpenseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B512F38215E8C4FE00EDD5AF /* NewExpenseViewController.xib */; };
+		B515A0E0160F97CF000A86BE /* ExpenseTracking.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B515A0DE160F97CF000A86BE /* ExpenseTracking.xcdatamodeld */; };
+		B515A0E3160F984A000A86BE /* Receipt.m in Sources */ = {isa = PBXBuildFile; fileRef = B515A0E2160F984A000A86BE /* Receipt.m */; };
+		B515A0E8160FB4D3000A86BE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5935250160ED1C2008EC194 /* CoreData.framework */; };
 		B5199DDD15F8770000CE6304 /* expenses_list.png in Resources */ = {isa = PBXBuildFile; fileRef = B5199DDC15F8770000CE6304 /* expenses_list.png */; };
 		B519A47215E93EC4005CD2D3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B519A47115E93EC4005CD2D3 /* QuartzCore.framework */; };
 		B54745AF15FD953300DF8A39 /* wood_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B54745AE15FD953300DF8A39 /* wood_bg.png */; };
@@ -42,7 +45,6 @@
 		B593524C160EB371008EC194 /* ReceiptsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B593524A160EB371008EC194 /* ReceiptsViewController.m */; };
 		B593524D160EB371008EC194 /* ReceiptsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B593524B160EB371008EC194 /* ReceiptsViewController.xib */; };
 		B593524F160EB655008EC194 /* camera_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B593524E160EB655008EC194 /* camera_icon.png */; };
-		B5935251160ED1C2008EC194 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5935250160ED1C2008EC194 /* CoreData.framework */; };
 		B597FE9A15EF27FE00EC0AC9 /* add_button.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9115EF27FE00EC0AC9 /* add_button.png */; };
 		B597FE9B15EF27FE00EC0AC9 /* border_seperator.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9215EF27FE00EC0AC9 /* border_seperator.png */; };
 		B597FE9C15EF27FE00EC0AC9 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = B597FE9315EF27FE00EC0AC9 /* calendar.png */; };
@@ -129,6 +131,9 @@
 		B512F38015E8C4FE00EDD5AF /* NewExpenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewExpenseViewController.h; sourceTree = "<group>"; };
 		B512F38115E8C4FE00EDD5AF /* NewExpenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewExpenseViewController.m; sourceTree = "<group>"; };
 		B512F38215E8C4FE00EDD5AF /* NewExpenseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewExpenseViewController.xib; sourceTree = "<group>"; };
+		B515A0DF160F97CF000A86BE /* ExpenseTracking.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExpenseTracking.xcdatamodel; sourceTree = "<group>"; };
+		B515A0E1160F984A000A86BE /* Receipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Receipt.h; sourceTree = "<group>"; };
+		B515A0E2160F984A000A86BE /* Receipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Receipt.m; sourceTree = "<group>"; };
 		B5199DDC15F8770000CE6304 /* expenses_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = expenses_list.png; path = ../../../Desktop/iphone_dev/expenses_list.png; sourceTree = "<group>"; };
 		B519A47115E93EC4005CD2D3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B54745AE15FD953300DF8A39 /* wood_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wood_bg.png; sourceTree = "<group>"; };
@@ -236,10 +241,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5935251160ED1C2008EC194 /* CoreData.framework in Frameworks */,
 				B561766F15F86AFD00B52DC2 /* libKal.a in Frameworks */,
 				B5A5758015E9B72B00EE9A62 /* libsqlite3.dylib in Frameworks */,
 				B5A5757D15E9B72300EE9A62 /* libsqlite3.0.dylib in Frameworks */,
+				B515A0E8160FB4D3000A86BE /* CoreData.framework in Frameworks */,
 				B519A47215E93EC4005CD2D3 /* QuartzCore.framework in Frameworks */,
 				B512F34D15E8B38600EDD5AF /* UIKit.framework in Frameworks */,
 				B512F34F15E8B38600EDD5AF /* Foundation.framework in Frameworks */,
@@ -414,6 +419,9 @@
 				B597FEC015F2CFAA00EC0AC9 /* ExpenseCategory.m */,
 				B5E9DC141604CDB4006FB6E6 /* Month.h */,
 				B5E9DC151604CDB4006FB6E6 /* Month.m */,
+				B515A0DE160F97CF000A86BE /* ExpenseTracking.xcdatamodeld */,
+				B515A0E1160F984A000A86BE /* Receipt.h */,
+				B515A0E2160F984A000A86BE /* Receipt.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -608,6 +616,8 @@
 				B5E9DC161604CDB4006FB6E6 /* Month.m in Sources */,
 				B5C4AE991605907400DA8A87 /* ExpensesByCategoryViewController.m in Sources */,
 				B593524C160EB371008EC194 /* ReceiptsViewController.m in Sources */,
+				B515A0E0160F97CF000A86BE /* ExpenseTracking.xcdatamodeld in Sources */,
+				B515A0E3160F984A000A86BE /* Receipt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -752,6 +762,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B515A0DE160F97CF000A86BE /* ExpenseTracking.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B515A0DF160F97CF000A86BE /* ExpenseTracking.xcdatamodel */,
+			);
+			currentVersion = B515A0DF160F97CF000A86BE /* ExpenseTracking.xcdatamodel */;
+			path = ExpenseTracking.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B512F33F15E8B38600EDD5AF /* Project object */;
 }

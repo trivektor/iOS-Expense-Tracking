@@ -8,6 +8,7 @@
 
 #import "ReceiptsViewController.h"
 #import "Receipt.h"
+#import "AppDelegate.h"
 
 @interface ReceiptsViewController ()
 
@@ -15,7 +16,9 @@
 
 @implementation ReceiptsViewController
 
-@synthesize managedObjectContext, managedObjectModel, persistenceStoreCoordinator;
+@synthesize managedObjectContext = __managedObjectContext;
+@synthesize managedObjectModel = __managedObjectModel;
+@synthesize persistenceStoreCoordinator = __persistenceStoreCoordinator;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,6 +39,11 @@
 
     [self.navigationItem setTitle:@"Receipts"];
     [self.navigationItem setRightBarButtonItem:newReceipt];
+}
+
+- (void)viewWillUnload
+{
+    [self saveContext];
 }
 
 - (void)viewDidUnload
@@ -65,19 +73,16 @@
         UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
         NSString *imagePath = [self saveReceiptImage:image];
         
-        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-        NSManagedObjectContext *context = [self managedObjectContext];
-        NSEntityDescription *entity = [NSEntityDescription insertNewObjectForEntityForName:@"Receipt" inManagedObjectContext:self.managedObjectContext];
-        [fetchRequest setEntity:entity];
+        Receipt *receipt = [NSEntityDescription insertNewObjectForEntityForName:@"Receipt" inManagedObjectContext:self.managedObjectContext];
         NSError *error;
         
-        //    [receipt setValue:@"Receipt" forKey:@"name"];
-        //    [receipt setValue:imagePath forKey:@"image"];
-        //    [receipt setValue:[NSDate date] forKey:@"created_at"];
+        [receipt setValue:@"Receipt" forKey:@"name"];
+        [receipt setValue:imagePath forKey:@"photo"];
+        [receipt setValue:[NSDate date] forKey:@"created_at"];
         
-        //    if ([context save:&error]) {
-        //        NSLog(@"Receipt has been saved successfully");
-        //    }
+        if ([self.managedObjectContext save:&error]) {
+            NSLog(@"Receipt has been saved successfully");
+        }
     }
     @catch (NSException *exception) {
         NSLog(@"%@", exception.description);
@@ -107,6 +112,71 @@
 - (void)saveReceipt
 {
     
+}
+
+- (void)saveContext
+{
+    NSError *error = nil;
+    NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
+    
+    if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+}
+
+- (NSManagedObjectContext *)managedObjectContext
+{
+    if (__managedObjectContext != nil) {
+        return __managedObjectContext;
+    }
+    
+    NSPersistentStoreCoordinator *coordinator = [self persistenceStoreCoordinator];
+    
+    if (coordinator != nil) {
+        __managedObjectContext = [[NSManagedObjectContext alloc] init];
+        [__managedObjectContext setPersistentStoreCoordinator:coordinator];
+    }
+    
+    return __managedObjectContext;
+}
+
+- (NSManagedObjectModel *)managedObjectModel
+{
+    if (__managedObjectModel != nil) {
+        return __managedObjectModel;
+    }
+    
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"ExpenseTracking" withExtension:@"momd"];
+    
+    __managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+    
+    return __managedObjectModel;
+}
+
+- (NSPersistentStoreCoordinator *)persistenceStoreCoordinator
+{
+    if (__persistenceStoreCoordinator != nil) {
+        return __persistenceStoreCoordinator;
+    }
+    
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"ExpenseTracking2.sqlite"];
+    
+    NSError *error = nil;
+    
+    __persistenceStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];
+    
+    if (![__persistenceStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+    
+    return __persistenceStoreCoordinator;
+}
+
+- (NSURL *)applicationDocumentsDirectory
+{
+    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
