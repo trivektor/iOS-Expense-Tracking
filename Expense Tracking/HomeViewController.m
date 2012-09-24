@@ -181,7 +181,7 @@
     
     if (selectedRow == 4) {
         ReceiptsViewController *r = [[ReceiptsViewController alloc] init];
-        r.managedObjectContext = self.managedObjectContext;
+        //r.managedObjectContext = self.managedObjectContext;
         [self.navigationController pushViewController:r animated:YES];
         return;
     }
@@ -192,7 +192,7 @@
         return;
     }
     
-    if (selectedRow == 6) {
+    if (selectedRow == 7) {
         FeedbackViewController *f = [[FeedbackViewController alloc] init];
         [self.navigationController pushViewController:f animated:YES];
         return;

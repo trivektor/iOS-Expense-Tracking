@@ -8,15 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ReceiptsViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface ReceiptsViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 {
     
+    __weak IBOutlet UITableView *receiptsTable;
 }
 
+@property (nonatomic, strong) NSArray *receipts;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, strong) NSPersistentStoreCoordinator *persistenceStoreCoordinator;
 
+- (void)loadReceipts;
 - (void)addReceipt;
 - (void)saveReceipt;
 - (NSString *)saveReceiptImage:(UIImage *)image;

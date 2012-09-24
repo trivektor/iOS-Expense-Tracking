@@ -8,7 +8,6 @@
 
 #import "ReceiptsViewController.h"
 #import "Receipt.h"
-#import "AppDelegate.h"
 
 @interface ReceiptsViewController ()
 
@@ -16,6 +15,7 @@
 
 @implementation ReceiptsViewController
 
+@synthesize receipts;
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistenceStoreCoordinator = __persistenceStoreCoordinator;
@@ -34,6 +34,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    receiptsTable.delegate = self;
+    receiptsTable.dataSource = self;
+    [self loadReceipts];
+    
     UIBarButtonItem *newReceipt = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"camera_icon.png"] style:UIBarButtonItemStylePlain target:self action:@selector(addReceipt)];
     [newReceipt setTintColor:[UIColor blackColor]];
 
@@ -48,6 +52,7 @@
 
 - (void)viewDidUnload
 {
+    receiptsTable = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -109,6 +114,18 @@
     return pngFilePath;
 }
 
+- (void)loadReceipts
+{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Receipt" inManagedObjectContext:self.managedObjectContext];
+    
+    [fetchRequest setEntity:entity];
+    
+    NSError *error = nil;
+    
+    self.receipts = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+}
+
 - (void)saveReceipt
 {
     
@@ -123,6 +140,38 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.receipts.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [receiptsTable dequeueReusableCellWithIdentifier:@"Cell"];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    }
+    
+    Receipt *r = [self.receipts objectAtIndex:[indexPath row]];
+    
+    cell.textLabel.text = @"Receipt";
+    cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfFile:r.photo]];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    return cell;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
 }
 
 - (NSManagedObjectContext *)managedObjectContext
