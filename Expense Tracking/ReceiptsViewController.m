@@ -41,6 +41,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
     
     receiptsTable.delegate = self;
     receiptsTable.dataSource = self;
+    receiptsTable.autoresizingMask = ~UIViewAutoresizingFlexibleBottomMargin;
     [self loadReceipts];
     
     UIBarButtonItem *newReceipt = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"camera_icon.png"] style:UIBarButtonItemStylePlain target:self action:@selector(addReceipt)];
@@ -319,6 +320,19 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSError *error = nil;
+        Receipt *r = [self.receipts objectAtIndex:[indexPath row]];
+        NSManagedObject *deletedReceipt = [self.managedObjectContext objectWithID:r.objectID];
+        [self.managedObjectContext deleteObject:deletedReceipt];
+        [self.managedObjectContext save:&error];
+        [self loadReceipts];
+        [receiptsTable reloadData];
+    }
 }
 
 - (NSManagedObjectContext *)managedObjectContext
