@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SignupViewController : UIViewController
+@interface SignupViewController : UIViewController <UITextFieldDelegate>
+{
+    __weak IBOutlet UITextField *emailField;
+    __weak IBOutlet UITextField *passwordField;
+    __weak IBOutlet UIButton *signupButton;
+}
+
+- (IBAction)signupButtonTapped:(id)sender;
 
 @end
