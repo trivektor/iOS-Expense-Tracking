@@ -339,6 +339,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ReceiptViewController *r = [[ReceiptViewController alloc] init];
+    r.receipt = [self.receipts objectAtIndex:[indexPath row]];
     r.modalPresentationStyle = UIModalPresentationFormSheet;
     r.modalPresentationStyle = UIModalTransitionStyleCoverVertical;
     

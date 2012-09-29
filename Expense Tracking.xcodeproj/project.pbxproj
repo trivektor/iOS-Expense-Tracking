@@ -24,6 +24,9 @@
 		B515A0E8160FB4D3000A86BE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5935250160ED1C2008EC194 /* CoreData.framework */; };
 		B515A0EF1616C206000A86BE /* ReceiptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B515A0ED1616C206000A86BE /* ReceiptViewController.m */; };
 		B515A0F01616C206000A86BE /* ReceiptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B515A0EE1616C206000A86BE /* ReceiptViewController.xib */; };
+		B515A0F6161795AB000A86BE /* upload_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B515A0F5161795AB000A86BE /* upload_icon.png */; };
+		B515A0FA16179649000A86BE /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B515A0F816179649000A86BE /* SignupViewController.m */; };
+		B515A0FB16179649000A86BE /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B515A0F916179649000A86BE /* SignupViewController.xib */; };
 		B5199DDD15F8770000CE6304 /* expenses_list.png in Resources */ = {isa = PBXBuildFile; fileRef = B5199DDC15F8770000CE6304 /* expenses_list.png */; };
 		B519A47215E93EC4005CD2D3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B519A47115E93EC4005CD2D3 /* QuartzCore.framework */; };
 		B54745AF15FD953300DF8A39 /* wood_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B54745AE15FD953300DF8A39 /* wood_bg.png */; };
@@ -139,6 +142,10 @@
 		B515A0EC1616C206000A86BE /* ReceiptViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceiptViewController.h; sourceTree = "<group>"; };
 		B515A0ED1616C206000A86BE /* ReceiptViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceiptViewController.m; sourceTree = "<group>"; };
 		B515A0EE1616C206000A86BE /* ReceiptViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceiptViewController.xib; sourceTree = "<group>"; };
+		B515A0F5161795AB000A86BE /* upload_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = upload_icon.png; path = ../../../Desktop/iphone_dev/upload_icon.png; sourceTree = "<group>"; };
+		B515A0F716179649000A86BE /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
+		B515A0F816179649000A86BE /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
+		B515A0F916179649000A86BE /* SignupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
 		B5199DDC15F8770000CE6304 /* expenses_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = expenses_list.png; path = ../../../Desktop/iphone_dev/expenses_list.png; sourceTree = "<group>"; };
 		B519A47115E93EC4005CD2D3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B54745AE15FD953300DF8A39 /* wood_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wood_bg.png; sourceTree = "<group>"; };
@@ -336,6 +343,7 @@
 		B512F36815E8B40E00EDD5AF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B515A0F5161795AB000A86BE /* upload_icon.png */,
 				B593524E160EB655008EC194 /* camera_icon.png */,
 				B5935247160EB2FA008EC194 /* receipt_icon.png */,
 				B5F20BC915FF012B00E71D64 /* charts_icon.png */,
@@ -414,6 +422,9 @@
 				B515A0EC1616C206000A86BE /* ReceiptViewController.h */,
 				B515A0ED1616C206000A86BE /* ReceiptViewController.m */,
 				B515A0EE1616C206000A86BE /* ReceiptViewController.xib */,
+				B515A0F716179649000A86BE /* SignupViewController.h */,
+				B515A0F816179649000A86BE /* SignupViewController.m */,
+				B515A0F916179649000A86BE /* SignupViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -584,6 +595,8 @@
 				B593524D160EB371008EC194 /* ReceiptsViewController.xib in Resources */,
 				B593524F160EB655008EC194 /* camera_icon.png in Resources */,
 				B515A0F01616C206000A86BE /* ReceiptViewController.xib in Resources */,
+				B515A0F6161795AB000A86BE /* upload_icon.png in Resources */,
+				B515A0FB16179649000A86BE /* SignupViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,6 +641,7 @@
 				B515A0E0160F97CF000A86BE /* ExpenseTracking.xcdatamodeld in Sources */,
 				B515A0E3160F984A000A86BE /* Receipt.m in Sources */,
 				B515A0EF1616C206000A86BE /* ReceiptViewController.m in Sources */,
+				B515A0FA16179649000A86BE /* SignupViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

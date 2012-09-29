@@ -14,6 +14,8 @@
 
 @implementation ReceiptViewController
 
+@synthesize receipt;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -33,6 +35,10 @@
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(dismiss)];
     [doneButton setTintColor:[UIColor blackColor]];
     [self.navigationItem setRightBarButtonItem:doneButton];
+    
+    UIImage *receiptImage = [UIImage imageWithData:[NSData dataWithContentsOfFile:self.receipt.photo]];
+    UIImageView *receiptImageView = [[UIImageView alloc] initWithImage:receiptImage];
+    [self.view addSubview:receiptImageView];
 }
 
 - (void)viewDidUnload

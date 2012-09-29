@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Receipt.h"
 
 @interface ReceiptViewController : UIViewController
+
+@property (nonatomic, strong) Receipt *receipt;
 
 - (void)dismiss;
 

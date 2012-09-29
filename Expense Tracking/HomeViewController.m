@@ -12,9 +12,9 @@
 #import "MonthsListViewController.h"
 #import "ExpensesByCategoryViewController.h"
 #import "NewExpenseViewController.h"
-#import "AboutViewController.h"
-#import "FeedbackViewController.h"
 #import "ReceiptsViewController.h"
+#import "SignupViewController.h"
+#import "FeedbackViewController.h"
 #import "CustomCell.h"
 
 @interface HomeViewController ()
@@ -39,8 +39,8 @@
                         @"View expenses by category",
                         @"Add new expense",
                         @"Receipts",
+                        @"Upload to server",
                         @"Settings",
-                        @"About this app",
                         @"Feedback",
                         nil];
         
@@ -50,8 +50,8 @@
                             @"charts_icon.png",
                             @"plus.png",
                             @"receipt_icon.png",
+                            @"upload_icon.png",
                             @"gear.png",
-                            @"about_icon.png",
                             @"speaker_icon.png",
                             nil];
     }
@@ -185,11 +185,14 @@
         [self.navigationController pushViewController:r animated:YES];
         return;
     }
+    
+    if (selectedRow == 5) {
+        SignupViewController *s = [[SignupViewController alloc] init];
+        [self.navigationController pushViewController:s animated:YES];
+        return;
+    }
         
     if (selectedRow == 6) {
-        AboutViewController *o = [[AboutViewController alloc] init];
-        [self.navigationController pushViewController:o animated:YES];
-        return;
     }
     
     if (selectedRow == 7) {
