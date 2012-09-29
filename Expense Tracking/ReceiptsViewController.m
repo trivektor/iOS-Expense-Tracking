@@ -7,6 +7,7 @@
 //
 
 #import "ReceiptsViewController.h"
+#import "ReceiptViewController.h"
 #import "Receipt.h"
 #include <math.h>
 
@@ -333,6 +334,22 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
         [self loadReceipts];
         [receiptsTable reloadData];
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ReceiptViewController *r = [[ReceiptViewController alloc] init];
+    r.modalPresentationStyle = UIModalPresentationFormSheet;
+    r.modalPresentationStyle = UIModalTransitionStyleCoverVertical;
+    
+//    UIViewAnimationTransition trans = UIViewAnimationTransitionCurlUp;
+//    [UIView beginAnimations:nil context:nil];
+//    [UIView setAnimationTransition:trans forView:self.view.window cache:YES];
+//    [self.navigationController presentModalViewController:r animated:YES];
+//    [UIView commitAnimations];
+
+    UINavigationController *newNavController = [[UINavigationController alloc] initWithRootViewController:r];
+    [self presentModalViewController:newNavController animated:YES];
 }
 
 - (NSManagedObjectContext *)managedObjectContext

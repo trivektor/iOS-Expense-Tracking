@@ -186,7 +186,7 @@
         return;
     }
         
-    if (selectedRow == 5) {
+    if (selectedRow == 6) {
         AboutViewController *o = [[AboutViewController alloc] init];
         [self.navigationController pushViewController:o animated:YES];
         return;
