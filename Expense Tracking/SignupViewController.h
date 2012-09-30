@@ -15,6 +15,8 @@
     __weak IBOutlet UIButton *signupButton;
 }
 
+@property (nonatomic, strong) UIView *spinnerView;
+
 - (IBAction)signupButtonTapped:(id)sender;
 
 @end

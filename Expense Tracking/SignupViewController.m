@@ -7,12 +7,17 @@
 //
 
 #import "SignupViewController.h"
+#import "SpinnerView.h"
+#import "AFJSONRequestOperation.h"
+#import "AFHTTPClient.h"
 
 @interface SignupViewController ()
 
 @end
 
 @implementation SignupViewController
+
+@synthesize spinnerView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,6 +39,9 @@
     
     self.view.backgroundColor = [UIColor clearColor];
     [signupButton setTitleColor:[UIColor colorWithRed:141/255.0 green:67/255.0 blue:2/255.0 alpha:1] forState:UIControlStateNormal];
+    
+    [emailField setDelegate:self];
+    [passwordField setDelegate:self];
 }
 
 - (void)viewDidUnload
@@ -57,6 +65,51 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Please enter both username and password" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
         return;
+    } else {
+        NSURL *signupURL = [NSURL URLWithString:@"http://192.168.0.4:3000/users.json"];
+        
+        AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:signupURL];
+        
+        NSMutableDictionary *userParams = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                           [emailField text], @"email", 
+                                           [passwordField text], @"password",
+                                           [passwordField text], @"password_confirmation",
+                                           nil];
+        
+        NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                userParams, @"user",
+                                nil];
+        
+        NSMutableURLRequest *postRequest = [httpClient requestWithMethod:@"POST" path:signupURL.absoluteString parameters:params];
+        //[postRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+        
+        AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:postRequest];
+        
+        [operation setCompletionBlockWithSuccess:
+            ^(AFHTTPRequestOperation *operation, id responseObject) {
+                NSString *response = [operation responseString];
+                
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+
+                NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[response dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:nil];
+                
+                if ([[json valueForKey:@"success"] intValue] == 1) {
+                    [alert setMessage:[json valueForKey:@"message"]];
+                } else {
+                    [alert setMessage:[json valueForKey:@"errors"]];
+                }
+                
+                [alert show];
+                [self.spinnerView removeFromSuperview];
+            }
+        failure:
+            ^(AFHTTPRequestOperation *operation, NSError *error) {
+                NSLog(@"error: %@", [operation error]);
+            }
+        ];
+        
+        self.spinnerView = [SpinnerView loadSpinnerIntoView:self.view];
+        [operation start];
     }
 }
 
