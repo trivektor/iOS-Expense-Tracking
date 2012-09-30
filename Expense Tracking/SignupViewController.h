@@ -18,5 +18,6 @@
 @property (nonatomic, strong) UIView *spinnerView;
 
 - (IBAction)signupButtonTapped:(id)sender;
+- (void)sendToLoginForm;
 
 @end

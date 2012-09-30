@@ -27,6 +27,9 @@
 		B515A0F6161795AB000A86BE /* upload_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B515A0F5161795AB000A86BE /* upload_icon.png */; };
 		B515A0FA16179649000A86BE /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B515A0F816179649000A86BE /* SignupViewController.m */; };
 		B515A0FB16179649000A86BE /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B515A0F916179649000A86BE /* SignupViewController.xib */; };
+		B515A0FF1617D2AA000A86BE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B515A0FD1617D2AA000A86BE /* LoginViewController.m */; };
+		B515A1001617D2AA000A86BE /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B515A0FE1617D2AA000A86BE /* LoginViewController.xib */; };
+		B515A1041617D68F000A86BE /* lock_icon_white.png in Resources */ = {isa = PBXBuildFile; fileRef = B515A1031617D68F000A86BE /* lock_icon_white.png */; };
 		B5199DDD15F8770000CE6304 /* expenses_list.png in Resources */ = {isa = PBXBuildFile; fileRef = B5199DDC15F8770000CE6304 /* expenses_list.png */; };
 		B519A47215E93EC4005CD2D3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B519A47115E93EC4005CD2D3 /* QuartzCore.framework */; };
 		B54745AF15FD953300DF8A39 /* wood_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B54745AE15FD953300DF8A39 /* wood_bg.png */; };
@@ -146,6 +149,10 @@
 		B515A0F716179649000A86BE /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
 		B515A0F816179649000A86BE /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
 		B515A0F916179649000A86BE /* SignupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
+		B515A0FC1617D2AA000A86BE /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		B515A0FD1617D2AA000A86BE /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		B515A0FE1617D2AA000A86BE /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		B515A1031617D68F000A86BE /* lock_icon_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock_icon_white.png; sourceTree = "<group>"; };
 		B5199DDC15F8770000CE6304 /* expenses_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = expenses_list.png; path = ../../../Desktop/iphone_dev/expenses_list.png; sourceTree = "<group>"; };
 		B519A47115E93EC4005CD2D3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B54745AE15FD953300DF8A39 /* wood_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wood_bg.png; sourceTree = "<group>"; };
@@ -343,6 +350,7 @@
 		B512F36815E8B40E00EDD5AF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B515A1031617D68F000A86BE /* lock_icon_white.png */,
 				B515A0F5161795AB000A86BE /* upload_icon.png */,
 				B593524E160EB655008EC194 /* camera_icon.png */,
 				B5935247160EB2FA008EC194 /* receipt_icon.png */,
@@ -425,6 +433,9 @@
 				B515A0F716179649000A86BE /* SignupViewController.h */,
 				B515A0F816179649000A86BE /* SignupViewController.m */,
 				B515A0F916179649000A86BE /* SignupViewController.xib */,
+				B515A0FC1617D2AA000A86BE /* LoginViewController.h */,
+				B515A0FD1617D2AA000A86BE /* LoginViewController.m */,
+				B515A0FE1617D2AA000A86BE /* LoginViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -597,6 +608,8 @@
 				B515A0F01616C206000A86BE /* ReceiptViewController.xib in Resources */,
 				B515A0F6161795AB000A86BE /* upload_icon.png in Resources */,
 				B515A0FB16179649000A86BE /* SignupViewController.xib in Resources */,
+				B515A1001617D2AA000A86BE /* LoginViewController.xib in Resources */,
+				B515A1041617D68F000A86BE /* lock_icon_white.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +655,7 @@
 				B515A0E3160F984A000A86BE /* Receipt.m in Sources */,
 				B515A0EF1616C206000A86BE /* ReceiptViewController.m in Sources */,
 				B515A0FA16179649000A86BE /* SignupViewController.m in Sources */,
+				B515A0FF1617D2AA000A86BE /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

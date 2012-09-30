@@ -7,6 +7,7 @@
 //
 
 #import "SignupViewController.h"
+#import "LoginViewController.h"
 #import "SpinnerView.h"
 #import "AFJSONRequestOperation.h"
 #import "AFHTTPClient.h"
@@ -36,6 +37,10 @@
     [backButton setTintColor:[UIColor blackColor]];
     [self.navigationItem setBackBarButtonItem:backButton];
     [self.navigationItem setTitle:@"Account Signup"];
+    
+    UIBarButtonItem *loginButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"lock_icon_white.png"] style:UIBarButtonItemStylePlain target:self action:@selector(sendToLoginForm)];
+    [loginButton setTintColor:[UIColor blackColor]];
+    [self.navigationItem setRightBarButtonItem:loginButton];
     
     self.view.backgroundColor = [UIColor clearColor];
     [signupButton setTitleColor:[UIColor colorWithRed:141/255.0 green:67/255.0 blue:2/255.0 alpha:1] forState:UIControlStateNormal];
@@ -122,6 +127,12 @@
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField
 {
     return TRUE;
+}
+
+- (void)sendToLoginForm
+{
+    LoginViewController *l = [[LoginViewController alloc] init];
+    [self.navigationController pushViewController:l animated:YES];
 }
 
 @end
