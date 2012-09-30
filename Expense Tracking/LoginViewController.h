@@ -15,6 +15,8 @@
     __weak IBOutlet UIButton *loginButton;
 }
 
+@property (nonatomic, strong) UIView *spinnerView;
+
 - (IBAction)loginButtonTapped:(id)sender;
 
 @end

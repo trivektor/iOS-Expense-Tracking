@@ -7,12 +7,17 @@
 //
 
 #import "LoginViewController.h"
+#import "SpinnerView.h"
+#import "AFHTTPClient.h"
+#import "AFHTTPRequestOperation.h"
 
 @interface LoginViewController ()
 
 @end
 
 @implementation LoginViewController
+
+@synthesize spinnerView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -69,7 +74,49 @@
         
         [alert show];
     } else {
+        NSURL *signinURL = [NSURL URLWithString:@"http://192.168.0.4:3000/api/tokens.json"];
         
+        AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:signinURL];
+        
+        NSMutableDictionary *userParams = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                           [emailField text], @"email", 
+                                           [passwordField text], @"password",
+                                           nil];
+        
+        NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                       userParams, @"user",
+                                       nil];
+        
+        NSMutableURLRequest *postRequest = [httpClient requestWithMethod:@"POST" path:signinURL.absoluteString parameters:params];
+        
+        AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:postRequest];
+        
+        [operation setCompletionBlockWithSuccess:
+         ^(AFHTTPRequestOperation *operation, id responseObject) {
+             NSString *response = [operation responseString];
+             
+             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+             
+             NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[response dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:nil];
+             
+             if ([[json valueForKey:@"success"] intValue] == 1) {
+                 [alert setMessage:[json valueForKey:@"message"]];
+             } else {
+                 [alert setTitle:@"Error"];
+                 [alert setMessage:[json valueForKey:@"errors"]];
+             }
+             
+             [alert show];
+             //[self.spinnerView removeFromSuperview];
+         }
+                                         failure:
+         ^(AFHTTPRequestOperation *operation, NSError *error) {
+             NSLog(@"error: %@", [operation error]);
+         }];
+        
+        //self.spinnerView = [SpinnerView loadSpinnerIntoView:self.view];
+        [operation start];
+
     }
 }
 
