@@ -10,6 +10,7 @@
 #import "SpinnerView.h"
 #import "AFHTTPClient.h"
 #import "AFHTTPRequestOperation.h"
+#import "KeyChainItemWrapper.h"
 
 @interface LoginViewController ()
 
@@ -74,7 +75,7 @@
         
         [alert show];
     } else {
-        NSURL *signinURL = [NSURL URLWithString:@"http://192.168.0.4:3000/api/tokens.json"];
+        NSURL *signinURL = [NSURL URLWithString:@"http://thawing-oasis-5679.herokuapp.com/api/tokens.json"];
         
         AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:signinURL];
         
@@ -101,6 +102,14 @@
              
              if ([[json valueForKey:@"success"] intValue] == 1) {
                  [alert setMessage:[json valueForKey:@"message"]];
+                 
+                 NSString *token = [json valueForKey:@"token"];
+                 NSLog(@"%@", token);
+                 
+                 KeychainItemWrapper *keychain = [[KeychainItemWrapper alloc] initWithIdentifier:@"ExpenseTrackingKeychain" accessGroup:nil];
+                 
+                 [keychain setObject:token forKey:(__bridge id)kSecAttrAccount];
+                 NSLog(@"%@", [keychain objectForKey:(__bridge id)kSecAttrAccount]);
              } else {
                  [alert setTitle:@"Error"];
                  [alert setMessage:[json valueForKey:@"errors"]];
