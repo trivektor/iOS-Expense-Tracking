@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "SignupViewController.h"
 #import "ServerUploadViewController.h"
 #import "SpinnerView.h"
 #import "AFHTTPClient.h"
@@ -48,6 +49,7 @@
     emailField = nil;
     passwordField = nil;
     loginButton = nil;
+    signupButton = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -60,12 +62,12 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
+    [textField resignFirstResponder];
     return YES;
 }
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField
 {
-    [textField resignFirstResponder];
     return YES;
 }
 
@@ -128,6 +130,12 @@
         [operation start];
 
     }
+}
+
+- (IBAction)signupButtonTapped:(id)sender
+{
+    SignupViewController *s = [[SignupViewController alloc] init];
+    [self.navigationController pushViewController:s animated:YES];
 }
 
 @end

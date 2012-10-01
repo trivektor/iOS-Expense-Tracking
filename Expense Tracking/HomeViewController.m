@@ -212,7 +212,7 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (BOOL)validateAuthenticationToken
+- (void)validateAuthenticationToken
 {
     NSURL *signinURL = [NSURL URLWithString:@"http://thawing-oasis-5679.herokuapp.com/api/tokens/validate.json"];
     

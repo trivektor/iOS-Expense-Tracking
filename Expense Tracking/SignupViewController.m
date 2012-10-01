@@ -33,14 +33,14 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
     [backButton setTintColor:[UIColor blackColor]];
     [self.navigationItem setBackBarButtonItem:backButton];
     [self.navigationItem setTitle:@"Account Signup"];
     
-    UIBarButtonItem *loginButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"lock_icon_white.png"] style:UIBarButtonItemStylePlain target:self action:@selector(sendToLoginForm)];
-    [loginButton setTintColor:[UIColor blackColor]];
-    [self.navigationItem setRightBarButtonItem:loginButton];
+    UIBarButtonItem *_loginButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"lock_icon_white.png"] style:UIBarButtonItemStylePlain target:self action:@selector(sendToLoginForm)];
+    [_loginButton setTintColor:[UIColor blackColor]];
+    [self.navigationItem setRightBarButtonItem:_loginButton];
     
     self.view.backgroundColor = [UIColor clearColor];
     [signupButton setTitleColor:[UIColor colorWithRed:141/255.0 green:67/255.0 blue:2/255.0 alpha:1] forState:UIControlStateNormal];
@@ -54,6 +54,7 @@
     emailField = nil;
     passwordField = nil;
     signupButton = nil;
+    loginButton = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -133,6 +134,11 @@
 {
     LoginViewController *l = [[LoginViewController alloc] init];
     [self.navigationController pushViewController:l animated:YES];
+}
+
+- (IBAction)loginButtonTapped:(id)sender
+{
+    [self sendToLoginForm];
 }
 
 @end

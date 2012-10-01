@@ -20,6 +20,6 @@
 @property (nonatomic, strong) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, strong) NSPersistentStoreCoordinator *persistenceStoreCoordinator;
 
-- (BOOL)validateAuthenticationToken;
+- (void)validateAuthenticationToken;
 
 @end

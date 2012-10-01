@@ -13,11 +13,13 @@
     __weak IBOutlet UITextField *emailField;
     __weak IBOutlet UITextField *passwordField;
     __weak IBOutlet UIButton *signupButton;
+    __weak IBOutlet UIButton *loginButton;
 }
 
 @property (nonatomic, strong) UIView *spinnerView;
 
 - (IBAction)signupButtonTapped:(id)sender;
+- (IBAction)loginButtonTapped:(id)sender;
 - (void)sendToLoginForm;
 
 @end

@@ -34,6 +34,7 @@
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil];
     [backButton setTintColor:[UIColor blackColor]];
     [self.navigationItem setBackBarButtonItem:backButton];
+    [self.navigationItem setTitle:@"Upload to Server"];
 }
 
 - (void)viewDidUnload
