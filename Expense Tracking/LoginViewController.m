@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "ServerUploadViewController.h"
 #import "SpinnerView.h"
 #import "AFHTTPClient.h"
 #import "AFHTTPRequestOperation.h"
@@ -109,13 +110,13 @@
                  KeychainItemWrapper *keychain = [[KeychainItemWrapper alloc] initWithIdentifier:@"ExpenseTrackingKeychain" accessGroup:nil];
                  
                  [keychain setObject:token forKey:(__bridge id)kSecAttrAccount];
-                 NSLog(@"%@", [keychain objectForKey:(__bridge id)kSecAttrAccount]);
+                 ServerUploadViewController *s = [[ServerUploadViewController alloc] init];
+                 [self.navigationController pushViewController:s animated:YES];
              } else {
                  [alert setTitle:@"Error"];
                  [alert setMessage:[json valueForKey:@"errors"]];
              }
              
-             [alert show];
              //[self.spinnerView removeFromSuperview];
          }
                                          failure:

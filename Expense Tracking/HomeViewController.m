@@ -15,6 +15,11 @@
 #import "ReceiptsViewController.h"
 #import "SignupViewController.h"
 #import "FeedbackViewController.h"
+#import "ServerUploadViewController.h"
+#import "LoginViewController.h"
+#import "KeyChainItemWrapper.h"
+#import "AFHTTPClient.h"
+#import "AFHTTPRequestOperation.h"
 #import "CustomCell.h"
 
 @interface HomeViewController ()
@@ -187,8 +192,7 @@
     }
     
     if (selectedRow == 5) {
-        SignupViewController *s = [[SignupViewController alloc] init];
-        [self.navigationController pushViewController:s animated:YES];
+        [self validateAuthenticationToken];
         return;
     }
         
@@ -206,6 +210,49 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (BOOL)validateAuthenticationToken
+{
+    NSURL *signinURL = [NSURL URLWithString:@"http://thawing-oasis-5679.herokuapp.com/api/tokens/validate.json"];
+    
+    KeychainItemWrapper *keychain = [[KeychainItemWrapper alloc] initWithIdentifier:@"ExpenseTrackingKeychain" accessGroup:nil];
+    
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:signinURL];
+    
+    NSMutableDictionary *userParams = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                       [keychain objectForKey:(__bridge id)kSecAttrAccount], @"token",
+                                       nil];
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                   userParams, @"user",
+                                   nil];
+    
+    NSMutableURLRequest *postRequest = [httpClient requestWithMethod:@"POST" path:signinURL.absoluteString parameters:params];
+    
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:postRequest];
+    
+    [operation setCompletionBlockWithSuccess:
+     ^(AFHTTPRequestOperation *operation, id responseObject) {
+         NSString *response = [operation responseString];
+         
+         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[response dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:nil];
+
+         if ([[json valueForKey:@"success"] intValue] == 1) {
+             ServerUploadViewController *s = [[ServerUploadViewController alloc] init];
+             [self.navigationController pushViewController:s animated:YES];
+         } else {
+             LoginViewController *l = [[LoginViewController alloc] init];
+             [self.navigationController pushViewController:l animated:YES];
+         }
+     }
+                                     failure:
+     ^(AFHTTPRequestOperation *operation, NSError *error) {
+         NSLog(@"error: %@", [operation error]);
+     }];
+    
+    //self.spinnerView = [SpinnerView loadSpinnerIntoView:self.view];
+    [operation start];
 }
 
 @end
