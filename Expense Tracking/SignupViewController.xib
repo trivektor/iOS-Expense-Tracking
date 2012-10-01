@@ -40,7 +40,7 @@
 					<object class="IBUIImageView" id="7974202">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{14, 4}, {292, 452}}</string>
+						<string key="NSFrame">{{14, 9}, {292, 398}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1068857539"/>
@@ -55,7 +55,7 @@
 					<object class="IBUITextField" id="1068857539">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{39, 15}, {243, 49}}</string>
+						<string key="NSFrame">{{39, 20}, {243, 49}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="653364290"/>
@@ -92,7 +92,7 @@
 					<object class="IBUIImageView" id="653364290">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{19, 66}, {282, 1}}</string>
+						<string key="NSFrame">{{19, 71}, {282, 1}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="18787767"/>
@@ -107,7 +107,7 @@
 					<object class="IBUITextField" id="18787767">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{39, 69}, {243, 49}}</string>
+						<string key="NSFrame">{{39, 74}, {243, 49}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="716097309"/>
@@ -135,7 +135,7 @@
 					<object class="IBUIImageView" id="716097309">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{19, 120}, {282, 1}}</string>
+						<string key="NSFrame">{{19, 125}, {282, 1}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="65157585"/>
@@ -147,7 +147,7 @@
 					<object class="IBUIButton" id="65157585">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{94, 139}, {132, 39}}</string>
+						<string key="NSFrame">{{94, 144}, {132, 39}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="637728692"/>
@@ -187,7 +187,7 @@
 					<object class="IBUIButton" id="637728692">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{54, 191}, {212, 37}}</string>
+						<string key="NSFrame">{{54, 196}, {212, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
@@ -300,12 +300,12 @@
 						<int key="objectID">1</int>
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
+							<reference ref="7974202"/>
 							<reference ref="1068857539"/>
 							<reference ref="653364290"/>
 							<reference ref="18787767"/>
 							<reference ref="716097309"/>
 							<reference ref="65157585"/>
-							<reference ref="7974202"/>
 							<reference ref="637728692"/>
 						</array>
 						<reference key="parent" ref="0"/>
@@ -385,16 +385,11 @@
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="loginButtonTapped:">id</string>
-						<string key="loginLabelTapped:">id</string>
 						<string key="signupButtonTapped:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="loginButtonTapped:">
 							<string key="name">loginButtonTapped:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="loginLabelTapped:">
-							<string key="name">loginLabelTapped:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="signupButtonTapped:">
