@@ -34,6 +34,7 @@
 		B515A10A16191C69000A86BE /* KeyChainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B515A10916191C69000A86BE /* KeyChainItemWrapper.m */; };
 		B515A10E161922C5000A86BE /* ServerUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B515A10C161922C5000A86BE /* ServerUploadViewController.m */; };
 		B515A10F161922C5000A86BE /* ServerUploadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B515A10D161922C5000A86BE /* ServerUploadViewController.xib */; };
+		B515A112161957A9000A86BE /* x_button_white.png in Resources */ = {isa = PBXBuildFile; fileRef = B515A111161957A9000A86BE /* x_button_white.png */; };
 		B5199DDD15F8770000CE6304 /* expenses_list.png in Resources */ = {isa = PBXBuildFile; fileRef = B5199DDC15F8770000CE6304 /* expenses_list.png */; };
 		B519A47215E93EC4005CD2D3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B519A47115E93EC4005CD2D3 /* QuartzCore.framework */; };
 		B54745AF15FD953300DF8A39 /* wood_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B54745AE15FD953300DF8A39 /* wood_bg.png */; };
@@ -164,6 +165,7 @@
 		B515A10B161922C4000A86BE /* ServerUploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerUploadViewController.h; sourceTree = "<group>"; };
 		B515A10C161922C5000A86BE /* ServerUploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerUploadViewController.m; sourceTree = "<group>"; };
 		B515A10D161922C5000A86BE /* ServerUploadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServerUploadViewController.xib; sourceTree = "<group>"; };
+		B515A111161957A9000A86BE /* x_button_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x_button_white.png; sourceTree = "<group>"; };
 		B5199DDC15F8770000CE6304 /* expenses_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = expenses_list.png; path = ../../../Desktop/iphone_dev/expenses_list.png; sourceTree = "<group>"; };
 		B519A47115E93EC4005CD2D3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B54745AE15FD953300DF8A39 /* wood_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wood_bg.png; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 		B512F36815E8B40E00EDD5AF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B515A111161957A9000A86BE /* x_button_white.png */,
 				B515A1031617D68F000A86BE /* lock_icon_white.png */,
 				B515A0F5161795AB000A86BE /* upload_icon.png */,
 				B593524E160EB655008EC194 /* camera_icon.png */,
@@ -630,6 +633,7 @@
 				B515A1001617D2AA000A86BE /* LoginViewController.xib in Resources */,
 				B515A1041617D68F000A86BE /* lock_icon_white.png in Resources */,
 				B515A10F161922C5000A86BE /* ServerUploadViewController.xib in Resources */,
+				B515A112161957A9000A86BE /* x_button_white.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

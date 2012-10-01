@@ -135,7 +135,11 @@
 - (IBAction)signupButtonTapped:(id)sender
 {
     SignupViewController *s = [[SignupViewController alloc] init];
-    [self.navigationController pushViewController:s animated:YES];
+    s.modalPresentationStyle = UIModalPresentationFormSheet;
+    s.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    
+    UINavigationController *signupController = [[UINavigationController alloc] initWithRootViewController:s];
+    [self.navigationController presentModalViewController:signupController animated:YES];
 }
 
 @end
